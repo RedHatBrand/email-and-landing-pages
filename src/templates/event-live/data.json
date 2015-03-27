@@ -4,22 +4,31 @@
     "event-logo": "http://upload.wikimedia.org/wikipedia/uk/e/e5/RedHat_Logo.png",
     "event-date": "September 28 - October 2, 2014",
     "event-location": "San Francisco, CA",
-    "main-message":  "all caps overpass bold, 34/40 px, ect. no more than 2 lines",
+    "hero": "http://www.redhat.com/profiles/rh/themes/redhatdotcom/img/header/header-event-list-2000x1357.jpg",
+    "hero-message":  "all caps overpass bold, 34/40 px, ect. no more than 2 lines",
     "call-to-action":  "Call to action",
     "subheading":  "Subheading overpass bold 14px uppercase",
     "body-copy":  "Lorem ipsum dolor sit amet, <a href='#'>consectetur </a>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
     "theme": "#cc0000",
     "sidebar-content": "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",
     "sidebar-title": "sidebar-title",
+    
     "full-width-image": "https://ununsplash.imgix.net/photo-1423347834838-5162bb452ca7?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
     "full-width-title": "all caps overpass bold, tracking",
     "full-width-subtitle": "all caps overpass bold, no tracking",
+    
+    "one-of-three-image": "http://www.redhat.com/cms/public/bio-lee-congdon-400x400_0.jpg",
     "one-of-three-title": " Overpass Bold Lorem Ipusum",
     "one-of-three-content": "Overpass Regular ",
+    
+    "two-of-three-image": "http://www.redhat.com/cms/public/bio-paul-cormier-400x400_1.jpg",
     "two-of-three-title": "Overpass Bold Lorem Ipusum ",
     "two-of-three-content": "Overpass Regular ",
+    
+    "three-of-three-image": "http://www.redhat.com/cms/public/bio-james-whitehurst-400x400_0.jpg",
     "three-of-three-title": "Overpass Bold Lorem Ipusum ",
     "three-of-three-content": "Overpass Regular  ",
+    
     "call-to-action2": "Call to action 2"
   }
 }

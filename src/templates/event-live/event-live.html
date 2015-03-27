@@ -269,8 +269,7 @@ height: calc(100vh - 2em);
     /* Yahoo! Mail Override */
     
     {
-      color: {{{theme}}}
-      ;
+      color: {{{theme}}};
       font-weight: normal;
       text-decoration: underline;
     }
@@ -399,33 +398,29 @@ height: calc(100vh - 2em);
       text-decoration: none;
     }
     
-      #one-of-three, #two-of-three, #three-of-three {
-        display: table-cell !important;
-      }
-    
-    #sidebar {
-        padding-top: 40px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 40px;
+    #one-of-three,
+    #two-of-three,
+    #three-of-three {
+      display: table-cell !important;
     }
     
+    #sidebar {
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 40px;
+    }
   </style>
-  
-   <style type="text/css" data-premailer="ignore">
+
+  <style type="text/css" data-premailer="ignore">
     /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
     
-
-    
-    
     @media only screen and (max-width: 480px) {
-      
       #sidebar {
         width: initial !important;
         display: block !important;
         margin: 0 !important;
       }
-
       #featured-image {
         padding-top: 0;
       }
@@ -466,7 +461,8 @@ height: calc(100vh - 2em);
       /* Prevent iOS Mail from adding padding to the body */
       /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
       
-      #bodyCell {   overflow-x: hidden !important;
+      #bodyCell {
+        overflow-x: hidden !important;
         padding: 0px 10px 10px 10px !important;
       }
       /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
@@ -536,28 +532,32 @@ height: calc(100vh - 2em);
       .footerContent a {
         display: block !important;
       }
-      
-      #one-of-three, #two-of-three, #three-of-three {
+      #one-of-three,
+      #two-of-three,
+      #three-of-three {
         display: block !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
         padding-top: 20px !important;
         padding-bottom: 20px !important;
       }
-      
       #date {
         display: block !important;
         padding-left: 20px !important;
         text-align: left !important;
         width: 90% !important;
       }
-
       #eventlogo {
         margin-top: 20px;
         padding-top: 20px;
         display: block !important;
         width: 100% !important;
+      }
+      .full-width {
+        width: 100% !important;
+      }
     }
+    
   </style>
 </head>
 
@@ -608,7 +608,7 @@ height: calc(100vh - 2em);
                   <tr>
                     <td colspan="2" style=" width:100%;font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
-                      {{ main-message }}
+                      {{ hero-message }}
                       <br />
                       <div>
                         <!--[if mso]>
@@ -616,7 +616,7 @@ height: calc(100vh - 2em);
     <w:anchorlock/>
     <center>
   <![endif]-->
-                        <a href="http://" style="margin-top:20px;color:#ffffff;display:inline-block;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:160px;-webkit-text-size-adjust:none; background-color: {{{theme}}};">{{ call-to-action2 }}</a>
+                        <a href="http://" style="margin-top:20px;color:#ffffff;display:inline-block;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:160px;-webkit-text-size-adjust:none; background-color: {{{theme}}};">{{ call-to-action }}</a>
                         <!--[if mso]>
     </center>
   </v:roundrect>
@@ -637,7 +637,7 @@ height: calc(100vh - 2em);
                     <td valign="top" class="bodyContent">
                       <h2 style="font-size: 15pt; text-transform:uppercase;"> {{ subheading }}</h2> {{{ body-copy }}}
                     </td>
-                    <td id="sidebar" style="background-color:whitesmoke;" width="250px;" id="featured-image" valign="top" >
+                    <td id="sidebar" style="background-color:whitesmoke;" width="250px;" id="featured-image" valign="top">
 
                       <h2 style="color: {{theme}};">{{sidebar-title}}</h2> {{sidebar-content}}
 
@@ -658,91 +658,88 @@ height: calc(100vh - 2em);
                 <table cellpadding="0" style="background-color:white; width:100%; height:180px;" border="0" cellpadding="0" cellspacing="0" width="100%">
 
                   <tr>
-                   
-                    <td id="one-of-three" style="padding-top:40px; padding-left:20px; padding-right:10px; padding-bottom: 20px;">
-                      <table cellpadding="0" >
+
+                    <td valign="top" id="one-of-three" style="padding-top:40px; padding-left:20px; padding-right:10px; padding-bottom: 20px;">
+                      <table cellpadding="0">
                         <tr>
                           <td>
-                            <img width="100%" src="http://www.redhat.com/cms/public/bio-james-whitehurst-400x400_0.jpg">
+                            <img class="full-width" width="220px" src="{{{one-of-three-image}}}" alt="">
                           </td>
                         </tr>
                         <tr>
                           <td style="padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:20px;color:white;" bgcolor="#111">
-                          <b>{{one-of-three-title}}</b>
-                            <br>
-                                 {{one-of-three-content}}
-                            
+                            <b>{{one-of-three-title}}</b>
+                            <br> {{one-of-three-content}}
+
                           </td>
                         </tr>
                       </table>
 
                     </td>
-                    
-                    <td id="two-of-three"style="padding-top:40px; padding-left:15px; padding-right:15px; padding-bottom: 20px;">
-                      <table cellpadding="0" >
+
+                    <td valign="top" id="two-of-three" style="padding-top:40px; padding-left:15px; padding-right:15px; padding-bottom: 20px;">
+                      <table cellpadding="0">
                         <tr>
                           <td>
-                           <img width="100%" src="http://www.redhat.com/cms/public/bio-ArunOberoi-400x400_0.jpg">
+                            <img class="full-width" width="220px" src="{{{two-of-three-image}}}">
 
-                            
+
                           </td>
                         </tr>
                         <tr>
-                          <td style="padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:20px;color:white; "bgcolor="#111">
-                            
-                           <b>{{two-of-three-title}}</b>
-                           <br>
-                                {{two-of-three-content}}
-                            
+                          <td style="padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:20px;color:white; " bgcolor="#111">
+
+                            <b>{{two-of-three-title}}</b>
+                            <br> {{two-of-three-content}}
+
                           </td>
                         </tr>
-                      </table >
+                      </table>
 
 
                     </td>
-                    <td id="three-of-three" style="padding-top:40px; padding-left:10px; padding-right:20px; padding-bottom: 20px;">
+                    <td valign="top" id="three-of-three" style="padding-top:40px; padding-left:10px; padding-right:20px; padding-bottom: 20px;">
 
-                      <table cellpadding="0" >
+                      <table cellpadding="0">
                         <tr>
                           <td>
-                          <img width="100%" src="http://www.redhat.com/cms/public/bio-jackie-yeaney-400x400_0.jpg">
+                            <img class="full-width" width="220px" src="{{{three-of-three-image}}}">
 
-                            
+
                           </td>
                         </tr>
                         <tr>
                           <td style="padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:20px;color:white; " bgcolor="#111">
                             <b>{{three-of-three-title}}</b>
-                            <br>
-                            {{three-of-three-content}}
-                            
+                            <br> {{three-of-three-content}}
+
                           </td>
                         </tr>
                       </table>
 
                     </td>
 
-                    
+
                   </tr>
-                  
+
                 </table>
-                
+
                 <table bgcolor="#fff" width="100%" cellpadding="0" style="text-align:center;">
                   <tbody>
                     <tr>
                       <td>
                         <div>
-                        <!--[if mso]>
+                          <!--[if mso]>
   <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="{{{theme}}}">
     <w:anchorlock/>
     <center>
   <![endif]-->
-                        <a href="http://" style=" text-transform: uppercase; margin-bottom:40px;margin-top:20px; padding:10px; color:#ffffff;display:inline-block;font-size:15px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:160px;-webkit-text-size-adjust:none; background-color: {{{theme}}};">{{ call-to-action }}</a>
-                        <!--[if mso]>
+                          <a href="http://" style=" text-transform: uppercase; margin-bottom:40px;margin-top:20px; padding:10px; color:#ffffff;display:inline-block;font-size:15px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:160px;-webkit-text-size-adjust:none; background-color: {{{theme}}};">{{ call-to-action }}</a>
+                          <!--[if mso]>
     </center>
   </v:roundrect>
 <![endif]-->
-                      </div>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -801,4 +798,3 @@ height: calc(100vh - 2em);
 </body>
 
 </html>
-

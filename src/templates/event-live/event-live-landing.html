@@ -1,0 +1,238 @@
+---
+width: calc(100vw - 2em);
+height: calc(100vh - 2em);
+---
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <link href="//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css" rel="stylesheet" type="text/css" />
+    <title>
+      {{page-title}}
+    </title>
+<link rel="stylesheet" href="/assets/stylesheets/main.css">
+   <style type="text/css">
+     a {
+  color: {{{theme}}};
+  text-decoration: none;
+  border-bottom: 1px solid;
+  transition: all .25s ease-in-out;
+}
+
+a:hover {
+  color: {{{theme}}};
+}
+   </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+  </head>
+ <body>
+  <header style="background-image: url('{{{hero}}}');" class='full-width-background'>
+    <a href='//www.redhat.com'>
+      <div class='logo-rh'></div>
+    </a>
+    <h1 style=" width:100%;font-size: 30px; line-height: 35px; color:white; text-transform:uppercase;">
+        {{ hero-message }}
+      </h1>
+    <br>
+    <h2 style="font-size:20px; font-wieght:bold">{{event-date}}<br>{{event-location}}</h2>
+  </header>
+  <div class='full-width-background'>
+
+    <div class="left-right">
+      <div class="left">
+        <h2>{{subheading}}</h2>
+        <p>
+          {{{ body-copy }}}
+        </p>
+      </div>
+      <div class="right">
+        <h2> {{ sidebar-title }}</h2>
+        <p>
+          {{ sidebar-content }}
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="banner" style="background-image:url('{{{full-width-image}}}');">
+
+
+
+      <h1 style="letter-spacing: 3px; width:100%;font-size: 30px; line-height: 35px; color:white; text-transform:uppercase;"> 
+         {{full-width-title}}</h1>
+
+      <h2 style="font-weight:bold;color:white;">
+           {{full-width-subtitle}}
+         </h2>
+    </div>
+
+    <div class="three">
+
+      <div class="one-of-three">
+      <img src="{{{one-of-three-image}}}" width="100%" alt="">
+<div>
+      <b>{{one-of-three-title}}</b>
+      <br>
+      {{one-of-three-content}}
+  </div>
+      </div>
+
+
+      <div class="one-of-three">
+              <img src="{{{two-of-three-image}}}" width="100%" alt="">
+
+        <div>
+          <b>{{one-of-three-title}}</b>
+          <br>
+          {{one-of-three-content}}
+          </div>
+      </div>
+
+
+      <div class="one-of-three">
+             <img src="{{{three-of-three-image}}}" width="100%" alt="">
+
+        <div>
+          <b>{{three-of-three-title}}</b>
+          <br>
+          {{three-of-three-content}}
+          </div>
+      </div>
+
+    </div>
+    <div class="clear"></div>
+
+    {{#session}}
+    <div class="session" id="session_{{session-id}}" <br>
+      <h2>{{session-title}}</h2>
+      <h4>{{session-time}}</h4>
+    </div>
+    {{/session}}
+  </div>
+  <div class='full-width-background' id='GatedFormContainer'></div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+      	
+        {{#session}}
+        {{#speaker}}
+          if ("{{speaker-session-id}}" == "{{session-id}}") {
+            var session = document.getElementById("session_{{session-id}}")
+      		var speaker = document.createElement("div");
+      		speaker.className = "speaker";
+      		speaker.innerHTML = "<div class='speaker-profile' style='background-image: url({{speaker-profile}})'></div><div class='speaker-info'><h3>{{speaker-name}}</h3><h4>{{speaker-position}}</h4><p>{{{speaker-bio}}}</p></div>";
+      	  	session.appendChild(speaker);
+      	  }
+        {{/speaker}}
+        {{/session}}
+        
+        window.DynamicFormConfig = {
+          showAdditionalFields: [ 'Additional Information'],
+          no_offer: true,
+          offer_id: '70160000000dnSvAAI',
+          no_tactic: true,
+      	  FormIntro: "<h2>{{form-register}}</h2><p>{{form-intro}}</p>",
+          FormCallToAction: "Submit",
+          ThanksTitle: "Thank You",
+          ThanksCallToAction: "",
+          ThanksText: "<p>{{form-thankyou}}</p>",
+          ThanksButton: false,
+          no_css: true,
+          no_auto: true
+        };
+        
+        var form_js = document.createElement("script");
+        form_js.type = "text/javascript";
+        form_js.src = "//www.redhat.com/forms/scripts/jquery.gatedform.js";
+        document.getElementsByTagName("body")[0].appendChild(form_js);
+            
+        $("#GatedFormContainer").css("opacity", "0");
+        
+        var checkExist = setInterval(function() {
+          if ($('#C_FirstName').length) {
+            clearInterval(checkExist);
+            setTimeout(function () { initFormInteractions() }, 1500);
+          }
+        }, 100);
+        
+        function initFormInteractions () {
+          $("#GatedFormContainer").css("opacity", "1");
+          
+          $("select option:first-child").empty(); // Blank first option in all select inputs
+          $("select").parent().addClass("dropdown-arrow");
+          $(".disabled").parent().css("opacity","0.75");
+          
+          var input = $("input, select");
+          
+//          input.focusin(function () {    
+//            var label = $(this).parent().siblings().eq(0);
+//            label.css("transform", "translateX(calc(-100% - 40px))");
+//            label.css("color","black");
+//            label.css("font-weight","600");
+//          });
+          
+          input.focusout(function () {
+            if ($.trim($(this).val()) == '') {
+              var label = $(this).parent().siblings().eq(0);
+              label.css("transform", "none");
+              label.css("color","#999");
+              label.css("font-weight","300");
+            }
+          });
+          
+          blankFirstOption ();
+          
+        }
+      });
+      
+      function blankFirstOption () {
+        $("#C_Department1").change(function(){
+          $("#C_Job_Role11").parent().css("opacity","1").parent().css("opacity","1");
+          if ($.trim($("#C_Job_Role11").val()) == '') {
+            var label = $("#C_Job_Role11").parent().siblings().eq(0);
+            label.css("transform", "none");
+            label.css("color","#999");
+            label.css("font-weight","300");
+          }
+          $(".disabled").parent().css("opacity","0.75");
+          $("#C_Job_Role11 option:first-child").empty();
+          
+          blankFirstOption ();
+        });
+      }
+    </script>
+    
+    <div class="footer">
+       <a href='#'>contact our sales team</a>
+            <br /> <a href='#'>manage your newsletter preferences </a>
+            <br /><a href='#'>read our privacy policy</a>
+            <br /> <a href='#'>unsubscribe from all Red Hat email</a>
+            <br />
+            <br /> 'Red Hat' and the 'Shadowman' logo are trademarks or registered trademarks of Red Hat, Inc.Linux is a registered trademark of Linus Torvalds. © 2015 Red Hat, Inc.
+            <br /> All rights reserved.
+            <br>
+            <br />
+            <li> Red Hat Australia </li>
+            <li> Level 35 </li>
+            <li> 100 Miller Street </li>
+            <li> North Sydney NSW 2060 </li>
+<div class="footer-links">
+          <a href="#"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/facebook.png">
+                      </a>
+                      <a href="#"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/google.png">
+                      </a>
+                      <a href="#"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/linkedin.png">
+                      </a>
+                      <a href="#"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/twitter.png">
+                      </a>
+                      <a href="#"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/youtube.png">
+                      </a>
+        </div>
+    </div>
+  
+  </body>
+</html>
+
