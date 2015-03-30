@@ -1,0 +1,14 @@
+{
+  "title": "Email Template Example",
+  "data": {
+    "event-logo": "http://upload.wikimedia.org/wikipedia/uk/e/e5/RedHat_Logo.png",
+    "main-message":  "all caps overpass bold, 34/40 px, ect. no more than 2 lines",
+    "call-to-action":  "Call to action",
+    "subheading":  "Subheading overpass bold 14px uppercase",
+    "body-copy":  "Lorem ipsum dolor sit amet, <a href='#'>consectetur </a>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
+    "theme": "#cc0000",
+    "featured-image": "https://ununsplash.imgix.net/photo-1423347834838-5162bb452ca7?q=75&fm=jpg&w=1080&fit=max&s=7165f7d5869e70f6886da43d48bf5fc6"
+  }
+}
+
+
