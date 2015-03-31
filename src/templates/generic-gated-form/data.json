@@ -1,0 +1,10 @@
+{
+  "title": "Generic Gated Form",
+  "data": {
+    "company-logo-reverse": "//redhatbrand.github.io/PartnerConferenceTemplates/shared/images/rh-logo.svg",
+    "company-logo": "http://upload.wikimedia.org/wikipedia/uk/e/e5/RedHat_Logo.png",
+    "form-config": "var GatedFormConfig = { \"country\" : \"us\", \"showAdditionalFields\" : [], \"hideStandardFields\" : [\"Last Name\", \"Work Email\", \"Work Phone\", \"Company\"], \"CustomQuestions\" : [], \"language\" : \"en\", \"ThanksTitle\" : \"Thank You\", \"ShowThanksButton\" : \"true\", \/************************************************ Google Analytics *************************************************\/ GoogleAnalyticsID  :  \"UA-XXXXX-X\", \/************************************************ Google AdWords Conversion Tracking *************************************************\/ GoogleAdWordsConversionTracking  :  { \t\t\"id\"  :  \"991646916\", \t\t\"label\"  :  \"Sjx6CLyuoAkQxKnt2AM\" } }"
+  }
+}
+
+
