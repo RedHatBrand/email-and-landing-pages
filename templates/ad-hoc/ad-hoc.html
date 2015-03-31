@@ -6,8 +6,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>{{ title }}</title>
 
-  <link href="//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css" rel="stylesheet">
-
+<style type="text/css" data-premailer="ignore">
+  
+  @import url('https://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+  @import url('http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+  @import url('//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+  
+  </style>
   <style type="text/css">
     #outlook a {
       padding: 0;
@@ -107,7 +112,7 @@
     #templateContainer {}
     
     h1 {
-      color: #111;
+      color: #111111;
       display: block;
       font-family: 'Overpass', sans-serif;
       font-size: 26px;
@@ -129,7 +134,7 @@
     }
     
     h2 {
-      color: #111;
+      color: #111111;
       display: block;
       font-family: 'Overpass', sans-serif;
       font-size: 20px;
@@ -202,7 +207,7 @@
     }
     
     #templateHeader {
-      background-color: #F4F4F4;
+
       border-top: 0;
       border-bottom: 0;
     }
@@ -292,7 +297,7 @@
     }
     
     .leftColumnContent {
-      color: #111;
+      color: #111111;
       font-family: 'Overpass', sans-serif;
       font-size: 14px;
       line-height: 150%;
@@ -317,7 +322,7 @@
     }
     
     .rightColumnContent {
-      color: #111;
+      color: #111111;
       font-family: 'Overpass', sans-serif;
       font-size: 14px;
       line-height: 150%;
@@ -355,7 +360,7 @@
     
     .footerContent {
       border: 0;
-      color: rgba(255, 255, 255, 0.69);
+      color: #a8a8a8;
       font-family: 'Overpass', sans-serif;
       font-size: 10px;
       line-height: 150%;
@@ -388,12 +393,28 @@
     #featured-image img {
      width: 250px;
     }
+    
+    #hero {
+      background-image: url('{{{hero-small}}}');
+    }
   </style>
    <style type="text/css" data-premailer="ignore">
     /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
     
     
     @media only screen and (max-width: 480px) {
+      
+/*      APPLE AUTOMATICALLY GENERATED LINKS FIX */
+      
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+}
+      
       
       #featured-image {
         padding-top: 0;
@@ -531,12 +552,12 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
                   <tr>
                     <td valign="top" class="preheaderContent" style="padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:0px;" mc:edit="preheader_content00">
-                      <img width="120px" src="{{event-logo}}" alt="">
+                      <img width="120px" src="//redhatbrand.github.io/email-and-landing-pages/assets/images/logos/redhat.png" alt="">
                     </td>
                     <!-- *|IFNOT:ARCHIVE_PAGE|* -->
                     <td id="view-in-browser" valign="middle" width="180" class="preheaderContent" style="line-height:15px; text-align:right; padding-top:10px; padding-right:0px; padding-bottom:10px; padding-left:0;" mc:edit="preheader_content01">
                       email not displaying properly?
-                      <br /> <a href="#" style="color:{{{theme}}}; " href="http://">view it in your browser</a>
+                      <br /> <a href="#" style="color:#cc0000; " href="http://">view it in your browser</a>
                     </td>
                     <!-- *|END:IF|* -->
                   </tr>
@@ -547,19 +568,19 @@
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN HEADER // -->
-                <table height="225px" background="/assets/images/headers/generic-red.jpg" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                <table id="hero" height="225px" bgcolor="#838383" background="{{{hero-small}}}" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                   <tr>
-                    <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
+                    <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-top: 60px; padding-bottom: 60px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
                       {{ main-message }}
                       <br />
                       <div>
                         <!--[if mso]>
-  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="{{{theme}}}">
+  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
     <w:anchorlock/>
     <center>
   <![endif]-->
-                        <a href="http://" style="margin-top:20px;color:#ffffff;display:inline-block;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:160px;-webkit-text-size-adjust:none; background-color: {{{theme}}};">{{ call-to-action }}</a>
+                        <a href="http://" style="margin-top:20px;color:#ffffff;display:inline-block;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:160px;-webkit-text-size-adjust:none; background-color: #cc0000;">{{ call-to-action }}</a>
                         <!--[if mso]>
     </center>
   </v:roundrect>
@@ -581,7 +602,8 @@
                       <h2 style="font-size: 15pt; text-transform:uppercase;"> {{ subheading }}</h2> {{{ body-copy }}}
                     </td>
                     {{# featured-image }}
-                    <td id ="featured-image" valign="top" class="bodyContent"><img src="{{featured-image}}" alt="">
+                    <td id ="featured-image" valign="top" class="bodyContent">
+                      <img src="{{featured-image}}" alt="" />
                     </td>
                     {{/featured-image }}
                   </tr>
@@ -600,26 +622,29 @@
                 <table style="background:#111111;" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                   <tr>
                     <td valign="top" class="footerContent">
-                      <a href='#'>contact our sales team</a>
-                      <br /> <a href='#'>manage your newsletter preferences </a>
-                      <br /><a href='#'>read our privacy policy</a>
-                      <br /> <a href='#'>unsubscribe from all Red Hat email</a>
+                      <a style="color:#a8a8a8;" href='#'>contact our sales team</a>
+                      <br /> <a style="color:#a8a8a8;" href='#'>manage your newsletter preferences </a>
+                      <br /><a style="color:#a8a8a8;" href='#'>read our privacy policy</a>
+                      <br /> <a style="color:#a8a8a8;" href='#'>unsubscribe from all Red Hat email</a>
                       <br />
                       <br /> 'Red Hat' and the 'Shadowman' logo are trademarks or registered trademarks of Red Hat, Inc.Linux is a registered trademark of Linus Torvalds. © 2015 Red Hat, Inc.
                       <br /> All rights reserved.
                       <br>
                       <br />
-                      <li> Red Hat Australia </li>
-                      <li> Level 35 </li>
-                      <li> 100 Miller Street </li>
-                      <li> North Sydney NSW 2060 </li>
+                      Red Hat Australia
+                      <br />                 
+                      Level 35
+                      <br />
+                      100 Miller Street
+                      <br />
+                      North Sydney NSW 2060
                     </td>
                     <td id="social" width="150px" style="padding-top:20px;padding-right:20px;text-align:right;" valign="top">
-                          <a href="{{{facebook}}}"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/facebook.png"></a>
-                          <a href="{{{google}}}"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/google.png"></a>
-                          <a href="{{{linked-in}}}"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/linkedin.png"></a>
-                          <a href="{{{twitter}}}"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/twitter.png"></a>
-                          <a href="{{{youtube}}}"><img style="padding-left:5px; padding-right:5px;" width="15px" src="/assets/images/icons/youtube.png"></a>
+                          <a href="http://www.facebook.com/redhatinc"><img alt="facebook"style="padding-left:5px; padding-right:5px;" width="15px" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/facebook.png"></a>
+                          <a href="http://plus.google.com/+RedHat"><img alt="google-plus"style="padding-left:5px; padding-right:5px;" width="15px" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/google.png"></a>
+                          <a href="http://linkedin.com/company/red-hat"><img alt="linkedin"style="padding-left:5px; padding-right:5px;" width="15px" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/linkedin.png"></a>
+                          <a href="http://twitter.com/redhatnews"><img alt="twitter"style="padding-left:5px; padding-right:5px;" width="15px" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/twitter.png"></a>
+                          <a href="http://youtube.com/redhat"><img alt="youtube"style="padding-left:5px; padding-right:5px;" width="15px" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/youtube.png"></a>
                     </td>
                   </tr>
 
