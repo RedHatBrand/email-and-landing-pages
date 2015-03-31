@@ -23,7 +23,7 @@ var MetalSmith         = require('metalsmith'),
 var tmp                = './.tmp';
 var prod               = './build';
 var base = {
-//  production: '//net-engine.github.io/healthwise-outfit-templates',
+  production: '//redhatbrand.github.io/email-and-landing-pages',
   development: ''
 };
 
