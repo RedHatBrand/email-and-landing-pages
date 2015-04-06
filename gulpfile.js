@@ -23,7 +23,7 @@ var MetalSmith         = require('metalsmith'),
 var tmp                = './.tmp';
 var prod               = './build';
 var base = {
-  production: '//redhatbrand.github.io/email-and-landing-pages',
+  production: 'http://redhatbrand.github.io/email-and-landing-pages',
   development: ''
 };
 
