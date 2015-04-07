@@ -20,12 +20,46 @@ height: calc(100vh - 2em);
     <div class="container">
       <div class="logo-rh"></div>
         <h1>{{ hero-heading }}</h1>
+        <a href="#form-section" class="button">{{call-to-action}}</a>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section {{theme}}-links">
     <div class="container">
-      repeating section
+      <div class="grid-container">
+        <div class="two-of-three">
+          <h1>Subheading Overpass Bold Capitilized</h1>
+          <p>Ipsum si se anim cernantur quo varias admodum illustriora, nam o aliqua 
+            quamquam, quamquam qui dolore laboris nam singulis et incurreret est ea varias 
+            dolore varias excepteur eu sunt mandaremus si offendit, ut duis multos aliqua 
+            doctrina. Incididunt cillum elit ne duis. Non si elit mandaremus, ne elit ne 
+            quae ea sed ipsum legam est eiusmod do sunt quo mandaremus. Labore quo ita enim 
+            vidisse, quo te lorem laborum. Ab incididunt a quamquam o esse ex consequat. 
+            Vidisse labore litteris commodo, aliqua si occaecat ab illum, excepteur enim te 
+            probant instituendarum o an culpa offendit ita ubi malis proident tractavissent 
+            te officia ex eram, sint excepteur aut lorem aute, si illum incididunt.</p>
+        </div>
+        <div class="one-of-three">
+          <img src="../../assets/images/headers/building.jpg" />
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="three-of-three">
+          <h1>Eiusmod Fidelissimae te Laboris Cupidatat hic Proident.</h1>
+          <p>Sed ut philosophari. Tempor si minim, qui summis se malis. Non possumus 
+            cohaerescant, cillum offendit sempiternum, si do enim occaecat id senserit ubi 
+            possumus. Ea doctrina tractavissent. Possumus amet iudicem incididunt e fabulas 
+            aute sed deserunt reprehenderit an sed eram consequat iudicem a nulla ullamco in 
+            tractavissent, <a href="#">litteris minim</a> fore expetendis amet id laboris te doctrina, hic 
+            iudicem fidelissimae ab esse senserit qui comprehenderit. De illum admodum sed 
+            culpa incididunt do veniam culpa. Cupidatat tamen sunt ita tamen. Se ea culpa ipsum 
+            velit, mandaremus de legam, qui qui graviterque iis de quid hic lorem 
+            an pariatur varias offendit ex legam ullamco id aute malis, multos 
+            possumus et sunt sunt o cillum concursionibus consequat enim expetendis. A ipsum 
+            ab nisi. Nulla aliquip hic proident. Amet ullamco laborum an fore aliquip 
+            voluptatibus. Cernantur non ipsum, se enim dolore est doctrina.</p>
+        </div>
+      </div>
     </div>
   </div>
   
@@ -39,14 +73,27 @@ height: calc(100vh - 2em);
   </div>
 
   <div class="footer">
-    <div class="left">
-      yolo
-
-    </div>
-    <div class="right">
-      yolo
+    <div class="container">
+      <div class="grid-container">
+        <div class="one-of-two">
+          <p>'Red Hat' and the 'Shadowman' logo are trademarks or registered trademarks of Red Hat, Inc. Linux is a registered trademark of Linus Torvalds. © 2015 Red Hat, Inc.<br>
+          All rights reserved.</p>
+          <p>Red Hat Australia<br>
+          Level 35<br>
+          100 Miller Street<br>
+          North Sydney NSW 2060</p>
+        </div>
+        <div class="social one-of-two">
+          <a href="http://www.facebook.com/redhatinc"><img alt="facebook" src="<%=baseUrl%>/assets/images/icons/facebook.png"></a>
+          <a href="http://plus.google.com/+RedHat"><img alt="google-plus" src="<%=baseUrl%>/assets/images/icons/google.png"></a>
+          <a href="http://linkedin.com/company/red-hat"><img alt="linkedin" src="<%=baseUrl%>/assets/images/icons/linkedin.png"></a>
+          <a href="http://twitter.com/redhatnews"><img alt="twitter" src="<%=baseUrl%>/assets/images/icons/twitter.png"></a>
+          <a href="http://youtube.com/redhat"><img alt="youtube" src="<%=baseUrl%>/assets/images/icons/youtube.png"></a>
+        </div>
+      </div>
     </div>
   </div>
+  
 </body>
 
 </html>

@@ -8,7 +8,7 @@
     .corporate { color: #cc0000 !important; }
     .corporate-links a { color: #cc0000 !important; }
     .corporate-background { background-color:#A30000; }
-    .corporate-pattern{
+    .corporate-pattern {
       border-color:         #cc0000!important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -19,9 +19,10 @@
     
     
 /*    slate*/
-    .services{ color: #5E6A71 !important; }
+    .services { color: #5E6A71 !important; }
     .services-links a { color: #5E6A71 !important;}
-    .services-pattern{
+    .services-background { background-color:#5E6A71; }
+    .services-pattern {
       border-color:         #5E6A71 !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -31,8 +32,9 @@
     }
     
 /*    orange*/
-    .storage-and-big-data{ color: #ed7700 !important; }
+    .storage-and-big-data { color: #ed7700 !important; }
     .storage-and-big-data-links a { color: #ed7700 !important; }
+    .storage-and-big-data-background { background-color:#ed7700; }
     .storage-and-big-data-pattern{
       border-color:         #ed7700 !important;
       border-top-width:     4px!important;
@@ -44,9 +46,10 @@
   
     
 /*    blue*/
-    .traditional-infrastructures{ color: #0088CE !important; }
+    .traditional-infrastructures { color: #0088CE !important; }
     .traditional-infrastructures-links a { color: #0088CE !important; }
-    .traditional-infrastructures-pattern{
+    .traditional-infrastructures-background { background-color:#0088CE; }
+    .traditional-infrastructures-pattern {
       border-color:         #0088CE !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -55,9 +58,10 @@
       border-style:         solid!important;      
     }
     
-    .cloud-infrastructures{ color: #0088CE !important; }
+    .cloud-infrastructures { color: #0088CE !important; }
     .cloud-infrastructures-links a { color: #0088CE !important; }
-    .cloud-infrastructures-pattern{
+    .cloud-infrastructures-background { background-color:#0088CE; }
+    .cloud-infrastructures-pattern {
       border-color:          #0088CE !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -66,9 +70,10 @@
       border-style:         solid!important;      
     }
     
-    .infrastructure-management{ color: #0088CE !important; }
+    .infrastructure-management { color: #0088CE !important; }
     .infrastructure-management-links a { color: #0088CE !important;  }
-    .infrastructure-management-pattern{
+    .infrastructure-management-background { background-color:#0088CE; }
+    .infrastructure-management-pattern {
       border-color:         #0088CE !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -79,9 +84,10 @@
     
     
 /*    green*/
-    .traditional-app-development{ color:  #3F9C35 !important; }
+    .traditional-app-development { color:  #3F9C35 !important; }
     .traditional-app-development-links a { color: #92D400 !important; }
-    .traditional-app-development-pattern{
+    .traditional-app-development-background { background-color:#3F9C35; }
+    .traditional-app-development-pattern {
       border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -90,9 +96,10 @@
       border-style:         solid!important;      
     }
     
-    .business-process-integration{ color:  #3F9C35 !important;  }
+    .business-process-integration { color:  #3F9C35 !important;  }
     .business-process-integration-links a {   color: #92D400 !important;  }
-    .business-process-integration-pattern{
+    .business-process-integration-background { background-color:#3F9C35; }
+    .business-process-integration-pattern {
       border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
@@ -101,9 +108,10 @@
       border-style:         solid!important;      
     }
     
-    .cloud-app-development{ color:  #3F9C35 !important;  }
+    .cloud-app-development { color:  #3F9C35 !important;  }
     .cloud-app-development-links a { color: #92D400 !important; }
-    .cloud-app-development-pattern{
+    .cloud-app-development-background { background-color:#3F9C35; }
+    .cloud-app-development-pattern {
       border-color:         #3F9C35 !important;      
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
