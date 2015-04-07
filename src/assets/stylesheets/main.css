@@ -4,7 +4,7 @@
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
     
-               NATIVE ELEMENTS   
+               NATIVE ELEMENTS
     
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
@@ -57,17 +57,17 @@ h4 {
   margin: 0;
 }
 
-p:not(:last-child), 
-h1:not(:last-child), 
-h2:not(:last-child), 
-h3:not(:last-child), 
+p:not(:last-child),
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
 h4:not(:last-child) {
   margin-bottom: .5em;
 }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
     
-                   LAYOUT  
+                   LAYOUT
     
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
@@ -78,6 +78,7 @@ h4:not(:last-child) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .hero h1 {
@@ -227,7 +228,7 @@ h4:not(:last-child) {
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
     
-                GATED FORM   
+                GATED FORM
     
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
