@@ -9,18 +9,23 @@ height: calc(100vh - 2em);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/main.css">
-  <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/themes.css">
+<!--  <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/themes.css">-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
   <title>{{title}}</title>
+
+  <% include ../../assets/stylesheets/themes.html %>     
+
 </head>
 
 <body>
 
-  <div class="hero {{{theme}}}-background" style="background-image:url({{hero-large}})">
-    <div class="container">
-      <div class="logo-rh"></div>
-        <h1>{{ hero-heading }}</h1>
-        <a href="#form-section" class="button">{{call-to-action}}</a>
+<div class="hero-wrapper {{{theme}}}-background">
+    <div class="hero {{{theme}}}-hero">
+      <div class="container">
+        <div class="logo-rh"></div>
+          <h1>{{ hero-heading }}</h1>
+          <a href="#form-section" class="button">{{call-to-action}}</a>
+      </div>
     </div>
   </div>
 
