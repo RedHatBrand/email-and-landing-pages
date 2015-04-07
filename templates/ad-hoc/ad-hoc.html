@@ -398,7 +398,6 @@
       border-right-width: 0;
       border-left-width: 0;
       border-bottom-width: 4px;
-      background-image: url('{{{hero-small}}}');
     }
     
     
@@ -410,7 +409,7 @@
     
     
 /*    red*/
-    .corporate{ color: #cc0000 !important; }
+    .corporate { color: #cc0000 !important; }
     .corporate-links a { color: #cc0000 !important; }
     .corporate-pattern{
       border-color:         #cc0000!important;
@@ -434,17 +433,6 @@
       border-style:         solid!important;      
     }
     
-    .partners{}
-    .partners-links a {}
-    .partners-pattern{
-      border-top-width:     4px!important;
-      border-bottom-width:  0!important;
-      border-left-width:    0!important;
-      border-right-width:   0!important;
-      border-style:         solid!important;      
-    }
-    
-    
 /*    orange*/
     .storage-and-big-data{ color: #ed7700 !important; }
     .storage-and-big-data-links a { color: #ed7700 !important; }
@@ -459,9 +447,10 @@
   
     
 /*    blue*/
-    .traditional-infrastructures{}
-    .traditional-infrastructures-links a {}
+    .traditional-infrastructures{ color: #0088CE !important; }
+    .traditional-infrastructures-links a { color: #0088CE !important; }
     .traditional-infrastructures-pattern{
+      border-color:         #0088CE !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
       border-left-width:    0!important;
@@ -469,9 +458,10 @@
       border-style:         solid!important;      
     }
     
-    .cloud-infrastructures{}
-    .cloud-infrastructures-links a {}
+    .cloud-infrastructures{ color: #0088CE !important; }
+    .cloud-infrastructures-links a { color: #0088CE !important; }
     .cloud-infrastructures-pattern{
+      border-color:          #0088CE !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
       border-left-width:    0!important;
@@ -479,9 +469,10 @@
       border-style:         solid!important;      
     }
     
-    .infrastructure-management{}
-    .infrastructure-management-links a {}
+    .infrastructure-management{ color: #0088CE !important; }
+    .infrastructure-management-links a { color: #0088CE !important;  }
     .infrastructure-management-pattern{
+      border-color:         #0088CE !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
       border-left-width:    0!important;
@@ -491,9 +482,10 @@
     
     
 /*    green*/
-    .traditional-app-development{}
-    .traditional-app-development-links a {}
+    .traditional-app-development{ color:  #3F9C35 !important; }
+    .traditional-app-development-links a { color: #92D400 !important; }
     .traditional-app-development-pattern{
+      border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
       border-left-width:    0!important;
@@ -501,9 +493,10 @@
       border-style:         solid!important;      
     }
     
-    .business-process-integration{}
-    .business-process-integration-links a {}
+    .business-process-integration{ color:  #3F9C35 !important;  }
+    .business-process-integration-links a {   color: #92D400 !important;  }
     .business-process-integration-pattern{
+      border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
       border-left-width:    0!important;
@@ -511,21 +504,17 @@
       border-style:         solid!important;      
     }
     
-    .cloud-app-development{}
-    .cloud-app-development-links a {}
+    .cloud-app-development{ color:  #3F9C35 !important;  }
+    .cloud-app-development-links a { color: #92D400 !important; }
     .cloud-app-development-pattern{
+      border-color:         #3F9C35 !important;      
       border-top-width:     4px!important;
       border-bottom-width:  0!important;
       border-left-width:    0!important;
       border-right-width:   0!important;
       border-style:         solid!important;      
     }
-    
-
-    
-    
-    
-    
+  
   </style>
    <style type="text/css" data-premailer="ignore">
     /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
@@ -536,6 +525,10 @@
 /*      APPLE AUTOMATICALLY GENERATED LINKS FIX */
       
       
+    .featured-image {
+      width: 100% !important;
+      padding-top: 40px !important;
+    }
       
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -550,7 +543,10 @@
     }
       
       #featured-image {
-        padding-top: 0 !important;
+        
+        padding-top: 40px !important;
+                width:90% !important; 
+
       }
       
       #featured-image img {
@@ -678,7 +674,7 @@
       <tr>
         <td align="center" valign="top" id="bodyCell">
           <!-- BEGIN TEMPLATE // -->
-          <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+          <table width="700" border="0" cellpadding="0" cellspacing="0" id="templateContainer">
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN PREHEADER // -->
@@ -701,11 +697,11 @@
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN HEADER // -->
-                <table id="hero" height="225px" bgcolor="#838383" background="{{{hero-small}}} !important" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                <table id="hero" height="225px" bgcolor="#838383" background="{{#hero-small}}{{{hero-small}}}{{/hero-small}}{{^hero-small}}http://redhatbrand.github.io/email-and-landing-pages/assets/images/headers/building.jpg{{/hero-small}}" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                   <tr>
                     <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-top: 60px; padding-bottom: 60px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
-                      {{ main-message }}
+                      {{ hero-heading }}
                       <br />
                       <div style="padding-top:20px">
                         <!--[if mso]>
@@ -725,8 +721,8 @@
                 
                 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-                    <td class="{{{theme}}}-pattern">
-                       <img id="pattern" border="0" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/patterns/{{{theme}}}.png">
+                    <td width="700" class="{{{theme}}}-pattern">
+                       <img width="700" id="pattern" border="0" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/patterns/{{{theme}}}.png">
                     </td>
                    
                   </tr>
@@ -742,14 +738,19 @@
                  <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                   <tr>
 
+                    {{^ show-images }} 
                     <td valign="top" class="bodyContent {{theme}}-links">
                       <h2 style="font-size: 15pt; text-transform:uppercase;"> {{ subheading }}</h2> {{{ body-copy }}}
                     </td>
-                    {{# featured-image }}
-                    <td id ="featured-image" valign="top" class="bodyContent {{theme}}-links">
-                      <img width="200" src="{{featured-image}}" alt="" />
+                    {{/ show-images }}
+                    {{# show-images }}
+                    <td style="min-width:350px;" width="450" valign="top" class="bodyContent {{theme}}-links">
+                      <h2 style="font-size: 15pt; text-transform:uppercase;"> {{ subheading }}</h2> {{{ body-copy }}}
                     </td>
-                    {{/featured-image }}
+                    <td width="200" id ="featured-image" valign="top" class="bodyContent {{theme}}-links">
+                      <img width="200" src="{{featured-image}}" alt="featured-image" />
+                    </td>
+                    {{/ show-images }}
                   </tr>
                   <tr>
                     <td class="bodyContent {{theme}}-links" style="padding-top:0; padding-bottom:0;">
