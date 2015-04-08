@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Email Template Example</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: lightgrey;
+    }
+    article {
+      text-align: center;
+      padding: 0.5em;
+    }
+    .preview {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0.5em;
+    }
+    .preview-frame { border: 0; }
+    a.home-link {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.75);
+      padding: .75em 1em;
+      color: white;
+      text-decoration: none;
+      border-top-right-radius: 3px;
+      font-family: monospace;
+      text-transform: uppercase;
+      opacity: .25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    a.home-link:before {
+      content: '/';
+      margin-right: .5em;
+    }
+    a.home-link:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+  <body>
+    <article>
+      <div class='preview' style='height: calc(100vh - 2em);; width: calc(100vw - 2em);'>
+        <iframe class='preview-frame' data-xml-url="http://redhatbrand.github.io/email-and-landing-pages/templates/newsletter/newsletter-landing.html" height='100%' width='100%'></iframe>
+      </div>
+      <div class='preview' style='height: calc(100vh - 2em);; width: calc(100vw - 2em);'>
+        <iframe class='preview-frame' data-xml-url="http://redhatbrand.github.io/email-and-landing-pages/templates/newsletter/newsletter.html" height='100%' width='100%'></iframe>
+      </div>
+      <div id="data" data-template-data="{&quot;body-section&quot;:&quot;true&quot;,&quot;hero-small&quot;:&quot;&quot;,&quot;hero-large&quot;:&quot;/assets/images/headers/buildings-large.jpg&quot;,&quot;hero-heading&quot;:&quot;Marketing Buzz&quot;,&quot;date&quot;:&quot;20/1/16&quot;,&quot;call-to-action&quot;:&quot;Call to action&quot;,&quot;subheading&quot;:&quot;Subheading overpass bold 14px uppercase&quot;,&quot;body-copy&quot;:&quot;Lorem ipsum dolor sit amet, &lt;a href=&#x27;#&#x27;&gt;consectetur &lt;/a&gt;adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&quot;,&quot;theme&quot;:&quot;corporate&quot;,&quot;show-images&quot;:&quot;true&quot;,&quot;footer&quot;:&quot;this is my footer, there are many like it &lt;br&gt; but this one is mine&quot;}"></div>
+    </article>
+
+    <a class="home-link" href="http://redhatbrand.github.io/email-and-landing-pages/">Home</a>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="http://redhatbrand.github.io/email-and-landing-pages/assets/javascripts/previews.js" type="text/javascript"></script>
+  </body>
+</html>

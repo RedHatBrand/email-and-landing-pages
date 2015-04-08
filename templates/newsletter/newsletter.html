@@ -1,0 +1,796 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>{{ title }}</title>
+
+<style type="text/css" data-premailer="ignore">
+  
+  @import url('https://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+  @import url('http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+  @import url('//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+  
+  </style>
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+    /* Force Outlook to provide a "view in browser" message */
+    
+    .ReadMsgBody {
+      width: 100%;
+    }
+    
+    .ExternalClass {
+      width: 100%;
+    }
+    /* Force Hotmail to display emails at full width */
+    
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+    /* Force Hotmail to display normal line spacing */
+    
+    body,
+    table,
+    td,
+    p,
+    a,
+    li,
+    blockquote {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    /* Prevent WebKit and Windows mobile changing default text sizes */
+    
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    /* Remove spacing between tables in Outlook 2007 and up */
+    
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+    /* Allow smoother rendering of resized image in Internet Explorer */
+    
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-weight: 300;
+    }
+    
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+    
+    table {
+      border-collapse: collapse !important;
+    }
+    
+    body,
+    #bodyTable,
+    #bodyCell {
+      background: #dbdbdb;
+      height: 100% !important;
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+    }
+    
+    #bodyCell {
+      padding: 0px;
+    }
+    
+    #templateContainer {
+      width: 700px;
+    }
+    
+    body,
+    #bodyTable {
+      line-height: 1.5em !important;
+      font-family: 'Overpass', sans-serif !important;
+    }
+    
+    #bodyCell {}
+    
+    #templateContainer {}
+    
+    h1 {
+      color: #111111;
+      display: block;
+      font-family: 'Overpass', sans-serif;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 100%;
+      letter-spacing: normal;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 20px;
+      margin-left: 0;
+      text-align: left;
+      padding-bottom: 10px;
+      border-top-width: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-bottom-width: 2px;
+      border-style: solid;
+    }
+    
+    h2 {
+      color: #111111;
+      display: block;
+      font-family: 'Overpass', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 100%;
+      letter-spacing: normal;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-left: 0;
+      text-align: left;
+      border-top-width: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-bottom-width: 0px;
+      border-style: solid;
+      border-color: #ebebeb;
+      padding-bottom: 10px;
+    }
+    
+    h3 {
+      color: #606060 !important;
+      display: block;
+      font-family: 'Overpass', sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: normal;
+      line-height: 100%;
+      letter-spacing: normal;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-left: 0;
+      text-align: left;
+    }
+    
+    h4 {
+      color: #808080 !important;
+      display: block;
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: normal;
+      line-height: 100%;
+      letter-spacing: normal;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-left: 0;
+      text-align: left;
+    }
+    
+    #templatePreheader {}
+    
+    .preheaderContent {
+      color: #808080;
+      font-family: 'Overpass', sans-serif;
+      font-size: 10px;
+      line-height: 125%;
+      text-align: left;
+    }
+    
+    .preheaderContent a:link,
+    .preheaderContent a:visited,
+    .preheaderContent a .yshortcuts {
+      font-weight: normal;
+      text-decoration: underline;
+      color: #000;
+    }
+    
+    #templateHeader {
+
+      border-top: 0;
+      border-bottom: 0;
+    }
+    
+    .headerContent {
+      color: #505050;
+      font-family: 'Overpass', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 100%;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      text-align: left;
+      vertical-align: middle;
+    }
+    
+    .headerContent a:link,
+    .headerContent a:visited,
+    /* Yahoo! Mail Override */
+    
+    .headerContent a .yshortcuts
+    /* Yahoo! Mail Override */
+    
+    {
+      color: #000 font-weight: normal;
+      text-decoration: underline;
+    }
+    
+    #headerImage {
+      height: auto;
+      width: 600px;
+    }
+    
+    #templateBody {
+      background-color: #fff;
+      border-top: 0;
+      border-bottom: 0;
+    }
+    
+    .bodyContent {
+      color: #505050;
+      font-family: 'Overpass', sans-serif;
+      font-size: 16px;
+      line-height: 150%;
+      padding-top: 40px;
+      padding-right: 20px;
+      padding-bottom: 0px;
+      padding-left: 20px;
+      text-align: left;
+      display: table-cell;
+    }
+    
+    .bodyContent a:link,
+    .bodyContent a:visited,
+    /* Yahoo! Mail Override */
+    
+    .bodyContent a .yshortcuts
+    /* Yahoo! Mail Override */
+    
+    {
+      font-weight: normal;
+      text-decoration: underline;
+    }
+    
+    .bodyContent img {
+      margin: 0 auto;
+      text-align: center !important;
+      display: inline;
+      height: auto;
+      width: 700px;
+    }
+    /* ========== Column Styles ========== */
+    
+    .templateColumnContainer {
+      display: inline;
+      width: 260px;
+    }
+    
+    #templateColumns {
+      border-top: 0;
+      border-bottom: 1px solid #CCCCCC;
+    }
+    
+    #templateColums p {
+      color: white !important;
+    }
+    
+    .leftColumnContent {
+      color: #111111;
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      line-height: 150%;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 20px;
+      padding-left: 0;
+      text-align: left;
+    }
+    
+    .leftColumnContent a:link,
+    .leftColumnContent a:visited,
+    /* Yahoo! Mail Override */
+    
+    .leftColumnContent a .yshortcuts
+    /* Yahoo! Mail Override */
+    
+    {
+      color: #fff;
+      font-weight: normal;
+      text-decoration: underline;
+    }
+    
+    .rightColumnContent {
+      color: #111111;
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      line-height: 150%;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 20px;
+      padding-left: 0;
+      text-align: left;
+    }
+    
+    .rightColumnContent a:link,
+    .rightColumnContent a:visited,
+    /* Yahoo! Mail Override */
+    
+    .rightColumnContent a .yshortcuts
+    /* Yahoo! Mail Override */
+    
+    {
+      color: #ffffff;
+      font-weight: normal;
+      text-decoration: underline;
+    }
+    
+    .leftColumnContent img,
+    .rightColumnContent img {
+      display: inline;
+      height: auto;
+      max-width: 260px;
+    }
+    
+    #templateFooter {
+      color: white !important;
+      border-top: 0;
+    }
+    
+    .footerContent {
+      border: 0;
+      color: #a8a8a8;
+      font-family: 'Overpass', sans-serif;
+      font-size: 10px;
+      line-height: 150%;
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      text-align: left;
+    }
+    
+    .footerContent li {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .footerContent a:link,
+    .footerContent a:visited,
+    /* Yahoo! Mail Override */
+    
+    .footerContent a .yshortcuts,
+    .footerContent a span
+    /* Yahoo! Mail Override */
+    
+    {
+      color: rgba(255, 255, 255, 0.67);
+      font-weight: normal;
+      text-decoration: underline;
+    }
+    
+    #featured-image img {
+     width: 250px;
+    }
+    
+    #hero {
+      border-top-width: 0;
+      border-right-width: 0;
+      border-left-width: 0;
+      border-bottom-width: 4px;
+    }
+    
+    
+    /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+    
+                      THEMES   
+    
+    /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
+    
+    
+/*    red*/
+    .corporate { color: #cc0000 !important; }
+    .corporate-links a { color: #cc0000 !important; }
+    .corporate-background { background-color:#A30000; }
+
+    .corporate-pattern{
+      border-color:         #cc0000!important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+    
+/*    slate*/
+    .services{ color: #5E6A71 !important; }
+    .services-links a { color: #5E6A71 !important;}
+    .services-background { background-color:#5E6A71 !important; }
+    .services-pattern{
+      border-color:         #5E6A71 !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+/*    orange*/
+    .storage-and-big-data{ color: #ed7700 !important; }
+    .storage-and-big-data-links a { color: #ed7700 !important; }
+    .storage-and-big-data-background { background-color:  #ed7700 !important;}
+
+    .storage-and-big-data-pattern{
+      border-color:         #ed7700 !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+  
+    
+/*    blue*/
+    .traditional-infrastructures{ color: #0088CE !important; }
+    .traditional-infrastructures-links a { color: #0088CE !important; }
+.traditional-infrastructures-background { background-color:  #0088CE !important;}
+
+    .traditional-infrastructures-pattern{
+      border-color:         #0088CE !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+    .cloud-infrastructures{ color: #0088CE !important; }
+    .cloud-infrastructures-links a { color: #0088CE !important; }
+    .cloud-infrastructures-background { background-color:  #0088CE !important;}
+    .cloud-infrastructures-pattern{
+      border-color:          #0088CE !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+    .infrastructure-management{ color: #0088CE !important; }
+    .infrastructure-management-links a { color: #0088CE !important;  }
+    .infrastructure-management-background { background-color:  #0088CE !important;}
+
+    .infrastructure-management-pattern{
+      border-color:         #0088CE !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+    
+/*    green*/
+    .traditional-app-development{ color:  #3F9C35 !important; }
+    .traditional-app-development-links a { color: #92D400 !important; }
+    .traditional-app-development-background { background-color:  #3F9C35 !important;}
+    .traditional-app-development-pattern{
+      border-color:         #3F9C35 !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+    .business-process-integration{ color:  #3F9C35 !important;  }
+    .business-process-integration-links a {   color: #92D400 !important;  }
+    .business-process-integration-background { background-color:  #3F9C35 !important;}
+
+    .business-process-integration-pattern{
+      border-color:         #3F9C35 !important;
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+    
+    .cloud-app-development{ color:  #3F9C35 !important;  }
+        .cloud-app-development-background { background-color:  #3F9C35 !important;}
+
+    .cloud-app-development-links a { color: #92D400 !important; }
+    .cloud-app-development-pattern{
+      border-color:         #3F9C35 !important;      
+      border-top-width:     4px!important;
+      border-bottom-width:  0!important;
+      border-left-width:    0!important;
+      border-right-width:   0!important;
+      border-style:         solid!important;      
+    }
+  
+  </style>
+   <style type="text/css" data-premailer="ignore">
+    /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
+    
+    
+    @media only screen and (max-width: 480px) {
+      
+/*      APPLE AUTOMATICALLY GENERATED LINKS FIX */
+      
+    
+    .bodyContent img {
+      margin: 0 auto;
+      text-align: center !important;
+      display: inline;
+      height: auto;
+      width: 100% !important ;
+    }
+      
+    .featured-image {
+      width: 100% !important;
+      padding-top: 40px !important;
+    }
+      
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+}
+      #pattern {
+      width: 100% !important;
+    }
+      
+      #featured-image {
+        
+        padding-top: 40px !important;
+                width:90% !important; 
+
+      }
+      
+      #featured-image img {
+        width:100% !important; 
+      }
+      
+      td#social {
+        padding: 0 0 20px 0; !important
+        width: 100% !important;
+      display: block !important;
+      }
+      
+      .preheader-content {
+        margin-top: -10px !important;
+      }
+      
+      #view-in-browser
+      {
+        display: none !important;
+      }
+
+      #headerimage img {
+        width: 100% !important;
+      }
+      /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+      
+      body,
+      table,
+      td,
+      p,
+      a,
+      li,
+      blockquote {
+        -webkit-text-size-adjust: none !important;
+      }
+      /* Prevent Webkit platforms from changing default text sizes */
+      
+      body {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+      /* Prevent iOS Mail from adding padding to the body */
+      /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
+      
+      #bodyCell {
+        padding: 0px 10px 10px 10px !important;
+      }
+      /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
+      /* ======== Page Styles ======== */
+      
+      #templateContainer {
+        max-width: 600px !important;
+        width: 100% !important;
+      }
+      h1 {
+        font-size: 24px !important;
+        line-height: 100% !important;
+      }
+      h2 {
+        font-size: 20px !important;
+        line-height: 100% !important;
+      }
+      h3 {
+        font-size: 18px !important;
+        line-height: 100% !important;
+      }
+      h4 {
+        font-size: 16px !important;
+        line-height: 100% !important;
+      }
+      #headerImage {
+        height: auto !important;
+        max-width: 600px !important;
+        width: 100% !important;
+      }
+      .headerContent {
+        font-size: 20px !important;
+        line-height: 125% !important;
+      }
+      #bodyImage {
+        height: auto !important;
+        max-width: 560px !important;
+        width: 100% !important;
+      }
+      .bodyContent {
+        display: block !important;
+        font-size: 18px !important;
+      }
+      .templateColumnContainer {
+        display: block !important;
+        width: 100% !important;
+      }
+      .columnImage {
+        height: auto !important;
+        max-width: 260px !important;
+        width: 100% !important;
+      }
+      .leftColumnContent {
+        font-size: 16px !important;
+        line-height: 125% !important;
+      }
+      .rightColumnContent {
+        font-size: 16px !important;
+        line-height: 125% !important;
+      }
+      .footerContent { 
+        margin-top: 20px !important;
+        display: block !important;
+        font-size: 14px !important;
+        line-height: 115% !important;
+      }
+      .footerContent a {
+        display: block !important;
+      }
+    }
+    
+    
+    
+  </style>
+</head>
+
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+          <!-- BEGIN TEMPLATE // -->
+          <table width="700" border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN PREHEADER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
+                  <tr>
+                    <td valign="top" class="preheaderContent" style="padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:0px;" mc:edit="preheader_content00">
+                      <img width="100" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/logos/redhat.png" alt="">
+                    </td>
+
+                  </tr>
+                </table>
+                <!-- // END PREHEADER -->
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN HEADER // -->
+                <table class="{{{theme}}}-background" id="hero" height="225px" bgcolor="#838383" background="{{hero-small}}" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                  <tr>
+                    <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-top: 60px; padding-bottom: 60px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
+
+                      {{{ hero-heading }}}
+                      <br />
+
+                    </td>
+                  </tr>
+                </table>
+                
+                <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="700" class="{{{theme}}}-pattern">
+                       <img width="700" id="pattern" border="0" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/patterns/{{{theme}}}.png">
+                    </td>
+                   
+                  </tr>
+                </table>
+                
+                <!-- // END HEADER -->
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="white" style="padding-bottom:40px;" align="center" valign="top">
+                <!-- BEGIN BODY // -->
+                {{#body-section}}
+                 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                  <tr>
+
+                    {{^ show-images }} 
+                    <td valign="top" class="bodyContent {{theme}}-links">
+                      <h2 style="font-size: 15pt; text-transform:uppercase;"> {{ #subheading }}{{ subheading }} {{/subheading }}</h2> {{{ body-copy }}}
+                    </td>
+                    {{/ show-images }}
+                  </tr>
+                  <tr>
+                    <td class="bodyContent {{theme}}-links" style="padding-top:0; padding-bottom:0;">
+                    </td>
+                  </tr>
+
+                </table>
+                {{/body-section}}
+                <!-- // END BODY -->
+              </td>
+            </tr>
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN FOOTER // -->
+                <table style="background:#111111;" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                  <tr>
+                    <td valign="top" class="footerContent">
+                      {{{footer}}}
+                    </td>
+                    <td id="social" width="150px" style="padding-top:20px;padding-right:20px;text-align:right;" valign="top">
+                          <a href="http://www.facebook.com/redhatinc"><img alt="facebook"style="padding-left:5px; padding-right:5px;" width="15" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/facebook.png"></a>
+                          <a href="http://plus.google.com/+RedHat"><img alt="google-plus"style="padding-left:5px; padding-right:5px;" width="15" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/google.png"></a>
+                          <a href="http://linkedin.com/company/red-hat"><img alt="linkedin"style="padding-left:5px; padding-right:5px;" width="15" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/linkedin.png"></a>
+                          <a href="http://twitter.com/redhatnews"><img alt="twitter"style="padding-left:5px; padding-right:5px;" width="15" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/twitter.png"></a>
+                          <a href="http://youtube.com/redhat"><img alt="youtube"style="padding-left:5px; padding-right:5px;" width="15" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/youtube.png"></a>
+                    </td>
+                  </tr>
+
+
+                </table>
+                <!-- // END FOOTER -->
+              </td>
+            </tr>
+          </table>
+          <!-- // END TEMPLATE -->
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+</html>

@@ -21,6 +21,10 @@ body {
   box-sizing: border-box;
 }
 
+.newsletter .container {
+  max-width: 700px;
+}
+
 .container {
   margin: 0 auto;
   position: relative;
@@ -72,7 +76,7 @@ h4:not(:last-child) {
                    LAYOUT
     
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
-
+.newsletter .hero { padding: 0; }
 .hero {
   width: 100%;
   padding: 4em 0;
@@ -83,10 +87,18 @@ h4:not(:last-child) {
 /*  background-attachment: fixed;*/
 }
 
+.newsletter h1 {
+  padding: 1.5em 0 0 0; 
+}
+
 .hero h1 {
   text-transform: uppercase;
-  padding: 1em 0;
+  padding: 1em 0 1em 0;
   color: white;
+}
+
+.hero h3 {
+  color: white; 
 }
 
 .button {
@@ -214,9 +226,9 @@ h4:not(:last-child) {
                   ASSETS
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
-
+.newsletter .logo-rh { top: 3em; }
 .logo-rh {
-  top: 0;
+  top: 0em;
   left: 2em;
   position: absolute;
   width: 100%;
