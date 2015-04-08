@@ -18,14 +18,14 @@ height: calc(100vh - 2em);
 
 </head>
 
-<body class="ad-hoc">
+<body class="newsletter">
 
 <div class="hero-wrapper {{{theme}}}-background">
-    <div class="hero {{{theme}}}-hero-{{{position}}}">
+    <div class="hero {{{theme}}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
         <h1>{{ hero-heading }}</h1>
-        <a href="#form" class="button" id="call-to-action">{{call-to-action}}</a>
+        <h3>{{date}}</h3>
       </div>
     </div>
   </div>
@@ -33,8 +33,6 @@ height: calc(100vh - 2em);
   <div class="section {{theme}}-links">
     <div class="container">
     
-    {{# mirror-email-content}}
-      
      {{#body-section}}
       {{# show-images }}
 
@@ -59,39 +57,7 @@ height: calc(100vh - 2em);
       {{/ show-images }}
       
       {{/body-section}}
-      
-      {{/ mirror-email-content}}
-      
-      {{^mirror-email-content}}
-      
-      {{#landing-page-section}}
-      
-      {{# show-images }}
 
-      <div class="grid-container">
-        <div class="two-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
-        </div>
-        <div class="one-of-three">
-          <img src="{{{featured-image}}}" />
-        </div>
-      </div>
-            {{/ show-images }}
-
-      {{^ show-images }}
-      <div class="grid-container">
-        <div class="three-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
-        </div>
-      </div>
-      {{/ show-images }}
-      
-      
-      {{/landing-page-section}}
-      
-      {{/mirror-email-content}}
     </div>
   </div>
   

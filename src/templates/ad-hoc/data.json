@@ -8,11 +8,13 @@
     "call-to-action":  "Call to action",
     "subheading":  "Subheading overpass bold 14px uppercase",
     "body-copy":  "Lorem ipsum dolor sit amet, <a href='#'>consectetur </a>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
-    "theme": "cloud-app-development",
+    "theme": "storage-and-big-data",
+    "position": "middle",
     "show-images": "true",
     "featured-image": "http://redhatbrand.github.io/email-and-landing-pages/assets/images/headers/building.jpg",
     "form-config": "var GatedFormConfig = { \"country\" : \"us\", \"showAdditionalFields\" : [], \"hideStandardFields\" : [\"Last Name\", \"Work Email\", \"Work Phone\", \"Company\"], \"CustomQuestions\" : [], \"language\" : \"en\", \"ThanksTitle\" : \"Thank You\", \"ShowThanksButton\" : \"true\", \/************************************************ Google Analytics *************************************************\/ GoogleAnalyticsID  :  \"UA-XXXXX-X\", \/************************************************ Google AdWords Conversion Tracking *************************************************\/ GoogleAdWordsConversionTracking  :  { \t\t\"id\"  :  \"991646916\", \t\t\"label\"  :  \"Sjx6CLyuoAkQxKnt2AM\" } }",
-    "footer" : "lorem ipsum footer sit amet"
+    "footer" : "this is my footer, there are many like it <br> but this one is mine ",
+    "mirror-email-content": "true" 
   }
 }
 
