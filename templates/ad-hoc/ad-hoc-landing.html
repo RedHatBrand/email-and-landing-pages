@@ -141,8 +141,11 @@
 
   <div class="section {{theme}}-links">
     <div class="container">
+    
+      {{#mirror-email-content}}
+      
      {{#body-section}}
-           {{# show-images }}
+      {{# show-images }}
 
       <div class="grid-container">
         <div class="two-of-three">
@@ -150,7 +153,7 @@
           <p>{{{body-copy}}}</p>
         </div>
         <div class="one-of-three">
-          <img src="../../assets/images/headers/building.jpg" />
+          <img src="{{{featured-image}}}" />
         </div>
       </div>
             {{/ show-images }}
@@ -165,6 +168,39 @@
       {{/ show-images }}
       
       {{/body-section}}
+      
+      {{/mirror-email-content}}
+      
+      {{^mirror-email-content}}
+      
+      {{#landing-page-section}}
+      
+      {{# show-images }}
+
+      <div class="grid-container">
+        <div class="two-of-three">
+          <h1>{{subheading}}</h1>
+          <p>{{{body-copy}}}</p>
+        </div>
+        <div class="one-of-three">
+          <img src="{{{featured-image}}}" />
+        </div>
+      </div>
+            {{/ show-images }}
+
+      {{^ show-images }}
+      <div class="grid-container">
+        <div class="three-of-three">
+          <h1>{{subheading}}</h1>
+          <p>{{{body-copy}}}</p>
+        </div>
+      </div>
+      {{/ show-images }}
+      
+      
+      {{/landing-page-section}}
+      
+      {{/mirror-email-content}}
     </div>
   </div>
   
@@ -234,12 +270,7 @@
     <div class="container">
       <div class="grid-container">
         <div class="one-of-two">
-          <p>'Red Hat' and the 'Shadowman' logo are trademarks or registered trademarks of Red Hat, Inc. Linux is a registered trademark of Linus Torvalds. © 2015 Red Hat, Inc.<br>
-          All rights reserved.</p>
-          <p>Red Hat Australia<br>
-          Level 35<br>
-          100 Miller Street<br>
-          North Sydney NSW 2060</p>
+          {{{footer}}}
         </div>
         <div class="social one-of-two">
           <a href="http://www.facebook.com/redhatinc"><img alt="facebook" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/facebook.png"></a>

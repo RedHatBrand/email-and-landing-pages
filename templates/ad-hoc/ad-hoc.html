@@ -411,6 +411,8 @@
 /*    red*/
     .corporate { color: #cc0000 !important; }
     .corporate-links a { color: #cc0000 !important; }
+    .corporate-background { background-color:#A30000; }
+
     .corporate-pattern{
       border-color:         #cc0000!important;
       border-top-width:     4px!important;
@@ -424,6 +426,7 @@
 /*    slate*/
     .services{ color: #5E6A71 !important; }
     .services-links a { color: #5E6A71 !important;}
+    .services-background { background-color:#5E6A71 !important; }
     .services-pattern{
       border-color:         #5E6A71 !important;
       border-top-width:     4px!important;
@@ -436,6 +439,8 @@
 /*    orange*/
     .storage-and-big-data{ color: #ed7700 !important; }
     .storage-and-big-data-links a { color: #ed7700 !important; }
+    .storage-and-big-data-background { background-color:  #ed7700 !important;}
+
     .storage-and-big-data-pattern{
       border-color:         #ed7700 !important;
       border-top-width:     4px!important;
@@ -449,6 +454,8 @@
 /*    blue*/
     .traditional-infrastructures{ color: #0088CE !important; }
     .traditional-infrastructures-links a { color: #0088CE !important; }
+.traditional-infrastructures-background { background-color:  #0088CE !important;}
+
     .traditional-infrastructures-pattern{
       border-color:         #0088CE !important;
       border-top-width:     4px!important;
@@ -460,6 +467,7 @@
     
     .cloud-infrastructures{ color: #0088CE !important; }
     .cloud-infrastructures-links a { color: #0088CE !important; }
+    .cloud-infrastructures-background { background-color:  #0088CE !important;}
     .cloud-infrastructures-pattern{
       border-color:          #0088CE !important;
       border-top-width:     4px!important;
@@ -471,6 +479,8 @@
     
     .infrastructure-management{ color: #0088CE !important; }
     .infrastructure-management-links a { color: #0088CE !important;  }
+    .infrastructure-management-background { background-color:  #0088CE !important;}
+
     .infrastructure-management-pattern{
       border-color:         #0088CE !important;
       border-top-width:     4px!important;
@@ -484,6 +494,7 @@
 /*    green*/
     .traditional-app-development{ color:  #3F9C35 !important; }
     .traditional-app-development-links a { color: #92D400 !important; }
+    .traditional-app-development-background { background-color:  #3F9C35 !important;}
     .traditional-app-development-pattern{
       border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
@@ -495,6 +506,8 @@
     
     .business-process-integration{ color:  #3F9C35 !important;  }
     .business-process-integration-links a {   color: #92D400 !important;  }
+    .business-process-integration-background { background-color:  #3F9C35 !important;}
+
     .business-process-integration-pattern{
       border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
@@ -505,6 +518,8 @@
     }
     
     .cloud-app-development{ color:  #3F9C35 !important;  }
+        .cloud-app-development-background { background-color:  #3F9C35 !important;}
+
     .cloud-app-development-links a { color: #92D400 !important; }
     .cloud-app-development-pattern{
       border-color:         #3F9C35 !important;      
@@ -692,7 +707,7 @@
             <tr>
               <td align="center" valign="top">
                 <!-- BEGIN HEADER // -->
-                <table id="hero" height="225px" bgcolor="#838383" background="{{#hero-small}}{{{hero-small}}}{{/hero-small}}{{^hero-small}}http://redhatbrand.github.io/email-and-landing-pages/assets/images/headers/building.jpg{{/hero-small}}" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                <table class="{{{theme}}}-background" id="hero" height="225px" bgcolor="#838383" background="{{hero-small}}" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                   <tr>
                     <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-top: 60px; padding-bottom: 60px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
@@ -763,16 +778,7 @@
                 <table style="background:#111111;" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                   <tr>
                     <td valign="top" class="footerContent">
-                      <a style="color:#a8a8a8;" href='#'>contact our sales team</a>
-                      <br /> <a style="color:#a8a8a8;" href='#'>manage your newsletter preferences </a>
-                      <br /><a style="color:#a8a8a8;" href='#'>read our privacy policy</a>
-                      <br /> <a style="color:#a8a8a8;" href='#'>unsubscribe from all Red Hat email</a>
-                      <br />
-                      <br /> 'Red Hat' and the 'Shadowman' logo are trademarks or registered trademarks of Red Hat, Inc.Linux is a registered trademark of Linus Torvalds. © 2015 Red Hat, Inc.
-                      <br /> All rights reserved.
-                      <br>
-                      <br />
-                      {{{ address }}}
+                      {{{footer}}}
                     </td>
                     <td id="social" width="150px" style="padding-top:20px;padding-right:20px;text-align:right;" valign="top">
                           <a href="http://www.facebook.com/redhatinc"><img alt="facebook"style="padding-left:5px; padding-right:5px;" width="15" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/facebook.png"></a>
