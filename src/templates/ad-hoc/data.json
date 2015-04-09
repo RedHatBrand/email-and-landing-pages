@@ -3,18 +3,19 @@
   "data": {
     "body-section": "true",
     "hero-small": "",
-    "hero-large": "/assets/images/headers/buildings-large.jpg",
+    "hero-large": "http://unsplash.imgix.net/photo-1428341944206-459111332729?dpr=2&fit=crop&fm=jpg&h=800&q=75&w=1050",
     "hero-heading":  "Give developers the tools to do what they do best",
     "call-to-action":  "Call to action",
     "subheading":  "Subheading overpass bold 14px uppercase",
     "body-copy":  "Lorem ipsum dolor sit amet, <a href='#'>consectetur </a>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
-    "theme": "storage-and-big-data",
+    "theme": "cloud-app-development",
     "position": "middle",
     "show-images": "true",
     "featured-image": "http://redhatbrand.github.io/email-and-landing-pages/assets/images/headers/building.jpg",
     "form-config": "var GatedFormConfig = { \"country\" : \"us\", \"showAdditionalFields\" : [], \"hideStandardFields\" : [\"Last Name\", \"Work Email\", \"Work Phone\", \"Company\"], \"CustomQuestions\" : [], \"language\" : \"en\", \"ThanksTitle\" : \"Thank You\", \"ShowThanksButton\" : \"true\", \/************************************************ Google Analytics *************************************************\/ GoogleAnalyticsID  :  \"UA-XXXXX-X\", \/************************************************ Google AdWords Conversion Tracking *************************************************\/ GoogleAdWordsConversionTracking  :  { \t\t\"id\"  :  \"991646916\", \t\t\"label\"  :  \"Sjx6CLyuoAkQxKnt2AM\" } }",
     "footer" : "this is my footer, there are many like it <br> but this one is mine ",
-    "mirror-email-content": "true" 
+    "mirror-email-content": "true",
+    "background-darken-amount": "20"
   }
 }
 
