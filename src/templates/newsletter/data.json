@@ -13,7 +13,7 @@
     "theme": "corporate",
     "show-images": "true",
     "footer": "this is my footer, there are many like it <br> but this one is mine",
-    "background-darken-amount": "20"
+    "background-darken-amount": "10"
   }
 }
 
