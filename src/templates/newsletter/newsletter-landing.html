@@ -4,24 +4,18 @@ height: calc(100vh - 2em);
 ---
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/main.css">
-<!--  <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/themes.css">-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
   <script src="<%=baseUrl%>/assets/javascripts/main.js" type="text/javascript"></script>
   <title>{{title}}</title>
-
-  <% include ../../assets/stylesheets/themes.html %>     
-
+  <% include ../../assets/stylesheets/themes.html %>
 </head>
-
 <body class="newsletter">
-
-<div class="hero-wrapper {{{theme}}}-background">
-    <div class="hero {{{theme}}}-hero-{{{position}}} background-darken">
+  <div class="hero-wrapper {{{theme}}}-hero-{{{position}}} background-darken">
+    <div class="hero {{{theme}}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
         <h1>{{ hero-heading }}</h1>
@@ -32,10 +26,8 @@ height: calc(100vh - 2em);
 
   <div class="section {{theme}}-links">
     <div class="container">
-    
-     {{#body-section}}
-      {{# show-images }}
-
+      {{#body-section}}
+      {{#show-images }}
       <div class="grid-container">
         <div class="two-of-three">
           <h1>{{subheading}}</h1>
@@ -45,7 +37,7 @@ height: calc(100vh - 2em);
           <img src="{{{featured-image}}}" />
         </div>
       </div>
-            {{/ show-images }}
+      {{/ show-images }}
 
       {{^ show-images }}
       <div class="grid-container">
@@ -55,22 +47,29 @@ height: calc(100vh - 2em);
         </div>
       </div>
       {{/ show-images }}
-      
       {{/body-section}}
-
     </div>
   </div>
-  
+
+  <div class="section {{theme}}-links">
+    <h1>News</h1>
+    <ul>
+      {{#news-items}}
+      <li></li>
+      {{/news-items}}
+    </ul>
+  </div>
+
   {{#form-config}}
   <div id="form-section">
-   <div class="container">
-     
-       <% include ../../assets/partials/generic-gated-form.html %>
+    <div class="container">
 
-   </div>
-    
+      <% include ../../assets/partials/generic-gated-form.html %>
+
+    </div>
+
   </div>
-    {{/form-config}}
+  {{/form-config}}
 
   <div class="footer">
     <div class="container">
@@ -88,7 +87,5 @@ height: calc(100vh - 2em);
       </div>
     </div>
   </div>
-  
 </body>
-
 </html>
