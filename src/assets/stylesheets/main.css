@@ -85,8 +85,8 @@ h4:not(:last-child) {
 /*  background-attachment: fixed;*/
 }
 
-.newsletter h1 {
-  padding: 1.5em 0 0 0; 
+.newsletter .hero h1 {
+  padding: 1em 0 0 0 ; 
 }
 
 .hero h1 {
