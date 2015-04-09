@@ -27,35 +27,29 @@ height: calc(100vh - 2em);
   <div class="section {{theme}}-links">
     <div class="container">
       {{#body-section}}
-      {{#show-images }}
-      <div class="grid-container">
-        <div class="two-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
-        </div>
-        <div class="one-of-three">
-          <img src="{{{featured-image}}}" />
-        </div>
-      </div>
-      {{/ show-images }}
-
-      {{^ show-images }}
       <div class="grid-container">
         <div class="three-of-three">
           <h1>{{subheading}}</h1>
           <p>{{{body-copy}}}</p>
         </div>
       </div>
-      {{/ show-images }}
       {{/body-section}}
     </div>
   </div>
 
   <div class="section {{theme}}-links">
     <h1>News</h1>
-    <ul>
+    <ul class="news-section-tiles">
       {{#news-items}}
-      <li></li>
+      <li class="news-section-tile">
+        <a href="{{ url }}">
+          <div class="news-section-tile_featured-image" style: "background-image: url('{{ featured-image }}')"></div>
+          <div class="news-section-tile_content">
+            <h4>{{ title }}</h4>
+            <p>{{ summary }}</p>
+          </div>
+        </a>
+      </li>
       {{/news-items}}
     </ul>
   </div>
@@ -63,11 +57,8 @@ height: calc(100vh - 2em);
   {{#form-config}}
   <div id="form-section">
     <div class="container">
-
       <% include ../../assets/partials/generic-gated-form.html %>
-
     </div>
-
   </div>
   {{/form-config}}
 

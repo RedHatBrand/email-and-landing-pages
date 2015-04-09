@@ -1,0 +1,25 @@
+.news-section-tiles {
+
+}
+
+.new-section-tile {
+  overflow: hidden;
+  background-color: #2e2e2e;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+  float: left;
+  width: 33.333%;
+  height: 24em;
+  padding: 0;
+  background: #06A8F9;
+  text-align: center;
+  border: 0;
+  background-position: center;
+  transition: 0.2s ease;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+}
