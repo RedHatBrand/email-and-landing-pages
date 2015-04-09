@@ -7,7 +7,7 @@ height: calc(100vh - 2em);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/main.css">
+  <link rel="stylesheet" href="<%=baseUrl%>/templates/newsletter/assets/stylesheets/main.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
   <script src="<%=baseUrl%>/assets/javascripts/main.js" type="text/javascript"></script>
   <title>{{title}}</title>
@@ -34,26 +34,23 @@ height: calc(100vh - 2em);
         </div>
       </div>
       {{/body-section}}
-
-
-      {{# show-news-items }}
-
-      <h1>News</h1>
-      <ul class="news-section-tiles">
-        {{#news-items}}
-        <li class="news-section-tile">
-          <a href="{{ url }}">
-            <div class="news-section-tile_featured-image" style="background-image: url('{{ featured-image }}')"></div>
-            <div class="news-section-tile_content">
-              <h4>{{ title }}</h4>
-              <p>{{ summary }}</p>
-            </div>
-          </a>
-        </li>
-        {{/news-items}}
-      </ul>
-
-      {{/ show-news-items }}
+  </div>
+  {{# show-news-items }}
+  <section>
+    <ul class="news-section-tiles">
+      {{#news-items}}
+      <li class="news-section-tile">
+        <a href="{{ url }}" style="background-image: url('{{ featured-image }}')">
+          <div class="news-section-tile_content">
+            <h4>{{ title }}</h4>
+            <p>{{ summary }}</p>
+          </div>
+        </a>
+      </li>
+      {{/news-items}}
+    </ul>
+    </section>
+    {{/ show-news-items }}
 
     </div> <!--end section-->
   </div><!--end container-->
