@@ -50,7 +50,7 @@ height: calc(100vh - 2em);
     blockquote {
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-    }
+    }a
     /* Prevent WebKit and Windows mobile changing default text sizes */
 
     table,
@@ -415,9 +415,9 @@ height: calc(100vh - 2em);
 
 /*    red*/
     .corporate { color: #cc0000 !important; }
+    .corporate-list { color: #cc0000 !important; }
     .corporate-links a { color: #cc0000 !important; }
     .corporate-background { background-color:#A30000; }
-
     .corporate-pattern{
       border-color:         #cc0000!important;
       border-top-width:     4px!important;
@@ -430,6 +430,7 @@ height: calc(100vh - 2em);
 
 /*    slate*/
     .services{ color: #5E6A71 !important; }
+    .services-list{ color: #5E6A71 !important; }
     .services-links a { color: #5E6A71 !important;}
     .services-background { background-color:#5E6A71 !important; }
     .services-pattern{
@@ -443,9 +444,9 @@ height: calc(100vh - 2em);
 
 /*    orange*/
     .storage-and-big-data{ color: #ed7700 !important; }
+    .storage-and-big-data-list{ color: #ed7700 !important; }
     .storage-and-big-data-links a { color: #ed7700 !important; }
     .storage-and-big-data-background { background-color:  #ed7700 !important;}
-
     .storage-and-big-data-pattern{
       border-color:         #ed7700 !important;
       border-top-width:     4px!important;
@@ -458,9 +459,9 @@ height: calc(100vh - 2em);
 
 /*    blue*/
     .traditional-infrastructures{ color: #0088CE !important; }
+    .traditional-infrastructures-list{ color: #0088CE !important; }
     .traditional-infrastructures-links a { color: #0088CE !important; }
-.traditional-infrastructures-background { background-color:  #0088CE !important;}
-
+    .traditional-infrastructures-background { background-color:  #0088CE !important;}
     .traditional-infrastructures-pattern{
       border-color:         #0088CE !important;
       border-top-width:     4px!important;
@@ -471,6 +472,7 @@ height: calc(100vh - 2em);
     }
 
     .cloud-infrastructures{ color: #0088CE !important; }
+    .cloud-infrastructures-list{ color: #0088CE !important; }
     .cloud-infrastructures-links a { color: #0088CE !important; }
     .cloud-infrastructures-background { background-color:  #0088CE !important;}
     .cloud-infrastructures-pattern{
@@ -483,9 +485,9 @@ height: calc(100vh - 2em);
     }
 
     .infrastructure-management{ color: #0088CE !important; }
+    .infrastructure-management-list{ color: #0088CE !important; }
     .infrastructure-management-links a { color: #0088CE !important;  }
     .infrastructure-management-background { background-color:  #0088CE !important;}
-
     .infrastructure-management-pattern{
       border-color:         #0088CE !important;
       border-top-width:     4px!important;
@@ -498,6 +500,7 @@ height: calc(100vh - 2em);
 
 /*    green*/
     .traditional-app-development{ color:  #3F9C35 !important; }
+    .traditional-app-development-list{ color:  #3F9C35 !important; }
     .traditional-app-development-links a { color: #92D400 !important; }
     .traditional-app-development-background { background-color:  #3F9C35 !important;}
     .traditional-app-development-pattern{
@@ -510,9 +513,9 @@ height: calc(100vh - 2em);
     }
 
     .business-process-integration{ color:  #3F9C35 !important;  }
+    .business-process-integration-list{ color:  #3F9C35 !important;  }
     .business-process-integration-links a {   color: #92D400 !important;  }
     .business-process-integration-background { background-color:  #3F9C35 !important;}
-
     .business-process-integration-pattern{
       border-color:         #3F9C35 !important;
       border-top-width:     4px!important;
@@ -523,8 +526,8 @@ height: calc(100vh - 2em);
     }
 
     .cloud-app-development{ color:  #3F9C35 !important;  }
-        .cloud-app-development-background { background-color:  #3F9C35 !important;}
-
+    .cloud-app-development-list{ color:  #3F9C35 !important;  }
+    .cloud-app-development-background { background-color:  #3F9C35 !important;}
     .cloud-app-development-links a { color: #92D400 !important; }
     .cloud-app-development-pattern{
       border-color:         #3F9C35 !important;
@@ -774,13 +777,13 @@ height: calc(100vh - 2em);
                       <h2>News</h2>
                       <ul class="news-section-tiles">
                         {{#news-items}}
-                        <li class="news-section-tile">
-                          <a href="{{ url }}">
+                        <li class="news-section-tile {{{theme}}}-list">
+                          <a style="color:#505050;" href="{{ url }}">
 
-                              <h4>{{ title }}</h4>
+                            <h3 style="text-transform:uppercase; text-decoration:none; color:#505050; font-style:normal;font-weight:bold;">{{ title }}</h3>
 
                           </a>
-                          <p>{{ summary }}</p>
+                          <p style="margin-top:0; padding-top:0; color:#505050;">{{ summary }}</p>
                         </li>
                         {{/news-items}}
                       </ul>

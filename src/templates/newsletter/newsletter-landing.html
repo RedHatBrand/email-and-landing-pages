@@ -34,16 +34,19 @@ height: calc(100vh - 2em);
         </div>
       </div>
       {{/body-section}}
-  </div>
+
+
   {{# show-news-items }}
+    <h1 class="news-item-section-title" >{{news-item-section-title}}</h1>
+
   <section>
     <ul class="news-section-tiles">
       {{#news-items}}
       <li class="news-section-tile">
-        <a href="{{ url }}" style="background-image: url('{{ featured-image }}')">
-          <div class="news-section-tile_content">
-            <h4>{{ title }}</h4>
-            <p>{{ summary }}</p>
+        <a href="{{ url }}" style="background-image: url('{{ featured-image }}')" class="{{theme}}-background {{theme}}-pattern">
+          <div class="news-section-tile_content ">
+            <h2>{{ title }}</h2>
+            <h4>{{ summary }}</h4>
           </div>
         </a>
       </li>
@@ -51,6 +54,9 @@ height: calc(100vh - 2em);
     </ul>
     </section>
     {{/ show-news-items }}
+
+
+
 
     </div> <!--end section-->
   </div><!--end container-->

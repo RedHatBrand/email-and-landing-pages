@@ -1,6 +1,9 @@
 @import '../../../../assets/stylesheets/main.scss';
 
 .news-section-tiles {
+
+  box-sizing: border-box;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 
@@ -11,24 +14,70 @@
   }
 }
 
+.news-item-section-title {
+
+}
+
+.news-section-tile_content{
+  text-transform: capitalize;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 20px;
+  
+  h2 {
+    font-weight: 200;
+  }
+  h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: inherit;
+    font-weight: 700;  
+  }
+}
+
+
+
+//  .news-section-tile:nth-child(even):last-child {
+//    width: 33.333%;
+//  }
+  .news-section-tile:nth-child(3n+1):last-child {
+    width: calc(100% - 10px);
+  }
+  .news-section-tile:nth-child(3n+2):last-child {
+    width: calc(66.667% - 10px);
+  }
+
+
+
 .news-section-tile {
+  overflow: hidden;
+  background-size: cover;
   list-style: none;
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
-  margin: 0;
+  margin:5px;
   float: left;
-  width: 33.333%;
+  width: calc(33.333% - 10px);
 
   &:before { display: none }
 
   a {
+    background-blend-mode: normal;
+    overflow: hidden;
     display: block;
-    height: 24em;
+    height: 20em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    &:hover {
+     background-blend-mode: multiply; 
+    }
+    
   }
 }
 
