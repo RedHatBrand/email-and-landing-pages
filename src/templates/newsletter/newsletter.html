@@ -132,7 +132,7 @@ height: calc(100vh - 2em);
       border-top-width: 0px;
       border-left-width: 0px;
       border-right-width: 0px;
-      border-bottom-width: 2px;
+      border-bottom-width: 0px;
       border-style: solid;
     }
 
@@ -764,6 +764,33 @@ height: calc(100vh - 2em);
 
                 </table>
                 {{/body-section}}
+               
+                {{# show-news-items }}
+
+                 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                  <tr>
+                    <td class="bodyContent {{theme-links}}">
+
+                      <h2>News</h2>
+                      <ul class="news-section-tiles">
+                        {{#news-items}}
+                        <li class="news-section-tile">
+                          <a href="{{ url }}">
+
+                              <h4>{{ title }}</h4>
+
+                          </a>
+                          <p>{{ summary }}</p>
+                        </li>
+                        {{/news-items}}
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+                
+                {{/ show-news-items }}
+
+                
                 <!-- // END BODY -->
               </td>
             </tr>

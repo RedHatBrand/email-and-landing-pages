@@ -11,9 +11,29 @@
     "subheading":  "Subheading overpass bold 14px uppercase",
     "body-copy":  "Lorem ipsum dolor sit amet, <a href='#'>consectetur </a>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
     "theme": "corporate",
-    "show-images": "true",
     "footer": "this is my footer, there are many like it <br> but this one is mine",
-    "background-darken-amount": "10"
+    "background-darken-amount": "10",
+    "show-news-items": "true",
+    "news-items": [
+      { 
+        "url": "#",
+        "featured-image": "https://ununsplash.imgix.net/photo-1428542170253-0d2f063e92c2?q=75&fm=jpg&w=1080&fit=max&s=b0236a3c6fda484b0955ccb379e1dc97",
+        "title": "first item", 
+        "summary": "the summmmarrrry yo"
+      },
+      { 
+        "url": "#",
+        "featured-image": "https://ununsplash.imgix.net/photo-1428542170253-0d2f063e92c2?q=75&fm=jpg&w=1080&fit=max&s=b0236a3c6fda484b0955ccb379e1dc97",
+        "title": "another item", 
+        "summary": "the second summary"
+      },
+      { 
+        "url": "#",
+        "featured-image": "https://ununsplash.imgix.net/photo-1428542170253-0d2f063e92c2?q=75&fm=jpg&w=1080&fit=max&s=b0236a3c6fda484b0955ccb379e1dc97",
+        "title": "not the first item", 
+        "summary": "another one"
+      }
+    ]
   }
 }
 

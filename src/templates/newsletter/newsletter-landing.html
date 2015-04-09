@@ -34,25 +34,30 @@ height: calc(100vh - 2em);
         </div>
       </div>
       {{/body-section}}
-    </div>
-  </div>
 
-  <div class="section {{theme}}-links">
-    <h1>News</h1>
-    <ul class="news-section-tiles">
-      {{#news-items}}
-      <li class="news-section-tile">
-        <a href="{{ url }}">
-          <div class="news-section-tile_featured-image" style: "background-image: url('{{ featured-image }}')"></div>
-          <div class="news-section-tile_content">
-            <h4>{{ title }}</h4>
-            <p>{{ summary }}</p>
-          </div>
-        </a>
-      </li>
-      {{/news-items}}
-    </ul>
-  </div>
+
+      {{# show-news-items }}
+
+      <h1>News</h1>
+      <ul class="news-section-tiles">
+        {{#news-items}}
+        <li class="news-section-tile">
+          <a href="{{ url }}">
+            <div class="news-section-tile_featured-image" style="background-image: url('{{ featured-image }}')"></div>
+            <div class="news-section-tile_content">
+              <h4>{{ title }}</h4>
+              <p>{{ summary }}</p>
+            </div>
+          </a>
+        </li>
+        {{/news-items}}
+      </ul>
+
+      {{/ show-news-items }}
+
+    </div> <!--end section-->
+  </div><!--end container-->
+
 
   {{#form-config}}
   <div id="form-section">
