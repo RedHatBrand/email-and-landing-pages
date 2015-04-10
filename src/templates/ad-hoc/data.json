@@ -15,7 +15,7 @@
     "form-config": "var GatedFormConfig = { \"country\" : \"us\", \"showAdditionalFields\" : [], \"hideStandardFields\" : [\"Last Name\", \"Work Email\", \"Work Phone\", \"Company\"], \"CustomQuestions\" : [], \"language\" : \"en\", \"ThanksTitle\" : \"Thank You\", \"ShowThanksButton\" : \"true\", \/************************************************ Google Analytics *************************************************\/ GoogleAnalyticsID  :  \"UA-XXXXX-X\", \/************************************************ Google AdWords Conversion Tracking *************************************************\/ GoogleAdWordsConversionTracking  :  { \t\t\"id\"  :  \"991646916\", \t\t\"label\"  :  \"Sjx6CLyuoAkQxKnt2AM\" } }",
     "footer" : "this is my footer, there are many like it <br> but this one is mine ",
     "mirror-email-content": "true",
-    "background-darken-amount": "20"
+    "background-darken-amount": "0.20"
   }
 }
 

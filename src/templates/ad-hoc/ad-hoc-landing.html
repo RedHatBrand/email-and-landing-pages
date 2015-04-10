@@ -14,14 +14,14 @@ height: calc(100vh - 2em);
   <script src="<%=baseUrl%>/assets/javascripts/main.js" type="text/javascript"></script>
   <title>{{title}}</title>
 
-  <% include ../../assets/stylesheets/themes.html %>     
+  <% include ../../assets/partials/themes.html %>
 
 </head>
 
 <body class="ad-hoc">
 
 <div class="hero-wrapper {{{theme}}}-background">
-    <div class="hero {{{theme}}}-hero-{{{position}}} background-darken">
+  <div class="hero hero-{{ position }} {{{theme}}}-hero-{{{position}}} background-darken">
       <div class="container">
         <div class="logo-rh"></div>
         <h1>{{ hero-heading }}</h1>
@@ -32,9 +32,9 @@ height: calc(100vh - 2em);
 
   <div class="section {{theme}}-links">
     <div class="container">
-    
+
     {{# mirror-email-content}}
-      
+
      {{#body-section}}
       {{# show-images }}
 
@@ -57,15 +57,15 @@ height: calc(100vh - 2em);
         </div>
       </div>
       {{/ show-images }}
-      
+
       {{/body-section}}
-      
+
       {{/ mirror-email-content}}
-      
+
       {{^mirror-email-content}}
-      
+
       {{#landing-page-section}}
-      
+
       {{# show-images }}
 
       <div class="grid-container">
@@ -87,22 +87,22 @@ height: calc(100vh - 2em);
         </div>
       </div>
       {{/ show-images }}
-      
-      
+
+
       {{/landing-page-section}}
-      
+
       {{/mirror-email-content}}
     </div>
   </div>
-  
+
   {{#form-config}}
   <div id="form-section">
    <div class="container">
-     
+
        <% include ../../assets/partials/generic-gated-form.html %>
 
    </div>
-    
+
   </div>
     {{/form-config}}
 
@@ -122,7 +122,7 @@ height: calc(100vh - 2em);
       </div>
     </div>
   </div>
-  
+
 </body>
 
 </html>

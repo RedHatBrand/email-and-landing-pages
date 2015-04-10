@@ -10,42 +10,42 @@
     "call-to-action":  "Call to action",
     "subheading":  "Subheading overpass bold 14px uppercase",
     "body-copy":  "Lorem ipsum dolor sit amet, <a href='#'>consectetur </a>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
-    "theme": "storage-and-big-data",
+    "theme": "corporate",
     "footer": "this is my footer, there are many like it <br> but this one is mine",
-    "background-darken-amount": "10",
+    "background-darken-amount": "0.10",
     "show-news-items": "true",
     "news-item-section-title": "Hot off the press",
     "news-items": [
-      { 
+      {
         "url": "#",
         "featured-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
-        "title": "first item", 
+        "title": "first item",
         "summary": "the summmmarrrry yo"
       },
-      { 
+      {
         "url": "#",
         "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
-        "title": "another item", 
+        "title": "another item",
         "summary": "the second summary"
-      },      { 
+      },      {
         "url": "#",
         "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
-        "title": "another item", 
-        "summary": "the second summary"
-      },
-            { 
-        "url": "#",
-        "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
-        "title": "another item", 
+        "title": "another item",
         "summary": "the second summary"
       },
-      { 
+            {
+        "url": "#",
+        "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "title": "another item",
+        "summary": "the second summary"
+      },
+      {
         "url": "#",
         "featured-image": "https://unsplash.imgix.net/photo-1427847888090-7b66d035cdaa?q=75&fm=jpg&w=1080&fit=max&s=4bd22b0300281062c276d31fc6a1831e",
-        "title": "not the first item", 
+        "title": "not the first item",
         "summary": "another one"
       }
-      
+
     ]
   }
 }

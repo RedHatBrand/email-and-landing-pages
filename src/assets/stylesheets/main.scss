@@ -3,9 +3,9 @@
 @import url('//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-    
+
                NATIVE ELEMENTS
-    
+
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
 html {
@@ -70,9 +70,9 @@ h4:not(:last-child) {
 }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-    
+
                    LAYOUT
-    
+
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 .newsletter .hero { padding: 0; }
 .hero {
@@ -86,7 +86,7 @@ h4:not(:last-child) {
 }
 
 .newsletter .hero h1 {
-  padding: 1em 0 0 0 ; 
+  padding: 1em 0 0 0 ;
 }
 
 .hero h1 {
@@ -96,7 +96,7 @@ h4:not(:last-child) {
 }
 
 .hero h3 {
-  color: white; 
+  color: white;
 }
 
 .button {
@@ -239,14 +239,14 @@ h4:not(:last-child) {
 }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-    
+
                 GATED FORM
-    
+
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
 #form-section {
  background: #f2f2f2;
- 
+
 }
 #GatedFormContainer {
   transition: opacity .5s ease-in-out;
@@ -397,7 +397,7 @@ h4:not(:last-child) {
     float: none;
     padding: 1em 0;
   }
-  
+
   .grid-container > div:last-child {
     padding: 0;
     padding-top: 1em;
@@ -407,12 +407,12 @@ h4:not(:last-child) {
     padding: 0;
     padding-bottom: 1em;
   }
-  
+
   #GatedFormContainer form {
     width: 100%;
     margin: 0 auto;
   }
-  
+
   .social {
     text-align: left;
   }
