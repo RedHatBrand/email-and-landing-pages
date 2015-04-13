@@ -15,104 +15,78 @@ height: calc(100vh - 2em);
   <title>{{title}}</title>
 
   <% include ../../assets/partials/themes.html %>
-
 </head>
 
 <body class="ad-hoc">
-
-<div class="hero-wrapper {{{theme}}}-background">
-  <div class="hero hero-{{ position }} {{{theme}}}-hero-{{{position}}} background-darken">
+  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
+    <div class="hero {{theme}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
         <h1>{{ hero-heading }}</h1>
         <a href="#form" class="button" id="call-to-action">{{call-to-action}}</a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="section {{theme}}-links">
+  {{#mirror-email-content}}
+  {{#body-sections}}
+  <section class="section body-section">
     <div class="container">
-
-    {{# mirror-email-content}}
-
-     {{#body-section}}
-      {{# show-images }}
-
       <div class="grid-container">
-        <div class="two-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
+        {{#show-images}}
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{ feature-image }}}">
         </div>
-        <div class="one-of-three">
-          <img src="{{{featured-image}}}" />
+        {{/show-images}}
+
+        <div class="body-section-content grid-item">
+          <h2>{{title}}</h2>
+
+          {{{body}}}
         </div>
       </div>
-            {{/ show-images }}
-
-      {{^ show-images }}
-      <div class="grid-container">
-        <div class="three-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
-        </div>
-      </div>
-      {{/ show-images }}
-
-      {{/body-section}}
-
-      {{/ mirror-email-content}}
-
-      {{^mirror-email-content}}
-
-      {{#landing-page-section}}
-
-      {{# show-images }}
-
-      <div class="grid-container">
-        <div class="two-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
-        </div>
-        <div class="one-of-three">
-          <img src="{{{featured-image}}}" />
-        </div>
-      </div>
-            {{/ show-images }}
-
-      {{^ show-images }}
-      <div class="grid-container">
-        <div class="three-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
-        </div>
-      </div>
-      {{/ show-images }}
-
-
-      {{/landing-page-section}}
-
-      {{/mirror-email-content}}
     </div>
-  </div>
+  </section>
+  {{/body-sections}}
+  {{/mirror-email-content}}
+
+  {{^mirror-email-content}}
+  {{#landing-page-sections}}
+  <section class="section body-section">
+    <div class="container">
+      <div class="grid-container">
+        {{#show-images}}
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{ feature-image }}}">
+        </div>
+        {{/show-images}}
+
+        <div class="body-section-content grid-item">
+          <h2>{{title}}</h2>
+
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/landing-page-sections}}
+  {{/mirror-email-content}}
 
   {{#form-config}}
-  <div id="form-section">
-   <div class="container">
+  <section id="form-section">
+    <div class="container">
+      <% include ../../assets/partials/generic-gated-form.html %>
+    </div>
+  </section>
+  {{/form-config}}
 
-       <% include ../../assets/partials/generic-gated-form.html %>
-
-   </div>
-
-  </div>
-    {{/form-config}}
-
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="grid-container">
-        <div class="one-of-two">
+        <div class="grid-item one-half content-small">
           {{{footer}}}
         </div>
-        <div class="social one-of-two">
+        <div class="grid-item one-half content-small social-links">
           <a href="http://www.facebook.com/redhatinc"><img alt="facebook" src="<%=baseUrl%>/assets/images/icons/facebook.png"></a>
           <a href="http://plus.google.com/+RedHat"><img alt="google-plus" src="<%=baseUrl%>/assets/images/icons/google.png"></a>
           <a href="http://linkedin.com/company/red-hat"><img alt="linkedin" src="<%=baseUrl%>/assets/images/icons/linkedin.png"></a>
@@ -121,8 +95,6 @@ height: calc(100vh - 2em);
         </div>
       </div>
     </div>
-  </div>
-
+  </footer>
 </body>
-
 </html>

@@ -1,21 +1,17 @@
 @import '../../../../assets/stylesheets/main.scss';
 
 .news-section-tiles {
-
   box-sizing: border-box;
   overflow: hidden;
-  margin: 0;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   &:before, &:after {
     content: '';
     display: table;
     clear: both;
   }
-}
-
-.news-item-section-title {
-
 }
 
 .news-section-tile_content{
@@ -25,29 +21,17 @@
   bottom: 0;
   box-sizing: border-box;
   position: absolute;
-  padding: 20px;
+  padding: 1.25em;
 
-  h2 {
-    font-weight: 200;
-  }
-  h4 {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: inherit;
-    font-weight: 700;
-  }
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
-
-
-  .news-section-tile:nth-child(3n+1):last-child {
-    width: calc(100% - 10px);
-  }
-  .news-section-tile:nth-child(3n+2):last-child {
-    width: calc(66.667% - 10px);
-  }
-
-
+.news-section-tile:nth-child(3n+1):last-child {
+  width: 100%;
+}
+.news-section-tile:nth-child(3n+2):last-child {
+  width: 66.667%;
+}
 
 .news-section-tile {
   overflow: hidden;
@@ -55,14 +39,15 @@
   list-style: none;
   overflow: hidden;
   position: relative;
-  box-sizing: border-box;
-  margin:5px;
   float: left;
-  width: calc(33.333% - 10px);
+  width: 33.333%;
+  color: white;
 
   &:before { display: none }
 
   a {
+    display: block;
+    position: relative;
     background-blend-mode: normal;
     overflow: hidden;
     display: block;
@@ -71,10 +56,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+
     &:hover {
      background-blend-mode: multiply;
     }
-
   }
 }
 
+.news-section-tile_content_summary {
+  margin-top: 0;
+}
+
+.news-section-tile_content_title {
+  margin-bottom: 0;
+}

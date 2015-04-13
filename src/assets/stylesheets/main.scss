@@ -2,22 +2,27 @@
 @import url('http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
 @import url('//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
 
+@import '../../../node_modules/red-hat-brand-typography/scss/red-hat-typography';
+
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
                NATIVE ELEMENTS
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
+html, body {
+  height: 100%;
+}
+
 html {
   font-family: "Overpass", sans-serif;
-  overflow-x: hidden;
 }
 
 body {
   background: white;
-  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  color: #646464;
 }
 
 .newsletter .container {
@@ -27,46 +32,12 @@ body {
 .container {
   margin: 0 auto;
   position: relative;
-  width: 100%;
   max-width: 1000px;
-  padding: 5em 2em;
-  box-sizing: border-box;
+  padding: 0 2em;
 }
 
-h2 {
-  font-weight: 600;
-}
-
-h3 {
-  text-transform: uppercase;
-  line-height: 1.5em;
-}
-
-h4 {
-  color: #999;
-  font-weight: 300;
-  line-height: 1.5em;
-}
-
-p {
-  line-height: 1.5em;
-  color: #646464;
-}
-
-p,
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
-p:not(:last-child),
-h1:not(:last-child),
-h2:not(:last-child),
-h3:not(:last-child),
-h4:not(:last-child) {
-  margin-bottom: .5em;
+.content-small > * {
+  font-size: 0.75em;
 }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -74,26 +45,29 @@ h4:not(:last-child) {
                    LAYOUT
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
-.newsletter .hero { padding: 0; }
-.hero {
-  width: 100%;
+
+header[role="banner"] {
   padding: 4em 0;
-  margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-/*  background-attachment: fixed;*/
-}
-
-.newsletter .hero h1 {
-  padding: 1em 0 0 0 ;
-}
-
-.hero h1 {
-  text-transform: uppercase;
-  padding: 1em 0 1em 0;
   color: white;
 }
+
+section {
+  padding: 3em 0;
+  margin: 0;
+}
+
+section:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+footer { margin: 0; }
+
+.newsletter .hero { padding: 0; }
+
+.hero .button { display: inline-block; }
 
 .hero h3 {
   color: white;
@@ -109,11 +83,9 @@ h4:not(:last-child) {
 }
 
 .footer {
-  height: auto;
-  margin-bottom: -20px;
-  font-size: 75%;
   background: #111;
   color: rgba(255, 255, 255, 0.72);
+  padding: 3em 0;
 }
 
 .section img {
@@ -124,16 +96,8 @@ h4:not(:last-child) {
   color: inherit;
 }
 
-.social {
+.social-links {
   text-align: right;
-}
-
-.social a {
-  padding: 0 .5em;
-}
-
-.social img {
-  width: 2em;
 }
 
 .clear {
@@ -146,77 +110,78 @@ h4:not(:last-child) {
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
+
 .grid-container {
-  overflow: auto;
-  width: 100%;
+  margin-left: -1em;
+  margin-right: -1em;
+
+  &.tight{
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+
+  &:before, &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
 }
 
-.grid-container:not(:last-child) {
-  margin-bottom: 4em;
-}
-
-.grid-container > div:last-child {
-  padding: 0;
-  padding-left: 1em;
-}
-
-.grid-container > div:first-child {
-  padding: 0;
-  padding-right: 1em;
-}
-
-.grid-container > div {
-  padding: 0 1em;
-}
-
-/* THREE */
-
-.one-of-three {
-  width: calc(100% * 1/3);
-  float: left;
+.grid-item {
+  padding: 1em;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  overflow: hidden;
 }
 
-.two-of-three {
-  width: calc(100% * 2/3);
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  overflow: hidden;
+.tight .grid-item {
+  padding: 0.5em;
 }
 
-.three-of-three {
-  padding: 0;
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  overflow: hidden;
+.grid-item + .grid-item {
+  margin: 0;
 }
 
-/* TWO */
+@media screen and (min-width: 560px) {
+  .one-half {
+    float: left;
+    width: 50%;
+  }
 
-.one-of-two {
-  width: calc(100% * 1/2);
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  overflow: hidden;
-}
+  .one-third {
+    float: left;
+    width: 33.333%;
+  }
 
-.two-of-two {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  overflow: hidden;
+  .two-thirds {
+    float: left;
+    width: 66.667%;
+  }
+
+  .body-section-feature-image + .body-section-content,
+  .featured-article-feature-image + .featured-article-content {
+    float: left;
+    width: 66.667%;
+  }
+
+  .body-section-feature-image,
+  .featured-article-feature-image {
+    width: 33.333%;
+  }
+
+  .body-section:nth-child(odd),
+  .featured-article:nth-child(odd) {
+    .body-section-feature-image,
+    .featured-article-feature-image {
+      float: right;
+    }
+  }
+
+  .body-section:nth-child(even),
+  .featured-article:nth-child(even) {
+    .body-section-feature-image,
+    .featured-article-feature-image {
+      float: left;
+    }
+  }
 }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -224,18 +189,16 @@ h4:not(:last-child) {
                   ASSETS
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
-.newsletter .logo-rh { top: 3em; }
+
 .logo-rh {
-  top: 0em;
-  left: 2em;
-  position: absolute;
-  width: 100%;
-  height: 50px;
+  height: 3.5em;
   background: url(//redhatbrand.github.io/PartnerConferenceTemplates/shared/images/rh-logo.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  margin-bottom: 2em;
-/*  right: 0;*/
+}
+
+.social-links img {
+  width: 1.5em;
 }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -244,12 +207,29 @@ h4:not(:last-child) {
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
+label + div.controls {
+  margin-top: 0.5em;
+}
+
+#GatedFormContainer .controls {
+  position: relative;
+}
+
+#GatedFormContainer .dropdown-arrow::after {
+  top: 1.25em;
+}
+
 #form-section {
  background: #f2f2f2;
 
 }
 #GatedFormContainer {
   transition: opacity .5s ease-in-out;
+}
+
+#GatedFormContainer section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #GatedFormContainer form {
@@ -282,7 +262,6 @@ h4:not(:last-child) {
   appearance: none;
   width: 100%;
   font-size: 100%;
-/*  height: 3em;*/
   border-radius: 4px;
   border: solid 1px #d9d9d9;
   padding: 1em 0.7em 0.7em 0.7em;
@@ -384,36 +363,16 @@ h4:not(:last-child) {
   border-color: #999 transparent transparent transparent;
 }
 
+@media only screen and (max-width: 560px) {
+  #GatedFormContainer form {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
                MEDIA QUERIES
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
-@media only screen and (max-width: 560px) {
-  .grid-container > div
-  {
-    width: 100%;
-    float: none;
-    padding: 1em 0;
-  }
-
-  .grid-container > div:last-child {
-    padding: 0;
-    padding-top: 1em;
-  }
-
-  .grid-container > div:first-child {
-    padding: 0;
-    padding-bottom: 1em;
-  }
-
-  #GatedFormContainer form {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .social {
-    text-align: left;
-  }
-}

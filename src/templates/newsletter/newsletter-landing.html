@@ -14,69 +14,72 @@ height: calc(100vh - 2em);
   <% include ../../assets/partials/themes.html %>
 </head>
 <body class="newsletter">
-  <div class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
+  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
     <div class="hero {{theme}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
         <h1>{{ hero-heading }}</h1>
-        <h3>{{date}}</h3>
+        <h2>{{date}}</h2>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="section {{theme}}-links">
+  {{#featured-articles}}
+  <section class="section featured-article">
     <div class="container">
-      {{#body-section}}
       <div class="grid-container">
-        <div class="three-of-three">
-          <h1>{{subheading}}</h1>
-          <p>{{{body-copy}}}</p>
+        {{#show-images}}
+        <div class="featured-article-feature-image grid-item">
+          <img src="{{{ feature-image }}}">
+        </div>
+        {{/show-images}}
+
+        <div class="featured-article-content grid-item">
+          <h2>{{title}}</h2>
+
+          {{{body}}}
         </div>
       </div>
-      {{/body-section}}
+    </div>
+  </section>
+  {{/featured-articles}}
 
+  <section id="news-items-section">
+    <div class="container">
+      <h2 class="news-item-section-title" >
+        {{articles-title}}
+      </h2>
 
-  {{# show-news-items }}
-    <h1 class="news-item-section-title" >{{news-item-section-title}}</h1>
-
-  <section>
-    <ul class="news-section-tiles">
-      {{#news-items}}
-      <li class="news-section-tile">
-        <a href="{{ url }}" style="background-image: url('{{ featured-image }}')" class="{{theme}}-background pattern {{theme}}-pattern">
-          <div class="news-section-tile_content ">
-            <h2>{{ title }}</h2>
-            <h4>{{ summary }}</h4>
-          </div>
-        </a>
-      </li>
-      {{/news-items}}
-    </ul>
-    </section>
-    {{/ show-news-items }}
-
-
-
-
-    </div> <!--end section-->
-  </div><!--end container-->
-
+      <ul class="news-section-tiles grid-container tight">
+        {{#articles}}
+        <li class="news-section-tile grid-item">
+          <a href="{{ url }}" style="background-image: url('{{ featured-image }}')" class="{{theme}}-background pattern {{theme}}-pattern">
+            <div class="news-section-tile_content">
+              <h3 class="news-section-tile_content_title">{{ title }}</h3>
+              <p class="news-section-tile_content_summary">{{ summary }}</p>
+            </div>
+          </a>
+        </li>
+        {{/articles}}
+      </ul>
+    </div>
+  </section>
 
   {{#form-config}}
-  <div id="form-section">
+  <section id="form-section">
     <div class="container">
       <% include ../../assets/partials/generic-gated-form.html %>
     </div>
-  </div>
+  </section>
   {{/form-config}}
 
   <div class="footer">
     <div class="container">
       <div class="grid-container">
-        <div class="one-of-two">
+        <div class="grid-item one-half content-small">
           {{{footer}}}
         </div>
-        <div class="social one-of-two">
+        <div class="grid-item one-half social-links content-small">
           <a href="http://www.facebook.com/redhatinc"><img alt="facebook" src="<%=baseUrl%>/assets/images/icons/facebook.png"></a>
           <a href="http://plus.google.com/+RedHat"><img alt="google-plus" src="<%=baseUrl%>/assets/images/icons/google.png"></a>
           <a href="http://linkedin.com/company/red-hat"><img alt="linkedin" src="<%=baseUrl%>/assets/images/icons/linkedin.png"></a>
