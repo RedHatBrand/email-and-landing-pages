@@ -40,8 +40,14 @@ height: calc(100vh - 2em);
           {{{body}}}
 
           <p>
-            <a href="{{{ call-to-action-url }}}"  class="call-to-action">
-              {{ call-to-action }}
+            <a href="{{{ url }}}"  class="call-to-action">
+              {{#call-to-action}}
+                {{ call-to-action }}
+              {{/call-to-action}}
+
+              {{^call-to-action}}
+                Find out more
+              {{/call-to-action}}
             </a>
           </p>
         </div>

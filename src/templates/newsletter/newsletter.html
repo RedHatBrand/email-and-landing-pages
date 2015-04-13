@@ -732,20 +732,22 @@ height: calc(100vh - 2em);
                     <td class="bodyContent {{theme}}-links" style="padding-top:0;">
                       {{{ body }}}
 
+                      {{#article-call-to-action }}
                       <p>
                       <!--[if mso]>
                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
                           <w:anchorlock/>
                           <center>
                         <![endif]-->
-                          <a href="{{{call-to-action-url}}}" class="call-to-action" style="color: #fff !important">
-                            {{ call-to-action }}
+                          <a href="{{{url}}}" class="call-to-action" style="color: #fff !important">
+                            {{ article-call-to-action }}
                           </a>
                         <!--[if mso]>
                           </center>
                         </v:roundrect>
                       <![endif]-->
                       </p>
+                      {{/article-call-to-action }}
 
                       <hr />
                     </td>

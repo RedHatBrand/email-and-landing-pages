@@ -7,7 +7,6 @@
     "hero-heading":  "Marketing Buzz",
     "date": "20/1/16",
     "position": "middle",
-    "call-to-action":  "Call to action",
     "theme": "corporate",
     "footer": "<p>this is my footer, there are many like it <br> but this one is mine</p>",
     "background-darken-amount": "0.10",
@@ -16,15 +15,14 @@
         "title": "Curabitur Vulputate",
         "body": "<p>Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non.</p>",
         "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
-        "call-to-action": "Curabitur vulputate, ligula",
-        "call-to-action-url": "#"
+        "url": "#"
       },
       {
         "title": "Vestibulum Ante Ipsum",
         "body": "<p>Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non.</p>",
         "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
         "call-to-action": "Mauris iaculis porttitor posuere",
-        "call-to-action-url": "#"
+        "url": "#"
       }
     ],
     "articles-title": "Hot off the press",
@@ -33,9 +31,7 @@
         "url": "#",
         "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
         "title": "first item",
-        "summary": "the summmmarrrry yo",
-        "call-to-action": "Come check it out",
-        "call-to-action-url": "#"
+        "summary": "the summmmarrrry yo"
       },
       {
         "url": "#",
