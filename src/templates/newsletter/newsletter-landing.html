@@ -38,6 +38,12 @@ height: calc(100vh - 2em);
           <h2>{{title}}</h2>
 
           {{{body}}}
+
+          <p>
+            <a href="{{{ call-to-action-url }}}"  class="call-to-action">
+              {{ call-to-action }}
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -53,7 +59,7 @@ height: calc(100vh - 2em);
       <ul class="news-section-tiles grid-container tight">
         {{#articles}}
         <li class="news-section-tile grid-item">
-          <a href="{{ url }}" style="background-image: url('{{ featured-image }}')" class="{{theme}}-background pattern {{theme}}-pattern">
+          <a href="{{ url }}" style="background-image: url('{{ feature-image }}')" class="{{theme}}-background pattern {{theme}}-pattern">
             <div class="news-section-tile_content">
               <h3 class="news-section-tile_content_title">{{ title }}</h3>
               <p class="news-section-tile_content_summary">{{ summary }}</p>

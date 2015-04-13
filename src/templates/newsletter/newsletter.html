@@ -110,85 +110,86 @@ height: calc(100vh - 2em);
       font-family: 'Overpass', sans-serif !important;
     }
 
-    #bodyCell {}
-
-    #templateContainer {}
-
     h1 {
-      color: #111111;
-      display: block;
-      font-family: 'Overpass', sans-serif;
-      font-size: 26px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 100%;
-      letter-spacing: normal;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 20px;
-      margin-left: 0;
-      text-align: left;
-      padding-bottom: 10px;
-      border-top-width: 0px;
-      border-left-width: 0px;
-      border-right-width: 0px;
-      border-bottom-width: 0px;
-      border-style: solid;
-    }
+      font-size: 3em;
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: 0.025em;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase; }
+      h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6 {
+        margin-top: 0; }
 
     h2 {
-      color: #111111;
-      display: block;
-      font-family: 'Overpass', sans-serif;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 100%;
-      letter-spacing: normal;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 10px;
-      margin-left: 0;
-      text-align: left;
-      border-top-width: 0px;
-      border-left-width: 0px;
-      border-right-width: 0px;
-      border-bottom-width: 0px;
-      border-style: solid;
-      border-color: #ebebeb;
-      padding-bottom: 10px;
-    }
+      font-size: 2em;
+      font-weight: 300;
+      line-height: 1.125em;
+      letter-spacing: 0.05em;
+      margin-top: 1.5em;
+      margin-bottom: 0.75em;
+      text-transform: uppercase; }
+      h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6 {
+        margin-top: 0; }
 
     h3 {
-      color: #606060 !important;
-      display: block;
-      font-family: 'Overpass', sans-serif;
-      font-size: 16px;
-      font-style: italic;
-      font-weight: normal;
-      line-height: 100%;
+      font-size: 1em;
+      font-weight: 700;
+      line-height: 1.5em;
       letter-spacing: normal;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 10px;
-      margin-left: 0;
-      text-align: left;
-    }
+      margin-top: 3em;
+      margin-bottom: 1.5em;
+      text-transform: uppercase; }
+      h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6 {
+        margin-top: 0; }
 
     h4 {
-      color: #808080 !important;
-      display: block;
-      font-family: 'Overpass', sans-serif;
-      font-size: 14px;
-      font-style: italic;
-      font-weight: normal;
-      line-height: 100%;
+      font-size: 0.8em;
+      font-weight: 700;
+      line-height: 1.2em;
       letter-spacing: normal;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 10px;
-      margin-left: 0;
-      text-align: left;
+      margin-top: 3.75em;
+      margin-bottom: 1.875em;
+      text-transform: uppercase; }
+      h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6 {
+        margin-top: 0; }
+
+    h5 {
+      font-size: 0.667em;
+      font-weight: 700;
+      line-height: 2em;
+      letter-spacing: normal;
+      margin-top: 1.5em;
+      margin-bottom: 0;
+      text-transform: uppercase; }
+      h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6 {
+        margin-top: 0; }
+
+    h6 {
+      font-size: 0.5em;
+      font-weight: 700;
+      line-height: 0.75em;
+      letter-spacing: normal;
+      margin-top: 1.5em;
+      margin-bottom: 0;
+      text-transform: uppercase; }
+      h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+        margin-top: 0; }
+
+    h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+      margin-top: 0; }
+
+    h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+      margin-bottom: 0; }
+
+    hr {
+      margin: 0;
+      border: none;
+      border-bottom: 1px solid #F5F5F5;
+    }
+
+    p {
+      margin: 1.5em 0;
     }
 
     #templatePreheader {}
@@ -210,17 +211,13 @@ height: calc(100vh - 2em);
     }
 
     #templateHeader {
-
       border-top: 0;
       border-bottom: 0;
     }
 
     .headerContent {
-      color: #505050;
       font-family: 'Overpass', sans-serif;
-      font-size: 20px;
       font-weight: bold;
-      line-height: 100%;
       padding-top: 0;
       padding-right: 0;
       padding-bottom: 0;
@@ -244,12 +241,6 @@ height: calc(100vh - 2em);
     #headerImage {
       height: auto;
       width: 600px;
-    }
-
-    #templateBody {
-      background-color: #fff;
-      border-top: 0;
-      border-bottom: 0;
     }
 
     .bodyContent {
@@ -282,79 +273,6 @@ height: calc(100vh - 2em);
       text-align: center !important;
       display: inline;
       height: auto;
-      width: 700px;
-    }
-    /* ========== Column Styles ========== */
-
-    .templateColumnContainer {
-      display: inline;
-      width: 260px;
-    }
-
-    #templateColumns {
-      border-top: 0;
-      border-bottom: 1px solid #CCCCCC;
-    }
-
-    #templateColums p {
-      color: white !important;
-    }
-
-    .leftColumnContent {
-      color: #111111;
-      font-family: 'Overpass', sans-serif;
-      font-size: 14px;
-      line-height: 150%;
-      padding-top: 0;
-      padding-right: 0;
-      padding-bottom: 20px;
-      padding-left: 0;
-      text-align: left;
-    }
-
-    .leftColumnContent a:link,
-    .leftColumnContent a:visited,
-    /* Yahoo! Mail Override */
-
-    .leftColumnContent a .yshortcuts
-    /* Yahoo! Mail Override */
-
-    {
-      color: #fff;
-      font-weight: normal;
-      text-decoration: underline;
-    }
-
-    .rightColumnContent {
-      color: #111111;
-      font-family: 'Overpass', sans-serif;
-      font-size: 14px;
-      line-height: 150%;
-      padding-top: 0;
-      padding-right: 0;
-      padding-bottom: 20px;
-      padding-left: 0;
-      text-align: left;
-    }
-
-    .rightColumnContent a:link,
-    .rightColumnContent a:visited,
-    /* Yahoo! Mail Override */
-
-    .rightColumnContent a .yshortcuts
-    /* Yahoo! Mail Override */
-
-    {
-      color: #ffffff;
-      font-weight: normal;
-      text-decoration: underline;
-    }
-
-    .leftColumnContent img,
-    .rightColumnContent img {
-      display: inline;
-      height: auto;
-      max-width: 260px;
     }
 
     #templateFooter {
@@ -404,6 +322,7 @@ height: calc(100vh - 2em);
       border-left-width: 0;
       border-bottom-width: 4px;
     }
+
 
 
     /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -538,70 +457,79 @@ height: calc(100vh - 2em);
       border-style:         solid!important;
     }
 
+    a.call-to-action {
+      color:#ffffff !important;
+      display:inline-block;
+      font-weight:bold;
+      line-height:35px;
+      text-align:center;
+      text-decoration:none;
+      padding: 0 10px;
+      -webkit-text-size-adjust:none;
+      background-color: #cc0000;
+    }
+
+    a.call-to-action:link,
+    a.call-to-action:link:visited {
+      text-decoration:none;
+    }
+
   </style>
-   <style type="text/css" data-premailer="ignore">
+  <style type="text/css" data-premailer="ignore">
     /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
 
-
     @media only screen and (max-width: 480px) {
-
-/*      APPLE AUTOMATICALLY GENERATED LINKS FIX */
-
-
-    .bodyContent img {
-      margin: 0 auto;
-      text-align: center !important;
-      display: inline;
-      height: auto;
-      width: 100% !important ;
-    }
-
-    .featured-image {
-      width: 100% !important;
-      padding-top: 40px !important;
-    }
-
-    a[x-apple-data-detectors] {
-      color: inherit !important;
-      text-decoration: none !important;
-      font-size: inherit !important;
-      font-family: inherit !important;
-      font-weight: inherit !important;
-      line-height: inherit !important;
-}
-      #pattern {
-      width: 100% !important;
-    }
-
-      #featured-image {
-
-        padding-top: 40px !important;
-                width:90% !important;
-
+      .bodyContent img {
+        margin: 0 auto;
+        text-align: center !important;
+        display: inline;
+        height: auto;
+        width: 100% !important;
       }
 
+      .featured-image {
+        width: 100% !important;
+        padding-top: 40px !important;
+      }
+
+      /* APPLE AUTOMATICALLY GENERATED LINKS FIX */
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      #pattern {
+        width: 100% !important;
+      }
+      #featured-image {
+        padding-top: 40px !important;
+        width:90% !important;
+      }
       #featured-image img {
         width:100% !important;
       }
-
       td#social {
         padding: 0 0 20px 0; !important
         width: 100% !important;
-      display: block !important;
+        display: block !important;
       }
 
       .preheader-content {
         margin-top: -10px !important;
       }
 
-      #view-in-browser
-      {
+      #view-in-browser {
         display: none !important;
       }
 
       #headerimage img {
         width: 100% !important;
       }
+
       /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
 
       body,
@@ -633,22 +561,63 @@ height: calc(100vh - 2em);
         max-width: 600px !important;
         width: 100% !important;
       }
+
+      /* ======== Heading Styles ==== */
+
       h1 {
-        font-size: 24px !important;
-        line-height: 100% !important;
-      }
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1em;
+        letter-spacing: 0.025em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase; }
+
       h2 {
-        font-size: 20px !important;
-        line-height: 100% !important;
-      }
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1.125em;
+        letter-spacing: 0.05em;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
+        text-transform: uppercase; }
+
       h3 {
-        font-size: 18px !important;
-        line-height: 100% !important;
-      }
+        font-size: 1em;
+        font-weight: 700;
+        line-height: 1.5em;
+        letter-spacing: normal;
+        margin-top: 3em;
+        margin-bottom: 1.5em;
+        text-transform: uppercase; }
+
       h4 {
-        font-size: 16px !important;
-        line-height: 100% !important;
-      }
+        font-size: 0.8em;
+        font-weight: 700;
+        line-height: 1.2em;
+        letter-spacing: normal;
+        margin-top: 3.75em;
+        margin-bottom: 1.875em;
+        text-transform: uppercase; }
+
+      h5 {
+        font-size: 0.667em;
+        font-weight: 700;
+        line-height: 2em;
+        letter-spacing: normal;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+        text-transform: uppercase; }
+
+      h6 {
+        font-size: 0.5em;
+        font-weight: 700;
+        line-height: 0.75em;
+        letter-spacing: normal;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+        text-transform: uppercase; }
+
       #headerImage {
         height: auto !important;
         max-width: 600px !important;
@@ -658,7 +627,7 @@ height: calc(100vh - 2em);
         font-size: 20px !important;
         line-height: 125% !important;
       }
-      #bodyImage {
+      .bodyImage {
         height: auto !important;
         max-width: 560px !important;
         width: 100% !important;
@@ -694,9 +663,6 @@ height: calc(100vh - 2em);
         display: block !important;
       }
     }
-
-
-
   </style>
 </head>
 
@@ -725,13 +691,15 @@ height: calc(100vh - 2em);
               <td align="center" valign="top">
                 <!-- BEGIN HEADER // -->
                 <table class="{{{theme}}}-background" id="hero" height="155px" bgcolor="#838383" background="{{hero-small}}" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
-                  <tr>
-                    <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-top: 30px; padding-bottom: 30px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
-                      {{{ hero-heading }}} <br>
-                      <span style="font-size:20px;">{{{ date }}}</span>
-                      <br />
+                    <td style="color:white; text-transform:uppercase; padding-top: 30px; padding-bottom: 30px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
+                      <h1 style="margin-top: 0">
+                        {{{ hero-heading }}}
+                      </h1>
+                      <h2 style="margin-top: 0; margin-bottom: 0">
+                        {{ date }}
+                      </h2>
                     </td>
                   </tr>
                 </table>
@@ -741,60 +709,82 @@ height: calc(100vh - 2em);
                     <td width="700" class="{{{theme}}}-pattern">
                        <img width="700" id="pattern" border="0" src="<%=baseUrl%>/assets/images/patterns/{{{theme}}}.png">
                     </td>
-
                   </tr>
                 </table>
-
                 <!-- // END HEADER -->
               </td>
             </tr>
+            {{#featured-articles}}
             <tr>
-              <td bgcolor="white" style="padding-bottom:40px;" align="center" valign="top">
-                <!-- BEGIN BODY // -->
-                {{#body-section}}
-                 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+              <td bgcolor="white" align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
-
                     <td valign="top" class="bodyContent {{theme}}-links">
-                      <h2 style="font-size: 15pt; text-transform:uppercase;"> {{ #subheading }}{{ subheading }} {{/subheading }}</h2> {{{ body-copy }}}
-                    </td>
-
-                  </tr>
-                  <tr>
-                    <td class="bodyContent {{theme}}-links" style="padding-top:0; padding-bottom:0;">
+                      <h2 style="margin-top: 0; margin-bottom: 0">{{ title }}</h2>
                     </td>
                   </tr>
-
-                </table>
-                {{/body-section}}
-
-                {{# show-news-items }}
-
-                 <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                   <tr>
-                    <td class="bodyContent {{theme-links}}">
+                    <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
+                      <img width="660" src="{{ feature-image }}" class="bodyImage" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bodyContent {{theme}}-links" style="padding-top:0;">
+                      {{{ body }}}
 
-                      <h2>News</h2>
-                      <ul class="news-section-tiles">
-                        {{#news-items}}
-                        <li class="news-section-tile {{{theme}}}-list">
-                          <a style="color:#505050;" href="{{ url }}">
-
-                            <h3 style="text-transform:uppercase; text-decoration:none; color:#505050; font-style:normal;font-weight:bold;">{{ title }}</h3>
-
+                      <p>
+                      <!--[if mso]>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
+                          <w:anchorlock/>
+                          <center>
+                        <![endif]-->
+                          <a href="{{{call-to-action-url}}}" class="call-to-action" style="color: #fff !important">
+                            {{ call-to-action }}
                           </a>
-                          <p style="margin-top:0; padding-top:0; color:#505050;">{{ summary }}</p>
-                        </li>
-                        {{/news-items}}
-                      </ul>
+                        <!--[if mso]>
+                          </center>
+                        </v:roundrect>
+                      <![endif]-->
+                      </p>
+
+                      <hr />
                     </td>
                   </tr>
                 </table>
+              </td>
+            </tr>
+            {{/featured-articles}}
 
-                {{/ show-news-items }}
+            <tr>
+              <td bgcolor="white" align="center" valign="top" style="padding-bottom: 40px">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td valign="top" class="bodyContent {{theme}}-links" style="padding-bottom: 20px">
+                      <h2 style="margin-top: 0; margin-bottom: 0">{{ articles-title }}</h2>
+                    </td>
+                  </tr>
+                  {{#articles}}
+                  <tr>
+                    <td valign="top" class="bodyContent {{theme}}-links" style="padding-top:0.5em; padding-bottom: 0.5em">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td valign="top" width="260" class="templateColumnContainer">
+                            <img width="260" src="{{{ feature-image }}}" class="columnImage" />
+                          </td>
+                          <td valign="top" class="templateColumnContainer" style="padding-left: 1em">
+                            <a href="{{{url}}}">
+                              <h3 style="margin-top: 0; margin-bottom: 0">{{ title }}</h3>
+                            </a>
+                            <p style="margin-top: 0">{{{ summary }}}</p>
+                          </td>
+                        </tr>
+                      </table>
 
-
-                <!-- // END BODY -->
+                      <hr style="padding-top: 1em" />
+                    </td>
+                  </tr>
+                  {{/articles}}
+                </table>
               </td>
             </tr>
             <tr>

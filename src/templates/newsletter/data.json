@@ -2,7 +2,7 @@
   "title": "Email Template Example",
   "data": {
     "show-images": true,
-    "hero-small": "",
+    "hero-small": "/assets/images/headers/buildings-large.jpg",
     "hero-large": "/assets/images/headers/buildings-large.jpg",
     "hero-heading":  "Marketing Buzz",
     "date": "20/1/16",
@@ -31,30 +31,32 @@
     "articles": [
       {
         "url": "#",
-        "featured-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
+        "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
         "title": "first item",
-        "summary": "the summmmarrrry yo"
+        "summary": "the summmmarrrry yo",
+        "call-to-action": "Come check it out",
+        "call-to-action-url": "#"
       },
       {
         "url": "#",
-        "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
         "title": "another item",
         "summary": "the second summary"
       },      {
         "url": "#",
-        "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
         "title": "another item",
         "summary": "the second summary"
       },
             {
         "url": "#",
-        "featured-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
         "title": "another item",
         "summary": "the second summary"
       },
       {
         "url": "#",
-        "featured-image": "https://unsplash.imgix.net/photo-1427847888090-7b66d035cdaa?q=75&fm=jpg&w=1080&fit=max&s=4bd22b0300281062c276d31fc6a1831e",
+        "feature-image": "https://unsplash.imgix.net/photo-1427847888090-7b66d035cdaa?q=75&fm=jpg&w=1080&fit=max&s=4bd22b0300281062c276d31fc6a1831e",
         "title": "not the first item",
         "summary": "another one"
       }

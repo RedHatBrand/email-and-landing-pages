@@ -370,9 +370,17 @@ label + div.controls {
   }
 }
 
-/*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
-               MEDIA QUERIES
-
-/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
+a.call-to-action {
+  color:#ffffff !important;
+  display:inline-block;
+  font-size:13px;
+  font-weight:bold;
+  line-height:35px;
+  text-align:center;
+  text-decoration:none;
+  padding: 0 10px;
+  -webkit-text-size-adjust:none;
+  background-color: #cc0000;
+}
 
