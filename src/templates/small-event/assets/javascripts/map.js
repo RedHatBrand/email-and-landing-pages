@@ -28,7 +28,6 @@
   });
 
   function initMap (loc) {
-    console.log(loc);
     var zoom = parseInt(mapSettings.zoom);
     var map = L.map('map', {
       scrollWheelZoom: false,

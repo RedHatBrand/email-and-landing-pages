@@ -5,7 +5,7 @@ header[role="banner"] {
 
 #main-nav-fixed {
   position: fixed;
-  z-index: 4;
+  z-index: 6;
   top: 0;
   left: 0;
   right: 0;
@@ -14,11 +14,48 @@ header[role="banner"] {
   background-color: rgba(0, 0, 0, 0.8);
   margin: 0;
 
-  .logo-rh { height: 2.5em; width: 7em; }
-  nav, ul, .logo-rh { display: inline-block; vertical-align: top }
+  .logo-rh {
+    height: 2.5em;
+    width: 7em;
+    margin-top: 0.5em
+  }
 
-  .logo-rh { margin-top: 0.5em; margin-right: 1em; }
-  nav { margin-top: 0; }
+  nav {
+    display: none;
+    position: absolute;
+    top: 3.25em;
+    margin:0;
+    left: 0;
+    right: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    background-color: rgba(0, 0, 0, 0.95)
+  }
+}
+
+#main-nav-fixed nav.menu-show {
+  display: block;
+}
+
+@media screen and (min-width: $max-width) {
+  #main-nav-fixed {
+    z-index: 4;
+    height: 3.75em;
+
+    .logo-rh {
+      margin-right: 1em
+    }
+    nav, ul, .logo-rh { display: inline-block; vertical-align: top }
+    nav {
+      position: static;
+      margin:0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      background-color: transparent
+    }
+  }
 }
 
 body > section {

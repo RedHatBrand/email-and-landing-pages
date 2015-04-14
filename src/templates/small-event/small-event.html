@@ -56,7 +56,7 @@ height: calc(100vh - 2em);
                 <!-- // END HEADER -->
               </td>
             </tr>
-            {{#featured-articles}}
+            {{#body-sections}}
             <tr>
               <td bgcolor="white" align="center" valign="top">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -110,38 +110,30 @@ height: calc(100vh - 2em);
                 </table>
               </td>
             </tr>
-            {{/featured-articles}}
+            {{/body-sections}}
 
             <tr>
               <td bgcolor="white" align="center" valign="top" style="padding-bottom: 40px">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
                     <td valign="top" class="bodyContent {{theme}}-links" style="padding-bottom: 20px">
-                      <h2 style="margin-top: 0; margin-bottom: 0">{{ articles-title }}</h2>
+                      <h2 style="margin-top: 0; margin-bottom: 0">{{ speakers-title }}</h2>
                     </td>
                   </tr>
-                  {{#articles}}
+                  {{#speakers}}
                   <tr>
                     <td valign="top" class="bodyContent {{theme}}-links" style="padding-top:8px; padding-bottom: 8px">
                       <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                           <td valign="top" width="260" class="templateColumnContainer templateColumnContainerLeft">
-                            {{^custom-feature-image}}
-                            {{#library-feature-image}}
-                            <img width="260" src="{{{ library-feature-image }}}" class="columnImage" />
-                            {{/library-feature-image}}
-                            {{/custom-feature-image}}
-
-                            {{#custom-feature-image}}
-                            <img width="260" src="{{{ custom-feature-image }}}" class="columnImage" />
-                            {{/custom-feature-image}}
+                            {{#profile-photo}}
+                            <img width="260" src="{{{ profile-photo }}}" class="columnImage" />
+                            {{/profile-photo}}
                           </td>
 
                           <td valign="top" class="templateColumnContainer templateColumnContainerRight" style="padding-left: 16px">
-                            <a href="{{{url}}}">
-                              <h3 style="margin-top: 0; margin-bottom: 0">{{ title }}</h3>
-                            </a>
-                            <p style="margin-top: 0">{{{ summary }}}</p>
+                            <h3 style="margin-top: 0; margin-bottom: 0">{{ name }}</h3>
+                            <p style="margin-top: 0">{{{ description }}}</p>
                           </td>
                         </tr>
                       </table>
@@ -149,7 +141,7 @@ height: calc(100vh - 2em);
                       <hr style="padding-top: 16px" />
                     </td>
                   </tr>
-                  {{/articles}}
+                  {{/speakers}}
                 </table>
               </td>
             </tr>

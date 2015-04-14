@@ -18,10 +18,10 @@
 
     @media screen and (max-width: $max-width) {
       transform: none;
-      left: $page-margin / 2;
-      right: $page-margin / 2;
-      top: $page-margin;
-      bottom: $page-margin / 2;
+      left: 1rem;
+      right: 1rem;
+      top: 1rem;
+      bottom: 1rem;
     }
   }
 
