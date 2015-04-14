@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="{{lang}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://redhatbrand.github.io/email-and-landing-pages/templates/newsletter/assets/stylesheets/main.css">
+  <link rel="stylesheet" href="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/stylesheets/main.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+  <script src='http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/leaflet.js'></script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/moment.js" type="text/javascript"></script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/bs-scrollspy.js" type="text/javascript"></script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/jquery.smoothscroll.js" type="text/javascript"></script>
   <script src="http://redhatbrand.github.io/email-and-landing-pages/assets/javascripts/main.js" type="text/javascript"></script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/main.js" type="text/javascript"></script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/modal.js" type="text/javascript"></script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/agenda.js" type="text/javascript"></script>
+
+  <script>
+    window.mapSettings = {
+      zoom: '{{map-scale}}' || 12,
+      address: '{{event-location-address}}'
+    };
+  </script>
+  <script src="http://redhatbrand.github.io/email-and-landing-pages/templates/small-event/assets/javascripts/map.js" type="text/javascript"></script>
   <title>{{title}}</title>
   <style type="text/css">
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -397,92 +412,206 @@ THEMES
 </style>
 
 </head>
-<body class="newsletter">
-  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
+<body class="small-event" data-spy="scroll" data-offset="100">
+  <div id="main-nav-fixed" class="nav-fixed-top">
+    <div class="container">
+      <div class="logo-rh"></div>
+
+      <a href="javascript:void(0)" class="icon">
+        <div class="hamburger">
+          <div class="menui top-menu"></div>
+          <div class="menui mid-menu"></div>
+          <div class="menui bottom-menu"></div>
+        </div>
+      </a>
+
+      <nav class="fixed-nav-menu mobilenav">
+        <ul class="nav nav-menu">
+          {{#body-sections}}
+          <li><a class="menu-link" href="#{{slug}}" aria-controls="{{ slug }}">{{link-text}}</a></li>
+          {{/body-sections}}
+
+          {{#speakers.length}}
+          <li><a class="menu-link" href="#speakers" aria-controls="speakers">{{speakers-title}}</a></li>
+          {{/speakers.length}}
+
+          {{#agenda-days.length}}
+          <li><a class="menu-link" href="#agenda" aria-controls="agenda">{{agenda-title}}</a></li>
+          {{/agenda-days.length}}
+
+          {{#event-location-address}}
+          <li><a class="menu-link" href="#location" aria-controls="agenda">{{event-location-title}}</a></li>
+          {{/event-location-address}}
+
+          <li><a href="#form" class="button menu-link">{{call-to-action}}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header role="banner" class="hero-wrapper hero-{{position}} {{theme}}-hero-{{position}} background-darken">
     <div class="hero {{theme}}-hero">
-      <div class="container">
-        <div class="logo-rh"></div>
-        <h1>{{ hero-heading }}</h1>
+      <div id="main-nav">
+        <div class="container">
+          <div class="logo-rh"></div>
+
+          <nav class="nav-menu">
+            <ul class="nav">
+              {{#body-sections}}
+              <li><a class="menu-link" href="#{{slug}}">{{link-text}}</a></li>
+              {{/body-sections}}
+
+              {{#speakers.length}}
+              <li><a class="menu-link" href="#speakers">{{speakers-title}}</a></li>
+              {{/speakers.length}}
+
+              {{#agenda-days.length}}
+              <li><a class="menu-link" href="#agenda">{{agenda-title}}</a></li>
+              {{/agenda-days.length}}
+
+              {{#event-location-address}}
+              <li><a class="menu-link" href="#location" aria-controls="agenda">{{event-location-title}}</a></li>
+              {{/event-location-address}}
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="container hero-text">
+        <h1>{{hero-heading}}</h1>
         <h2>{{date}}</h2>
+
+        <a href="#form" class="button menu-link">{{call-to-action}}</a>
       </div>
     </div>
   </header>
 
-  {{#featured-articles}}
-  <section class="section featured-article">
-    <div class="container">
+  {{#body-sections}}
+  <section class="section body-section" id="{{slug}}">
+    <div class="container feature-image-layout-{{feature-image-layout}}">
+      <h1>{{title}}</h1>
       <div class="grid-container">
         {{^custom-feature-image}}
         {{#library-feature-image}}
-        <div class="featured-article-feature-image grid-item">
-          <img src="{{{ library-feature-image }}}">
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{library-feature-image}}}">
         </div>
         {{/library-feature-image}}
         {{/custom-feature-image}}
 
         {{#custom-feature-image}}
-        <div class="featured-article-feature-image grid-item">
-          <img src="{{{ custom-feature-image }}}">
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{custom-feature-image}}}">
         </div>
         {{/custom-feature-image}}
 
-        <div class="featured-article-content grid-item">
-          <h2>{{title}}</h2>
-
+        <div class="body-section-content grid-item">
           {{{body}}}
-
-          <p>
-            <a href="{{{ url }}}"  class="call-to-action">
-              {{#call-to-action}}
-                {{ call-to-action }}
-              {{/call-to-action}}
-
-              {{^call-to-action}}
-                Find out more
-              {{/call-to-action}}
-            </a>
-          </p>
         </div>
       </div>
     </div>
   </section>
-  {{/featured-articles}}
+  {{/body-sections}}
 
-  <section id="news-items-section">
-    <div class="container">
-      <h2 class="news-item-section-title" >
-        {{articles-title}}
-      </h2>
+  {{#speakers.length}}
+  <section id="speakers" class='section-speakers main'>
+    <div class='container'>
+      <h1 class="speaker-title">
+        {{speakers-title}}
+      </h1>
 
-      <ul class="news-section-tiles grid-container tight">
-        {{#articles}}
-        <li class="news-section-tile grid-item">
-          <a
-            href="{{ url }}"
-            {{^custom-feature-image}}
-            {{#library-feature-image}}
-            style="background-image: url('{{ library-feature-image }}')"
-            {{/library-feature-image}}
-            {{/custom-feature-image}}
-            {{#custom-feature-image}}
-            style="background-image: url('{{ custom-feature-image }}')"
-            {{/custom-feature-image}}
-            class="{{theme}}-background pattern {{theme}}-pattern">
+      <div class="grid-container">
+        {{#speakers}}
+        <a data-target-modal="{{slug}}" href="#{{slug}}" class="modal-open grid-item one-quarter">
+          <div class="circle" style="background-image:url('{{{profile-photo}}}')"></div>
+        </a>
+        {{/speakers}}
+      </div>
+    </div>
+  </section>
+  {{/speakers.length}}
 
-            <div class="news-section-tile_content">
-              <h3 class="news-section-tile_content_title">{{ title }}</h3>
-              <p class="news-section-tile_content_summary">{{ summary }}</p>
+  {{#agenda-days.length}}
+  <section id="agenda" class="section-agenda agenda-container main">
+    <nav class="sub-nav-menu" id="sub-nav-fixed">
+      <div class="container">
+        <ul class="nav sub-nav">
+          {{#agenda-days}}
+          <li>
+            <a href="#agenda-day-{{ slug }}" aria-controls="agenda-day-{{ slug }}" class="menu-link">
+              {{ label }}
+            </a>
+          </li>
+          {{/agenda-days}}
+        </ul>
+      </div>
+    </nav>
+
+    {{#agenda-days}}
+    <div id="agenda-day-{{ slug }}" class="agenda-day">
+      <div class="agenda-day-info container">
+        <h1>{{name}}</h1>
+        <h2>{{date}}</h2>
+      </div>
+      <div class="time-table js-time-table">
+        {{#sessions}}
+        {{#start}}
+        <div class="agenda-session js-agenda-session" data-start="{{start}}" data-end="{{end}}" data-type="{{type}}">
+          <div class="agenda-session-inner {{type}}">
+            <header class="session-header">
+              {{#title}}
+              <h3 class="agenda-session-header-text">{{title}}</h3>
+              {{/title}}
+              {{#speaker}}
+              <h3 class="agenda-session-header-speaker">{{speaker}}</h3>
+              {{/speaker}}
+            </header>
+
+            <div class="agenda-session-content">
+              {{#location}}
+              <p class="agenda-session-content-location">{{location}}</p>
+              {{/location}}
+              {{#group}}
+              <p class="agenda-session-content-group">{{group}}</p>
+              {{/group}}
             </div>
-          </a>
-        </li>
-        {{/articles}}
-      </ul>
+          </div>
+        </div>
+        {{/start}}
+        {{/sessions}}
+      </div>
+    </div>
+    {{/agenda-days}}
+  </section>
+  {{/agenda-days.length}}
+
+  <section id="location">
+    <div id="map"></div>
+    <div class="container">
+      <h1>{{event-location}}</h1>
+
+      {{#event-location-photo}}
+      <div class="grid-container">
+        <div class="grid-item one-half">
+          {{{ event-location-details }}}
+        </div>
+        <div class="grid-item one-half">
+          <img src="{{event-location-photo}}" />
+        </div>
+      </div>
+      {{/event-location-photo}}
+
+      {{^event-location-photo}}
+        {{{ event-location-details }}}
+      {{/event-location-photo}}
     </div>
   </section>
 
   {{#form-config}}
-  <section id="form-section">
+  <section id="form">
     <div class="container">
+      <h1>{{registration-title}}</h1>
+
       
     <div id='GatedFormContainer'></div>
     <script type="text/javascript">
@@ -539,7 +668,38 @@ THEMES
   </section>
   {{/form-config}}
 
-  <div class="footer">
+  <div class="modal-overlay" id="modal-overlay"></div>
+  {{#speakers}}
+  <div id="{{slug}}" class="modal full-width">
+    <header class="modal-header">
+      <h3>{{name}}</h3>
+
+      <button type="button" class="modal-close icon-remove icon-only">
+        Close
+      </button>
+    </header>
+    <div class="modal-content">
+      <div class="grid-container">
+        <div class="grid-item one-third profile">
+          <div class="circle" style="background-image:url('{{{profile-photo}}}')"></div>
+
+          <div class="sign-off">
+            <p>
+              <em>{{title}}</em>
+              <br />
+              <strong>{{company}}</strong>
+            </p>
+          </div>
+        </div>
+        <div class="grid-item two-thirds left-align">
+          {{{description}}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/speakers}}
+
+  <footer class="footer">
     <div class="container">
       <div class="grid-container">
         <div class="grid-item one-half content-small">
@@ -554,6 +714,6 @@ THEMES
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 </html>
