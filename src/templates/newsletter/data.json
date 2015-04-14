@@ -1,7 +1,7 @@
 {
   "title": "Email Template Example",
   "data": {
-    "show-images": true,
+    "lang": "en",
     "hero-small": "/assets/images/headers/buildings-large.jpg",
     "hero-large": "/assets/images/headers/buildings-large.jpg",
     "hero-heading":  "Marketing Buzz",
@@ -14,13 +14,15 @@
       {
         "title": "Curabitur Vulputate",
         "body": "<p>Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non.</p>",
-        "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
         "url": "#"
       },
       {
         "title": "Vestibulum Ante Ipsum",
         "body": "<p>Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non.</p>",
-        "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
         "call-to-action": "Mauris iaculis porttitor posuere",
         "url": "#"
       }
@@ -29,30 +31,35 @@
     "articles": [
       {
         "url": "#",
-        "feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427435177721-d2fd4bd8ec5c?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050",
         "title": "first item",
         "summary": "the summmmarrrry yo"
       },
       {
         "url": "#",
-        "feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
         "title": "another item",
         "summary": "the second summary"
       },      {
         "url": "#",
-        "feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
         "title": "another item",
         "summary": "the second summary"
       },
             {
         "url": "#",
-        "feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427949680810-01ff14e683ea?q=75&fm=jpg&w=1080&fit=max&s=cca5b22fa01b71c11f753de33a7c89fa",
         "title": "another item",
         "summary": "the second summary"
       },
       {
         "url": "#",
-        "feature-image": "https://unsplash.imgix.net/photo-1427847888090-7b66d035cdaa?q=75&fm=jpg&w=1080&fit=max&s=4bd22b0300281062c276d31fc6a1831e",
+        "library-feature-image": "",
+        "custom-feature-image": "https://unsplash.imgix.net/photo-1427847888090-7b66d035cdaa?q=75&fm=jpg&w=1080&fit=max&s=4bd22b0300281062c276d31fc6a1831e",
         "title": "not the first item",
         "summary": "another one"
       }

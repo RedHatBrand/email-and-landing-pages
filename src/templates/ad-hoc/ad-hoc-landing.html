@@ -27,16 +27,24 @@ height: calc(100vh - 2em);
     </div>
   </header>
 
-  {{#mirror-email-content}}
+  {{^landing-page-sections}}
   {{#body-sections}}
   <section class="section body-section">
     <div class="container">
       <div class="grid-container">
-        {{#show-images}}
+        {{^custom-feature-image}}
+        {{#library-feature-image}}
         <div class="body-section-feature-image grid-item">
-          <img src="{{{ feature-image }}}">
+          <img src="{{{ library-feature-image }}}">
         </div>
-        {{/show-images}}
+        {{/library-feature-image}}
+        {{/custom-feature-image}}
+
+        {{#custom-feature-image}}
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{ custom-feature-image }}}">
+        </div>
+        {{/custom-feature-image}}
 
         <div class="body-section-content grid-item">
           <h2>{{title}}</h2>
@@ -47,18 +55,23 @@ height: calc(100vh - 2em);
     </div>
   </section>
   {{/body-sections}}
-  {{/mirror-email-content}}
+  {{/landing-page-sections}}
 
-  {{^mirror-email-content}}
   {{#landing-page-sections}}
   <section class="section body-section">
     <div class="container">
       <div class="grid-container">
-        {{#show-images}}
+        {{#library-feature-image}}
         <div class="body-section-feature-image grid-item">
-          <img src="{{{ feature-image }}}">
+          <img src="{{{ library-feature-image }}}">
         </div>
-        {{/show-images}}
+        {{/library-feature-image}}
+
+        {{#custom-feature-image}}
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{ custom-feature-image }}}">
+        </div>
+        {{/custom-feature-image}}
 
         <div class="body-section-content grid-item">
           <h2>{{title}}</h2>
@@ -69,7 +82,6 @@ height: calc(100vh - 2em);
     </div>
   </section>
   {{/landing-page-sections}}
-  {{/mirror-email-content}}
 
   {{#form-config}}
   <section id="form-section">

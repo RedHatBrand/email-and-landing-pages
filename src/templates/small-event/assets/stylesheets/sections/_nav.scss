@@ -1,0 +1,33 @@
+.nav-menu {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    &:before { display: none }
+
+    a {
+      padding: 1.5em 0.5em;
+      text-transform: capitalize;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      font-size: 1em;
+      color: white;
+
+      &:hover {
+        // color: ?
+      }
+    }
+    &.active a {
+      // border-bottom: 4px solid ?;
+      // color: ?;
+    }
+  }
+}

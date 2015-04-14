@@ -1,0 +1,18 @@
+@import '../../../../assets/stylesheets/main.scss';
+
+$max-width: 768px;
+$page-margin: $line-height * 2;
+
+@import 'helpers/layout_helpers';
+@import 'helpers/layout_helper_classes';
+@import 'components/circle';
+@import 'components/modal';
+@import 'components/tabs';
+@import 'sections/nav';
+@import 'sections/agenda';
+
+body.noscroll {
+  overflow: hidden;
+}
+
+

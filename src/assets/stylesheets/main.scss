@@ -3,6 +3,7 @@
 @import url('//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
 
 @import '../../../node_modules/red-hat-brand-typography/scss/red-hat-typography';
+@import '../../../node_modules/red-hat-brand-palette/scss/red-hat-palette';
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
@@ -40,6 +41,8 @@ body {
   font-size: 0.75em;
 }
 
+img { display: block }
+
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
                    LAYOUT
@@ -47,6 +50,7 @@ body {
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
 header[role="banner"] {
+  margin: 0;
   padding: 4em 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,6 +102,8 @@ footer { margin: 0; }
 
 .social-links {
   text-align: right;
+
+  img { display: initial }
 }
 
 .clear {
@@ -149,6 +155,11 @@ footer { margin: 0; }
   .one-third {
     float: left;
     width: 33.333%;
+  }
+
+  .one-quarter {
+    float: left;
+    width: 25%;
   }
 
   .two-thirds {
@@ -211,6 +222,8 @@ label + div.controls {
   margin-top: 0.5em;
 }
 
+#GatedFormContainer img { display: initial }
+
 #GatedFormContainer .controls {
   position: relative;
 }
@@ -230,6 +243,7 @@ label + div.controls {
 #GatedFormContainer section {
   padding-top: 0;
   padding-bottom: 0;
+  background-color: transparent;
 }
 
 #GatedFormContainer form {
@@ -361,6 +375,10 @@ label + div.controls {
   border-style: solid;
   border-width: 9px 6px 0px 6px;
   border-color: #999 transparent transparent transparent;
+}
+
+#elqFrame ~ * {
+  margin: 0;
 }
 
 @media only screen and (max-width: 560px) {

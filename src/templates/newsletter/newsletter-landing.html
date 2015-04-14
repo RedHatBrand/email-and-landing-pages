@@ -28,11 +28,19 @@ height: calc(100vh - 2em);
   <section class="section featured-article">
     <div class="container">
       <div class="grid-container">
-        {{#show-images}}
+        {{^custom-feature-image}}
+        {{#library-feature-image}}
         <div class="featured-article-feature-image grid-item">
-          <img src="{{{ feature-image }}}">
+          <img src="{{{ library-feature-image }}}">
         </div>
-        {{/show-images}}
+        {{/library-feature-image}}
+        {{/custom-feature-image}}
+
+        {{#custom-feature-image}}
+        <div class="featured-article-feature-image grid-item">
+          <img src="{{{ custom-feature-image }}}">
+        </div>
+        {{/custom-feature-image}}
 
         <div class="featured-article-content grid-item">
           <h2>{{title}}</h2>
@@ -65,7 +73,18 @@ height: calc(100vh - 2em);
       <ul class="news-section-tiles grid-container tight">
         {{#articles}}
         <li class="news-section-tile grid-item">
-          <a href="{{ url }}" style="background-image: url('{{ feature-image }}')" class="{{theme}}-background pattern {{theme}}-pattern">
+          <a
+            href="{{ url }}"
+            {{^custom-feature-image}}
+            {{#library-feature-image}}
+            style="background-image: url('{{ library-feature-image }}')"
+            {{/library-feature-image}}
+            {{/custom-feature-image}}
+            {{#custom-feature-image}}
+            style="background-image: url('{{ custom-feature-image }}')"
+            {{/custom-feature-image}}
+            class="{{theme}}-background pattern {{theme}}-pattern">
+
             <div class="news-section-tile_content">
               <h3 class="news-section-tile_content_title">{{ title }}</h3>
               <p class="news-section-tile_content_summary">{{ summary }}</p>

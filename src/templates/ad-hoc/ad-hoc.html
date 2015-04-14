@@ -78,11 +78,22 @@ height: calc(100vh - 2em);
                       <h2 style="margin-top: 0; margin-bottom: 0">{{ title }}</h2>
                     </td>
                   </tr>
+                  {{^custom-feature-iamge}}
+                  {{#library-feature-iamge}}
                   <tr>
                     <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
                       <img width="660" src="{{ feature-image }}" class="bodyImage" />
                     </td>
                   </tr>
+                  {{/library-feature-iamge}}
+                  {{/custom-feature-iamge}}
+                  {{#custom-feature-iamge}}
+                  <tr>
+                    <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
+                      <img width="660" src="{{ feature-image }}" class="bodyImage" />
+                    </td>
+                  </tr>
+                  {{/custom-feature-iamge}}
                   <tr>
                     <td class="bodyContent {{theme}}-links" style="padding-top:0;">
                       {{{ body }}}
