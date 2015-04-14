@@ -9,80 +9,104 @@ height: calc(100vh - 2em);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<%=baseUrl%>/templates/small-event/assets/stylesheets/main.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
-  <script src="<%=baseUrl%>/assets/javascripts/main.js" type="text/javascript"></script>
+  <script src='<%=baseUrl%>/templates/small-event/assets/javascripts/leaflet.js'></script>
   <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/moment.js" type="text/javascript"></script>
-  <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/bs-tabs.js" type="text/javascript"></script>
+  <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/bs-scrollspy.js" type="text/javascript"></script>
+  <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/jquery.smoothscroll.js" type="text/javascript"></script>
+  <script src="<%=baseUrl%>/assets/javascripts/main.js" type="text/javascript"></script>
+  <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/main.js" type="text/javascript"></script>
   <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/modal.js" type="text/javascript"></script>
   <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/agenda.js" type="text/javascript"></script>
+
+  <script>
+    window.mapSettings = {
+      zoom: '{{map-scale}}' || 12,
+      address: '{{event-location-address}}'
+    };
+  </script>
+  <script src="<%=baseUrl%>/templates/small-event/assets/javascripts/map.js" type="text/javascript"></script>
   <title>{{title}}</title>
   <% include ../../assets/partials/themes.html %>
 </head>
-<body class="small-event" data-spy="scroll" data-target="#main-nav" data-offset="100">
-  <div class="modal-overlay" id="modal-overlay"></div>
+<body class="small-event" data-spy="scroll" data-offset="100">
+  <div id="main-nav-fixed" class="nav-fixed-top">
+    <div class="container">
+      <div class="logo-rh"></div>
+
+      <nav class="fixed-nav-menu">
+        <ul class="nav nav-menu">
+          {{#body-sections}}
+          <li><a class="menu-link" href="#{{slug}}" aria-controls="{{ slug }}">{{link-text}}</a></li>
+          {{/body-sections}}
+
+          {{#speakers.length}}
+          <li><a class="menu-link" href="#speakers" aria-controls="speakers">{{speakers-title}}</a></li>
+          {{/speakers.length}}
+
+          {{#agenda-days.length}}
+          <li><a class="menu-link" href="#agenda" aria-controls="agenda">{{agenda-title}}</a></li>
+          {{/agenda-days.length}}
+
+          <li><a href="#form" class="button menu-link">{{call-to-action}}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <header role="banner" class="hero-wrapper hero-{{position}} {{theme}}-hero-{{position}} background-darken">
     <div class="hero {{theme}}-hero">
-      <div class="container">
-        <div class="logo-rh"></div>
+      <div id="main-nav">
+        <div class="container">
+          <div class="logo-rh"></div>
 
-        <nav id="main-nav" class="nav-menu">
-          <ul>
-            {{#body-sections}}
-            <li><a href="#{{slug}}">{{link-text}}</a></li>
-            {{/body-sections}}
+          <nav class="nav-menu">
+            <ul class="nav">
+              {{#body-sections}}
+              <li><a class="menu-link" href="#{{slug}}">{{link-text}}</a></li>
+              {{/body-sections}}
 
-            {{#speakers.length}}
-            <li><a href="#speakers">{{speakers-title}}</a></li>
-            {{/speakers.length}}
+              {{#speakers.length}}
+              <li><a class="menu-link" href="#speakers">{{speakers-title}}</a></li>
+              {{/speakers.length}}
 
-            {{#agenda-days.length}}
-            <li><a href="#{{slug}}">{{agenda-title}}</a></li>
-            {{/agenda-days.length}}
-          </ul>
-        </nav>
+              {{#agenda-days.length}}
+              <li><a class="menu-link" href="#agenda">{{agenda-title}}</a></li>
+              {{/agenda-days.length}}
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <div class="container">
+      <div class="container hero-text">
         <h1>{{hero-heading}}</h1>
         <h2>{{date}}</h2>
+
+        <a href="#form" class="button menu-link">{{call-to-action}}</a>
       </div>
     </div>
   </header>
 
   {{#body-sections}}
   <section class="section body-section" id="{{slug}}">
-    <div class="container">
+    <div class="container feature-image-layout-{{feature-image-layout}}">
+      <h1>{{title}}</h1>
       <div class="grid-container">
         {{^custom-feature-image}}
         {{#library-feature-image}}
-        <div class="featured-article-feature-image grid-item">
+        <div class="body-section-feature-image grid-item">
           <img src="{{{library-feature-image}}}">
         </div>
         {{/library-feature-image}}
         {{/custom-feature-image}}
 
         {{#custom-feature-image}}
-        <div class="featured-article-feature-image grid-item">
+        <div class="body-section-feature-image grid-item">
           <img src="{{{custom-feature-image}}}">
         </div>
         {{/custom-feature-image}}
 
-        <div class="featured-article-content grid-item">
-          <h2>{{title}}</h2>
-
+        <div class="body-section-content grid-item">
           {{{body}}}
-
-          <p>
-            <a href="{{{url}}}"  class="call-to-action">
-              {{#call-to-action}}
-                {{call-to-action}}
-              {{/call-to-action}}
-
-              {{^call-to-action}}
-                Find out more
-              {{/call-to-action}}
-            </a>
-          </p>
         </div>
       </div>
     </div>
@@ -98,37 +122,9 @@ height: calc(100vh - 2em);
 
       <div class="grid-container">
         {{#speakers}}
-        <a data-target-modal="{{slug}}" href="#{{slug}}" class="modal-open grid-item one-third">
+        <a data-target-modal="{{slug}}" href="#{{slug}}" class="modal-open grid-item one-quarter">
           <div class="circle" style="background-image:url('{{{profile-photo}}}')"></div>
         </a>
-
-        <div id="{{slug}}" class="modal full-width">
-          <header class="modal-header">
-            <h1>{{name}}</h1>
-
-            <button type="button" class="modal-close icon-remove icon-only">
-              Close
-            </button>
-          </header>
-          <div class="modal-content">
-            <div class="grid-container">
-              <div class="grid-item one-third profile">
-                <div class="circle" style="background-image:url('{{{profile-photo}}}')"></div>
-
-                <div class="sign-off">
-                  <p>
-                    <em>{{title}}</em>
-                    <br />
-                    <strong>{{company}}</strong>
-                  </p>
-                </div>
-              </div>
-              <div class="grid-item two-thirds left-align">
-                {{{description}}}
-              </div>
-            </div>
-          </div>
-        </div>
         {{/speakers}}
       </div>
     </div>
@@ -137,71 +133,120 @@ height: calc(100vh - 2em);
 
   {{#agenda-days.length}}
   <section id="agenda" class="section-agenda agenda-container main">
-    <div class="container">
-      <h1>Agenda</h1>
-
-      <div role="tabpanel">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs nav-justified" role="tablist">
+    <nav class="sub-nav-menu" id="sub-nav-fixed">
+      <div class="container">
+        <ul class="nav sub-nav">
           {{#agenda-days}}
-          <li role="presentation">
-            <a href="#agenda-day-{{ slug }}" aria-controls="agenda-day-{{ slug }}" role="tab" data-toggle="tab">
-              {{ day-name }}
+          <li>
+            <a href="#agenda-day-{{ slug }}" aria-controls="agenda-day-{{ slug }}" class="menu-link">
+              {{ label }}
             </a>
           </li>
           {{/agenda-days}}
         </ul>
+      </div>
+    </nav>
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          {{#agenda-days}}
-          <div role="tabpanel" class="tab-pane active" id="agenda-day-{{ slug }}">
-            <div class="agenda-day-info">
-              <h2>{{day-name}}</h2>
-              <h3>{{date}}</h3>
-            </div>
-            <div class="time-table js-time-table">
-              {{#sessions}}
-              {{#start}}
-              <div class="agenda-session js-agenda-session" data-start="{{start}}" data-end="{{end}}">
-                <div class="agenda-session-inner {{type}}">
-                  <header class="session-header">
-                    {{#title}}
-                    <h3 class="agenda-session-header-text">{{title}}</h3>
-                    {{/title}}
-                    {{#speaker}}
-                    <h3 class="agenda-session-header-speaker">{{speaker}}</h3>
-                    {{/speaker}}
-                  </header>
+    {{#agenda-days}}
+    <div id="agenda-day-{{ slug }}" class="agenda-day">
+      <div class="agenda-day-info container">
+        <h1>{{name}}</h1>
+        <h2>{{date}}</h2>
+      </div>
+      <div class="time-table js-time-table">
+        {{#sessions}}
+        {{#start}}
+        <div class="agenda-session js-agenda-session" data-start="{{start}}" data-end="{{end}}" data-type="{{type}}">
+          <div class="agenda-session-inner {{type}}">
+            <header class="session-header">
+              {{#title}}
+              <h3 class="agenda-session-header-text">{{title}}</h3>
+              {{/title}}
+              {{#speaker}}
+              <h3 class="agenda-session-header-speaker">{{speaker}}</h3>
+              {{/speaker}}
+            </header>
 
-                  <div class="agenda-session-content">
-                    {{#location}}
-                    <p class="agenda-session-content-location">{{location}}</p>
-                    {{/location}}
-                    {{#group}}
-                    <p class="agenda-session-content-group">{{group}}</p>
-                    {{/group}}
-                  </div>
-                </div>
-              </div>
-              {{/start}}
-              {{/sessions}}
+            <div class="agenda-session-content">
+              {{#location}}
+              <p class="agenda-session-content-location">{{location}}</p>
+              {{/location}}
+              {{#group}}
+              <p class="agenda-session-content-group">{{group}}</p>
+              {{/group}}
             </div>
           </div>
-          {{/agenda-days}}
         </div>
+        {{/start}}
+        {{/sessions}}
       </div>
     </div>
+    {{/agenda-days}}
   </section>
   {{/agenda-days.length}}
 
-  {{#form-config}}
-  <section id="form-section">
+  <section id="location">
+    <div id="map"></div>
     <div class="container">
+      <h1>{{event-location}}</h1>
+
+      {{#event-location-photo}}
+      <div class="grid-container">
+        <div class="grid-item one-half">
+          {{{ event-location-details }}}
+        </div>
+        <div class="grid-item one-half">
+          <img src="{{event-location-photo}}" />
+        </div>
+      </div>
+      {{/event-location-photo}}
+
+      {{^event-location-photo}}
+        {{{ event-location-details }}}
+      {{/event-location-photo}}
+    </div>
+  </section>
+
+  {{#form-config}}
+  <section id="form">
+    <div class="container">
+      <h1>{{registration-title}}</h1>
+
       <% include ../../assets/partials/generic-gated-form.html %>
     </div>
   </section>
   {{/form-config}}
+
+  <div class="modal-overlay" id="modal-overlay"></div>
+  {{#speakers}}
+  <div id="{{slug}}" class="modal full-width">
+    <header class="modal-header">
+      <h3>{{name}}</h3>
+
+      <button type="button" class="modal-close icon-remove icon-only">
+        Close
+      </button>
+    </header>
+    <div class="modal-content">
+      <div class="grid-container">
+        <div class="grid-item one-third profile">
+          <div class="circle" style="background-image:url('{{{profile-photo}}}')"></div>
+
+          <div class="sign-off">
+            <p>
+              <em>{{title}}</em>
+              <br />
+              <strong>{{company}}</strong>
+            </p>
+          </div>
+        </div>
+        <div class="grid-item two-thirds left-align">
+          {{{description}}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/speakers}}
 
   <footer class="footer">
     <div class="container">

@@ -116,37 +116,36 @@ footer { margin: 0; }
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
 
-
-.grid-container {
-  margin-left: -1em;
-  margin-right: -1em;
-
-  &.tight{
-    margin-left: -0.5em;
-    margin-right: -0.5em;
-  }
-
-  &:before, &:after {
-    content: '';
-    clear: both;
-    display: table;
-  }
-}
-
-.grid-item {
-  padding: 1em;
-  box-sizing: border-box;
-}
-
-.tight .grid-item {
-  padding: 0.5em;
-}
-
-.grid-item + .grid-item {
-  margin: 0;
-}
-
 @media screen and (min-width: 560px) {
+  .grid-container {
+    margin-left: -1em;
+    margin-right: -1em;
+
+    &.tight{
+      margin-left: -0.5em;
+      margin-right: -0.5em;
+    }
+
+    &:before, &:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+
+  .grid-item {
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  .tight .grid-item {
+    padding: 0.5em;
+  }
+
+  .grid-item + .grid-item {
+    margin: 0;
+  }
+
   .one-half {
     float: left;
     width: 50%;
@@ -170,6 +169,10 @@ footer { margin: 0; }
   .body-section-feature-image + .body-section-content,
   .featured-article-feature-image + .featured-article-content {
     float: left;
+  }
+
+  .body-section-feature-image + .body-section-content,
+  .featured-article-feature-image + .featured-article-content {
     width: 66.667%;
   }
 
@@ -177,6 +180,31 @@ footer { margin: 0; }
   .featured-article-feature-image {
     width: 33.333%;
   }
+
+  .feature-image-layout-third {
+    .body-section-feature-image + .body-section-content,
+    .feature-article-feature-image + .featured-article-content {
+      width: 66.667%;
+    }
+  }
+
+  .feature-image-layout-third {
+    .body-section-feature-image,
+    .feature-article-feature-image {
+      width: 33.333%;
+    }
+  }
+
+  .feature-image-layout-half .body-section-feature-image + .body-section-content,
+  .feature-image-layout-half .feature-article-feature-image + .featured-article-content {
+    width: 50%;
+  }
+
+  .feature-image-layout-half .body-section-feature-image,
+  .feature-image-layout-half .feature-article-feature-image {
+    width: 50%;
+  }
+
 
   .body-section:nth-child(odd),
   .featured-article:nth-child(odd) {
@@ -244,11 +272,6 @@ label + div.controls {
   padding-top: 0;
   padding-bottom: 0;
   background-color: transparent;
-}
-
-#GatedFormContainer form {
-  width: 60%;
-  margin: 0 auto;
 }
 
 #GatedFormContainer form .form-group {
@@ -379,6 +402,47 @@ label + div.controls {
 
 #elqFrame ~ * {
   margin: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .form-group {
+    margin-left: -1em;
+    margin-right: -1em;
+
+    &:after, &:before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .dropdown-arrow:after {
+      right: 32px;
+    }
+
+    > label { padding: 1em 0.7em 0.7em 0.7em; }
+
+    .col-sm-2, .col-sm-10 {
+      padding-left: 1em;
+      padding-right: 1em;
+      box-sizing: border-box;
+      float: left;
+      margin: 0;
+    }
+
+    .col-sm-2 {
+      width: 25%;
+      display: block;
+      text-align: right;
+    }
+
+    .col-sm-10 {
+      width: 75%;
+    }
+
+    .col-sm-offset-2 {
+      margin-left: 25%;
+    }
+  }
 }
 
 @media only screen and (max-width: 560px) {

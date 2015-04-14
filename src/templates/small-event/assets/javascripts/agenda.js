@@ -1,6 +1,7 @@
 (function (global) {
   function initAgenda () {
-    var timeFormat = global.redHatTimeFormat || 'hh:mm a';
+    var timeFormat = 'h:mm';
+    var meridianFormat = 'a';
 
     var days = [].slice.call(document.getElementsByClassName('js-time-table')).map(function (dayElem) {
       return {
@@ -10,6 +11,7 @@
             start: sessionElem.getAttribute('data-start'),
             end: sessionElem.getAttribute('data-end'),
             group: sessionElem.getAttribute('data-group'),
+            type: sessionElem.getAttribute('data-type'),
             element: sessionElem
           };
         })
@@ -43,29 +45,38 @@
     days.forEach(function (day) {
       var container = day.element;
       day.ranges.forEach(function (range) {
+        var rangeRowContainer = document.createElement('div');
         var rangeRow = document.createElement('div');
         var rangeRowSessions = document.createElement('div');
         var time = moment(range.start, 'X').format(timeFormat);
-        var timeElem = document.createElement('h3');
+        var meridian = moment(range.start, 'X').format(meridianFormat);
+        var timeElem = document.createElement('div');
+        var timeValueElem = document.createElement('h3');
+        var meridianElem = document.createElement('span');
 
         timeElem.classList.add('agenda-range-row-start-time');
-        timeElem.innerHTML = time;
+        timeValueElem.innerHTML = time;
+        meridianElem.innerHTML = meridian;
+        timeElem.appendChild(timeValueElem);
+        timeElem.appendChild(meridianElem);
 
         rangeRowSessions.classList.add('agenda-range-row-sesions-container');
 
         rangeRow.classList.add('agenda-range-row');
-        rangeRow.classList.add('agenda-range-row-sessions-' + range.sessions.length);
-        rangeRow.appendChild(timeElem);
-        rangeRow.appendChild(rangeRowSessions);
+        rangeRowContainer.classList.add('container');
+        rangeRowContainer.classList.add('agenda-range-row-sessions-' + range.sessions.length);
+        rangeRowContainer.appendChild(timeElem);
+        rangeRowContainer.appendChild(rangeRowSessions);
+        rangeRow.appendChild(rangeRowContainer);
 
         range.sessions.forEach(function (session) {
-          var sessionsElem;
+          var sessionElem = document.createElement('div');
+          sessionElem.classList.add('agenda-session');
+          sessionElem.innerHTML = session.element.innerHTML;
+          rangeRowSessions.appendChild(sessionElem);
 
-          if (!global.attendeeGroup || !session.group || session.group === global.attendeeGroup) {
-            sessionElem = document.createElement('div');
-            sessionElem.classList.add('agenda-session');
-            sessionElem.innerHTML = session.element.innerHTML;
-            rangeRowSessions.appendChild(sessionElem);
+          if (session.type === 'break') {
+            rangeRow.classList.add('break');
           }
 
           container.removeChild(session.element);
@@ -77,7 +88,6 @@
   }
 
   $(function () {
-    $('#agenda .nav-tabs li:first-child a').tab('show')
     initAgenda()
   })
 })(window)

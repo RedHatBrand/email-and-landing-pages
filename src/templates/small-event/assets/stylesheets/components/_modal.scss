@@ -1,5 +1,6 @@
 .modal {
   @include animatableHide;
+  margin: 0;
 
   &.open {
     visibility: visible;
@@ -28,6 +29,25 @@
     position: absolute;
     top: 1.6em;
     right: 1.6em;
+    margin: 0;
+    font-size: 1em;
+    width: 1.6em;
+    height: 1.6em;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+
+    &:before {
+      content: "\2715";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-indent: 0;
+      line-height: 1em;
+    }
   }
 
 
@@ -46,6 +66,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    margin: 0;
     padding: ($line-height * 4.5) $line-height;
     overflow-y: auto;
     background-color: darken(white, 5%);
@@ -55,6 +76,7 @@
 .modal-overlay {
   @include animatableHide;
   z-index: 9998;
+  margin: 0;
 
   background-color: rgba(0,0,0,0.75);
 
