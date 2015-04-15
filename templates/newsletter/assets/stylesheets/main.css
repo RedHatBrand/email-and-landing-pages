@@ -541,6 +541,13 @@ label + div.controls {
 #GatedFormContainer form label.error:not(:first-child), #GatedFormContainer form h1, #DynamicFormThankYou .social-icons, #GatedFormContainer form .form-message, #GatedFormContainer form .rh-logo {
   display: none !important; }
 
+#DynamicFormThankYou {
+  margin-bottom: 1rem; }
+
+#DynamicFormThankYou > .form-header > .form-group > .col-sm-12 > h2 {
+  padding-left: 10px;
+  padding-bottom: 20px; }
+
 .dropdown-arrow:after {
   content: "";
   width: 0;
@@ -661,3 +668,11 @@ a.call-to-action {
 
 .news-section-tile_content_title {
   margin-bottom: 0; }
+
+@media screen and (max-width: 600px) {
+  .news-section-tile {
+    width: 100%; }
+
+  .news-section-tile:last-child {
+    width: 100% !important; }
+ }

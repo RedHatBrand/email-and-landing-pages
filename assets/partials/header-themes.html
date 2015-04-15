@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ lang }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://redhatbrand.github.io/email-and-landing-pages/assets/stylesheets/main.css">
-<!--  <link rel="stylesheet" href="http://redhatbrand.github.io/email-and-landing-pages/assets/stylesheets/themes.css">-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
-  <script src="http://redhatbrand.github.io/email-and-landing-pages/assets/javascripts/main.js" type="text/javascript"></script>
-  <title>{{title}}</title>
-
-  <style type="text/css">
+<style type="text/css">
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 THEMES
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
@@ -48,7 +37,6 @@ THEMES
 }
 
 /* red */
-
 .corporate {
   color: #cc0000 !important;
 }
@@ -61,28 +49,70 @@ THEMES
   background-color: #A30000;
 }
 
+{{^custom-image}}
+{{#library-image}}
 .corporate-hero-right {
   background-image:
     url('http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-12-12-100.svg'),
     url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-12-12.svg'),
-    url('{{{hero-large}}}');
+    url('{{{library-image}}}');
 }
+{{/library-image}}
+{{/custom-image}}
 
+{{#custom-image}}
+.corporate-hero-right {
+  background-image:
+    url('http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-12-12-100.svg'),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-12-12.svg'),
+    url('{{{custom-image}}}');
+}
+{{/custom-image}}
+
+{{^custom-image}}
+{{#library-image}}
 .corporate-hero-middle {
   background-image:
     url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-alt-50.svg),
     url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-08-04.svg'),
-    url('{{{hero-large}}}');
+    url('{{{library-image}}}');
 
 }
+{{/library-image}}
+{{/custom-image}}
+
+{{#custom-image}}
+.corporate-hero-middle {
+  background-image:
+    url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-alt-50.svg),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-08-04.svg'),
+    url('{{{custom-image}}}');
+
+}
+{{/custom-image}}
 
 @media only screen and (max-width: 560px) {
+  {{^custom-image}}
+  {{#library-image}}
   .corporate-hero-middle {
     background-image:
       url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-alt-100.svg),
       url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-08-04.svg'),
-      url('{{{hero-large}}}');
+      url('{{{library-image}}}');
+
   }
+  {{/library-image}}
+  {{/custom-image}}
+
+  {{#custom-image}}
+  .corporate-hero-middle {
+    background-image:
+      url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-alt-100.svg),
+      url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-08-04.svg'),
+      url('{{{custom-image}}}');
+
+  }
+  {{/custom-image}}
 }
 
 .corporate-pattern:hover:before {
@@ -103,27 +133,66 @@ THEMES
   background-color: #5E6A71;
 }
 
+{{^custom-image}}
+{{#library-image}}
 .services-hero-right {
   background-image:
     url('http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-12-12-100.svg'),
     url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-12-12.svg'),
-    url('{{{hero-large}}}');
+    url('{{{library-image}}}');
 }
+{{/library-image}}
+{{/custom-image}}
 
+{{#custom-image}}
+.services-hero-right {
+  background-image:
+    url('http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-12-12-100.svg'),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-12-12.svg'),
+    url('{{{custom-image}}}');
+}
+{{/custom-image}}
+
+{{^custom-image}}
+{{#library-image}}
 .services-hero-middle {
   background-image:
     url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-50.svg),
     url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg'),
-    url('{{{hero-large}}}');
+    url('{{{library-image}}}');
 }
+{{/library-image}}
+{{/custom-image}}
+
+{{#custom-image}}
+.services-hero-middle {
+  background-image:
+    url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-50.svg),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg'),
+    url('{{{custom-image}}}');
+}
+{{/custom-image}}
 
 @media only screen and (max-width: 560px) {
+  {{^custom-image}}
+  {{#library-image}}
   .services-hero-middle {
     background-image:
       url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-100.svg),
       url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg'),
-      url('{{{hero-large}}}');
+      url('{{{library-image}}}');
   }
+  {{/library-image}}
+  {{/custom-image}}
+
+  {{#custom-image}}
+  .services-hero-middle {
+    background-image:
+      url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-100.svg),
+      url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg'),
+      url('{{{custom-image}}}');
+  }
+  {{/custom-image}}
 }
 
 .services-pattern:before {
@@ -160,6 +229,46 @@ THEMES
     url('{{{hero-large}}}');
 }
 
+{{^custom-image}}
+{{#library-image}}
+.services-hero-right {
+  background-image:
+    url('http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-12-12-100.svg'),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-12-12.svg'),
+    url('{{{library-image}}}');
+}
+{{/library-image}}
+{{/custom-image}}
+
+{{#custom-image}}
+.services-hero-right {
+  background-image:
+    url('http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-12-12-100.svg'),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-12-12.svg'),
+    url('{{{custom-image}}}');
+}
+{{/custom-image}}
+
+{{^custom-image}}
+{{#library-image}}
+.services-hero-middle {
+  background-image:
+    url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-50.svg),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg'),
+    url('{{{library-image}}}');
+}
+{{/library-image}}
+{{/custom-image}}
+
+{{#custom-image}}
+.services-hero-middle {
+  background-image:
+    url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-50.svg),
+    url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg'),
+    url('{{{custom-image}}}');
+}
+{{/custom-image}}
+
 @media only screen and (max-width: 560px) {
   .storage-and-big-data-hero-middle {
     background-image:
@@ -175,8 +284,6 @@ THEMES
 }
 
 /* blue */
-
-/*traditional-infrastructures*/
 
 .traditional-infrastructures {
   color: #0088CE !important;
@@ -215,8 +322,6 @@ THEMES
   }
 }
 
-/*cloud-infrastructures*/
-
 .cloud-infrastructures {
   color: #0088CE !important;
 }
@@ -249,8 +354,6 @@ THEMES
       url('{{{hero-large}}}');
   }
 }
-
-/*infrastructure-management*/
 
 .infrastructure-management {
   color: #0088CE !important;
@@ -292,8 +395,6 @@ THEMES
 
 /*    green*/
 
-/*traditional-app-development   */
-
 .traditional-app-development {
   color: #3F9C35 !important;
 }
@@ -331,8 +432,6 @@ THEMES
   }
 }
 
-/*business-process-integration*/
-
 .business-process-integration {
   color: #3F9C35 !important;
 }
@@ -362,7 +461,7 @@ THEMES
 
 
 @media only screen and (max-width: 560px) {
-{
+  .business-process-integration-hero-middle {
     background-image:
       url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/business-process/green-mid/positioned-08-04-alt-100.svg),
       url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-08-04.svg'),
@@ -370,8 +469,6 @@ THEMES
       url('{{{hero-large}}}');
   }
 }
-
-/*cloud-app-development*/
 
 .cloud-app-development {
   color: #3F9C35 !important;
@@ -410,150 +507,3 @@ THEMES
   }
 }
 </style>
-
-</head>
-
-<body class="ad-hoc">
-  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
-    <div class="hero {{theme}}-hero">
-      <div class="container">
-        <div class="logo-rh"></div>
-        <h1>{{{hero-heading}}}</h1>
-        <a href="#form" class="button" id="call-to-action">{{call-to-action}}</a>
-      </div>
-    </div>
-  </header>
-
-  {{^landing-page-sections}}
-  {{#body-sections}}
-  <section class="section body-section">
-    <div class="container">
-      <div class="grid-container">
-        {{^custom-feature-image}}
-        {{#library-feature-image}}
-        <div class="body-section-feature-image grid-item">
-          <img src="{{{library-feature-image}}}" />
-        </div>
-        {{/library-feature-image}}
-        {{/custom-feature-image}}
-
-        {{#custom-feature-image}}
-        <div class="body-section-feature-image grid-item">
-          <img src="{{{ custom-feature-image }}}" />
-        </div>
-        {{/custom-feature-image}}
-
-        <div class="body-section-content grid-item">
-          <h2>{{{title}}}</h2>
-
-          {{{body}}}
-        </div>
-      </div>
-    </div>
-  </section>
-  {{/body-sections}}
-  {{/landing-page-sections}}
-
-  {{#landing-page-sections}}
-  <section class="section body-section">
-    <div class="container">
-      <div class="grid-container">
-        {{#library-feature-image}}
-        <div class="body-section-feature-image grid-item">
-          <img src="{{{ library-feature-image }}}">
-        </div>
-        {{/library-feature-image}}
-
-        {{#custom-feature-image}}
-        <div class="body-section-feature-image grid-item">
-          <img src="{{{ custom-feature-image }}}">
-        </div>
-        {{/custom-feature-image}}
-
-        <div class="body-section-content grid-item">
-          <h2>{{{title}}}</h2>
-
-          {{{body}}}
-        </div>
-      </div>
-    </div>
-  </section>
-  {{/landing-page-sections}}
-
-  {{#form-config}}
-  <section id="form-section">
-    <div class="container">
-      
-    <div id='GatedFormContainer'></div>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        
-        {{{form-config}}}
-        
-        window.DynamicFormConfig = GatedFormConfig;
-        
-        var form_js = document.createElement("script");
-        form_js.type = "text/javascript";
-        form_js.src = "//www.redhat.com/forms/scripts/jquery.gatedform.js";
-        document.getElementsByTagName("body")[0].appendChild(form_js);
-            
-        $("#GatedFormContainer").css("opacity", "0");
-        
-        var checkExist = setInterval(function() {
-          if ($('#C_FirstName').length) {
-            clearInterval(checkExist);
-            setTimeout(function () { initFormInteractions() }, 1500);
-          }
-        }, 100);
-        
-        function initFormInteractions () {
-          $("#GatedFormContainer").css("opacity", "1");
-          
-          $("select:not([multiple]) option:first-child").empty(); // Blank first option in all select inputs
-          $("select:not([multiple])").parent().addClass("dropdown-arrow");
-          $(".disabled").parent().css("opacity","0.75");
-          
-          blankFirstOption ();
-          
-        }
-      });
-      
-      function blankFirstOption () {
-        $("#C_Department1").change(function(){
-          $("#C_Job_Role11").parent().css("opacity","1").parent().css("opacity","1");
-          if ($.trim($("#C_Job_Role11").val()) == '') {
-            var label = $("#C_Job_Role11").parent().siblings().eq(0);
-            label.css("transform", "none");
-            label.css("color","#999");
-            label.css("font-weight","300");
-          }
-          $(".disabled").parent().css("opacity","0.75");
-          $("#C_Job_Role11 option:first-child").empty();
-          
-          blankFirstOption ();
-        });
-      }
-    </script>
- 
-    </div>
-  </section>
-  {{/form-config}}
-
-  <footer class="footer">
-    <div class="container">
-      <div class="grid-container">
-        <div class="grid-item one-half content-small">
-          {{{footer}}}
-        </div>
-        <div class="grid-item one-half content-small social-links">
-          <a href="http://www.facebook.com/redhatinc"><img alt="facebook" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/facebook.png"></a>
-          <a href="http://plus.google.com/+RedHat"><img alt="google-plus" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/google.png"></a>
-          <a href="http://linkedin.com/company/red-hat"><img alt="linkedin" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/linkedin.png"></a>
-          <a href="http://twitter.com/redhatnews"><img alt="twitter" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/twitter.png"></a>
-          <a href="http://youtube.com/redhat"><img alt="youtube" src="http://redhatbrand.github.io/email-and-landing-pages/assets/images/icons/youtube.png"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
