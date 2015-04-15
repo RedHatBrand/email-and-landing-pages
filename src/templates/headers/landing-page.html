@@ -1,0 +1,30 @@
+---
+width: 1200px
+height: 400px
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="<%=baseUrl%>/assets/stylesheets/main.css">
+  <% include ../../assets/partials/themes.html %>
+
+  <style>
+    body { position: relative; }
+    header[role="banner"] {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body style="width: {{landing-page-width}}px; height: {{landing-page-height}}px">
+  <header role="banner" class="hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
+  </header>
+</body>
+</html>
+

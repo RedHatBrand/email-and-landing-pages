@@ -1,0 +1,15 @@
+{
+  "title": "Headers",
+  "data": {
+    "theme": "cloud-app-development",
+    "position": "middle",
+    "background-darken-amount": "0.20",
+    "hero-large": "/assets/images/headers/buildings-large.jpg",
+    "email-width": 700,
+    "email-height": 250,
+    "landing-page-width": 1200,
+    "landing-page-height": 400
+  }
+}
+
+
