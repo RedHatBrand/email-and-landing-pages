@@ -1518,5 +1518,14 @@ section:nth-child(even) .agenda-range-row > .container {
   padding-bottom: 2em;
   background-color: rgba(255, 255, 255, 0.95); }
 
+.speaker-link {
+  text-decoration: none;
+  text-align: center;
+  color: #8f9694; }
+  .speaker-link h4 {
+    margin-top: 1em; }
+  .speaker-link:hover {
+    color: #111111; }
+
 body.noscroll {
   overflow: hidden; }

@@ -685,8 +685,11 @@ a.call-to-action:link:visited {
                   <tr>
                     <td style="font-size: 30px; line-height: 35px; color:white; text-transform:uppercase; padding-top: 60px; padding-bottom: 60px; padding-left:20px; padding-right:20px;" valign="top" class="headerContent">
 
-                      {{ hero-heading }}
+                      <h1>
+                        {{{hero-heading}}}
+                      </h1>
                       <br />
+                      {{#call-to-action}}
                       <div style="padding-top:20px">
                         <!--[if mso]>
   <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
@@ -698,6 +701,7 @@ a.call-to-action:link:visited {
     </center>
   </v:roundrect>
 <![endif]-->
+                      {{/call-to-action}}
                       </div>
                     </td>
                   </tr>
@@ -721,25 +725,25 @@ a.call-to-action:link:visited {
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
                     <td valign="top" class="bodyContent {{theme}}-links">
-                      <h2 style="margin-top: 0; margin-bottom: 0">{{ title }}</h2>
+                      <h2 style="margin-top: 0; margin-bottom: 0">{{{title}}}</h2>
                     </td>
                   </tr>
-                  {{^custom-feature-iamge}}
-                  {{#library-feature-iamge}}
+                  {{^custom-feature-image}}
+                  {{#library-feature-image}}
                   <tr>
                     <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
                       <img width="660" src="{{ feature-image }}" class="bodyImage" />
                     </td>
                   </tr>
-                  {{/library-feature-iamge}}
-                  {{/custom-feature-iamge}}
-                  {{#custom-feature-iamge}}
+                  {{/library-feature-image}}
+                  {{/custom-feature-image}}
+                  {{#custom-feature-image}}
                   <tr>
                     <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
                       <img width="660" src="{{ feature-image }}" class="bodyImage" />
                     </td>
                   </tr>
-                  {{/custom-feature-iamge}}
+                  {{/custom-feature-image}}
                   <tr>
                     <td class="bodyContent {{theme}}-links" style="padding-top:0;">
                       {{{ body }}}
