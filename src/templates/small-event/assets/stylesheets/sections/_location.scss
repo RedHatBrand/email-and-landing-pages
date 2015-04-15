@@ -4,10 +4,19 @@
   right: 0;
   top: 0;
   bottom: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
 }
 
-#location > .container {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: rgba(255, 255, 255, 0.95)
+#location {
+  color: white;
 }

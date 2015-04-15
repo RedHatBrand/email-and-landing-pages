@@ -94,18 +94,49 @@ height: calc(100vh - 2em);
       </div>
 
       <div class="container hero-text">
-        <h1>{{hero-heading}}</h1>
+        <h1>{{{hero-heading}}}</h1>
         <h2>{{date}}</h2>
 
+        {{#call-to-action}}
         <a href="#form" class="button menu-link">{{call-to-action}}</a>
+        {{/call-to-action}}
       </div>
     </div>
   </header>
 
+  {{^landing-page-sections}}
   {{#body-sections}}
   <section class="section body-section" id="{{slug}}">
     <div class="container feature-image-layout-{{feature-image-layout}}">
-      <h1>{{title}}</h1>
+      <h1>{{{title}}}</h1>
+      <div class="grid-container">
+        {{^custom-feature-image}}
+        {{#library-feature-image}}
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{library-feature-image}}}">
+        </div>
+        {{/library-feature-image}}
+        {{/custom-feature-image}}
+
+        {{#custom-feature-image}}
+        <div class="body-section-feature-image grid-item">
+          <img src="{{{custom-feature-image}}}">
+        </div>
+        {{/custom-feature-image}}
+
+        <div class="body-section-content grid-item">
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/body-sections}}
+  {{/landing-page-sections}}
+
+  {{#body-sections}}
+  <section class="section body-section" id="{{slug}}">
+    <div class="container feature-image-layout-{{feature-image-layout}}">
+      <h1>{{{title}}}</h1>
       <div class="grid-container">
         {{^custom-feature-image}}
         {{#library-feature-image}}
@@ -138,8 +169,9 @@ height: calc(100vh - 2em);
 
       <div class="grid-container">
         {{#speakers}}
-        <a data-target-modal="{{slug}}" href="#{{slug}}" class="modal-open grid-item one-quarter">
+        <a data-target-modal="{{slug}}" href="#{{slug}}" class="modal-open grid-item one-quarter speaker-link">
           <div class="circle" style="background-image:url('{{{profile-photo}}}')"></div>
+          <h4>{{{name}}}</h4>
         </a>
         {{/speakers}}
       </div>
