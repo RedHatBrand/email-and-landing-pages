@@ -388,6 +388,14 @@ label + div.controls {
   display: none !important;
 }
 
+#DynamicFormThankYou {
+  margin-bottom: 1rem;
+}
+#DynamicFormThankYou > .form-header > .form-group > .col-sm-12 > h2 {
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
 .dropdown-arrow:after {
   content: "";
   width: 0;

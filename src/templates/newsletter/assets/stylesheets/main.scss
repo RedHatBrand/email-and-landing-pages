@@ -70,3 +70,12 @@
 .news-section-tile_content_title {
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .news-section-tile {
+    width: 100%;
+  }
+  .news-section-tile:last-child {
+    width: 100% !important;
+  }
+}
