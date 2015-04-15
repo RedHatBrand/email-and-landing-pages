@@ -21,7 +21,7 @@ height: calc(100vh - 2em);
     <div class="hero {{theme}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
-        <h1>{{ hero-heading }}</h1>
+        <h1>{{{hero-heading}}}</h1>
         <a href="#form" class="button" id="call-to-action">{{call-to-action}}</a>
       </div>
     </div>
@@ -35,19 +35,19 @@ height: calc(100vh - 2em);
         {{^custom-feature-image}}
         {{#library-feature-image}}
         <div class="body-section-feature-image grid-item">
-          <img src="{{{ library-feature-image }}}">
+          <img src="{{{library-feature-image}}}" />
         </div>
         {{/library-feature-image}}
         {{/custom-feature-image}}
 
         {{#custom-feature-image}}
         <div class="body-section-feature-image grid-item">
-          <img src="{{{ custom-feature-image }}}">
+          <img src="{{{ custom-feature-image }}}" />
         </div>
         {{/custom-feature-image}}
 
         <div class="body-section-content grid-item">
-          <h2>{{title}}</h2>
+          <h2>{{{title}}}</h2>
 
           {{{body}}}
         </div>
@@ -74,7 +74,7 @@ height: calc(100vh - 2em);
         {{/custom-feature-image}}
 
         <div class="body-section-content grid-item">
-          <h2>{{title}}</h2>
+          <h2>{{{title}}}</h2>
 
           {{{body}}}
         </div>

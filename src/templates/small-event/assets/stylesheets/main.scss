@@ -15,6 +15,7 @@ $page-margin: $line-height * 2;
 @import 'sections/hero';
 @import 'sections/agenda';
 @import 'sections/location';
+@import 'sections/speakers';
 
 body.noscroll {
   overflow: hidden;
