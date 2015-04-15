@@ -3,8 +3,8 @@
   "data": {
     "theme": "cloud-app-development",
     "position": "middle",
-    "hero-small": "",
-    "hero-large": "http://unsplash.imgix.net/photo-1428341944206-459111332729?dpr=2&fit=crop&fm=jpg&h=800&q=75&w=1050",
+    "library-email-hero-image": "http://unsplash.imgix.net/photo-1428341944206-459111332729?dpr=2&fit=crop&fm=jpg&h=300&q=75&w=700",
+    "library-landing-hero-image": "http://unsplash.imgix.net/photo-1428341944206-459111332729?dpr=2&fit=crop&fm=jpg&h=800&q=75&w=1050",
     "background-darken-amount": "0.20",
     "hero-heading":  "Give developers the tools to do what they do best",
     "call-to-action":  "Call to action",
