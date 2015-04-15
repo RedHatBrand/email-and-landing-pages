@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Headers</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: lightgrey;
+    }
+    article {
+      text-align: center;
+      padding: 0.5em;
+    }
+    .preview {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0.5em;
+    }
+    .preview-frame { border: 0; }
+    a.home-link {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.75);
+      padding: .75em 1em;
+      color: white;
+      text-decoration: none;
+      border-top-right-radius: 3px;
+      font-family: monospace;
+      text-transform: uppercase;
+      opacity: .25;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    a.home-link:before {
+      content: '/';
+      margin-right: .5em;
+    }
+    a.home-link:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+  <body>
+    <article>
+      <div class='preview' style='height: 250px; width: 700px'>
+        <iframe class='preview-frame' data-xml-url="http://redhatbrand.github.io/email-and-landing-pages/templates/headers/email.html" height='100%' width='100%'></iframe>
+      </div>
+      <div class='preview' style='height: 400px; width: 1200px'>
+        <iframe class='preview-frame' data-xml-url="http://redhatbrand.github.io/email-and-landing-pages/templates/headers/landing-page.html" height='100%' width='100%'></iframe>
+      </div>
+      <div id="data" data-template-data="{&quot;theme&quot;:&quot;cloud-app-development&quot;,&quot;position&quot;:&quot;middle&quot;,&quot;background-darken-amount&quot;:&quot;0.20&quot;,&quot;hero-large&quot;:&quot;/assets/images/headers/buildings-large.jpg&quot;,&quot;email-width&quot;:700,&quot;email-height&quot;:250,&quot;landing-page-width&quot;:1200,&quot;landing-page-height&quot;:400}"></div>
+    </article>
+
+    <a class="home-link" href="http://redhatbrand.github.io/email-and-landing-pages/">Home</a>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="http://redhatbrand.github.io/email-and-landing-pages/assets/javascripts/previews.js" type="text/javascript"></script>
+  </body>
+</html>
