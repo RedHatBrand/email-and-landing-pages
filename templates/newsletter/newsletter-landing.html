@@ -411,7 +411,14 @@ THEMES
 
 </head>
 <body class="newsletter">
-  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
+  <header role="banner" class="hero-wrapper"
+    {{^custom-landing-hero-image}}
+    style="background-image: url({{{library-landing-hero-image}}})"
+    {{/custom-landing-hero-image}}
+    {{#custom-landing-hero-image}}
+    style="background-image: url({{{custom-landing-hero-image}}})"
+    {{/custom-landing-hero-image}}>
+
     <div class="hero {{theme}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
@@ -440,7 +447,7 @@ THEMES
         {{/custom-feature-image}}
 
         <div class="featured-article-content grid-item">
-          <h2>{{title}}</h2>
+          <h2>{{{title}}}</h2>
 
           {{{body}}}
 
@@ -464,7 +471,7 @@ THEMES
   <section id="news-items-section">
     <div class="container">
       <h2 class="news-item-section-title" >
-        {{articles-title}}
+        {{{articles-title}}}
       </h2>
 
       <ul class="news-section-tiles grid-container tight">
@@ -483,8 +490,8 @@ THEMES
             class="{{theme}}-background pattern {{theme}}-pattern">
 
             <div class="news-section-tile_content">
-              <h3 class="news-section-tile_content_title">{{ title }}</h3>
-              <p class="news-section-tile_content_summary">{{ summary }}</p>
+              <h3 class="news-section-tile_content_title">{{{title}}}</h3>
+              <p class="news-section-tile_content_summary">{{{summary}}}</p>
             </div>
           </a>
         </li>
