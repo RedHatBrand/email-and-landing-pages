@@ -283,13 +283,13 @@ pre {
   background-color: #A30000; }
 
 .corporate-hero-middle-stripe {
-  background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-06-06.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-08-04.svg); }
 
 .corporate-hero-middle-stripe2, .corporate-hero-right-stripe2 {
   display: none; }
 
 .corporate-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-alt-50.svg); }
 
 .corporate-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-12-12.svg); }
@@ -304,13 +304,13 @@ pre {
   background-color: #5E6A71; }
 
 .services-hero-middle-stripe {
-  background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-06-06.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-08-04.svg); }
 
 .services-hero-middle-stripe2, .services-hero-right-stripe2 {
   display: none; }
 
 .services-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-50.svg); }
 
 .services-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/grey/grid-12-12.svg); }
@@ -331,7 +331,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/yellow/grid-08-04.svg); }
 
 .storage-and-big-data-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/storage/yellow/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/storage/yellow/positioned-08-04-alt-50.svg); }
 
 .storage-and-big-data-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/yellow/grid-12-12.svg); }
@@ -355,7 +355,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/blue/grid-08-04.svg); }
 
 .traditional-infrastructures-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/infrastructure/blue/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/infrastructure/blue/positioned-08-04-alt-50.svg); }
 
 .traditional-infrastructures-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/blue/grid-12-12.svg); }
@@ -379,7 +379,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/blue/grid-08-04.svg); }
 
 .cloud-infrastructures-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/blue/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/blue/positioned-08-04-alt-50.svg); }
 
 .cloud-infrastructures-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/blue/grid-12-12.svg); }
@@ -403,7 +403,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/blue/grid-08-04.svg); }
 
 .infrastructure-management-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/management/blue/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/management/blue/positioned-08-04-alt-50.svg); }
 
 .infrastructure-management-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/blue/grid-12-12.svg); }
@@ -427,7 +427,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-08-04.svg); }
 
 .traditional-app-development-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/app-dev/green-mid/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/app-dev/green-mid/positioned-08-04-alt-50.svg); }
 
 .traditional-app-development-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-12-12.svg); }
@@ -451,7 +451,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-08-04.svg); }
 
 .business-process-integration-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/business-process/green-mid/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/business-process/green-mid/positioned-08-04-alt-50.svg); }
 
 .business-process-integration-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-12-12.svg); }
@@ -475,7 +475,7 @@ pre {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-08-04.svg); }
 
 .cloud-app-development-hero-middle-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-dev/green-mid/positioned-08-04-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-dev/green-mid/positioned-08-04-alt-50.svg); }
 
 .cloud-app-development-hero-right-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-12-12.svg); }
