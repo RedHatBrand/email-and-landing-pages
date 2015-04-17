@@ -1,14 +1,16 @@
 {
   "title": "Headers",
   "data": {
-    "theme": "cloud-app-development",
+    "theme": "corporate",
     "position": "middle",
     "background-darken-amount": "0.20",
-    "hero-large": "/assets/images/headers/buildings-large.jpg",
+    "custom-image": "https://download.unsplash.com/photo-1425136738262-212551713a58",
     "email-width": 700,
-    "email-height": 250,
+    "saturation": 100,
+    "darken-amount": "0.2",
     "landing-page-width": 1200,
-    "landing-page-height": 400
+    "background-position-x": "50",
+    "background-position-y": "50"
   }
 }
 
