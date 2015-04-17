@@ -1,0 +1,69 @@
+    
+    /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+    
+                      THEMES
+    
+    /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\*/
+
+/*    red*/
+    .corporate { color: #cc0000 !important; }
+    .corporate-links a { color: #cc0000 !important; }
+    .corporate-background { background-color:#A30000; }
+    .corporate-hero {
+      background-image: url('http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/red/grid-08-04.svg');
+    }
+    
+    
+/*    slate*/
+    .services { color: #5E6A71 !important; }
+    .services-links a { color: #5E6A71 !important;}
+    .services-background { background-color:#5E6A71; }
+    .services-hero {
+    }
+    
+/*    orange*/
+    .storage-and-big-data { color: #ed7700 !important; }
+    .storage-and-big-data-links a { color: #ed7700 !important; }
+    .storage-and-big-data-background { background-color:#ed7700; }
+    .storage-and-big-data-hero{
+    }
+  
+    
+/*    blue*/
+    .traditional-infrastructures { color: #0088CE !important; }
+    .traditional-infrastructures-links a { color: #0088CE !important; }
+    .traditional-infrastructures-background { background-color:#0088CE; }
+    .traditional-infrastructures-hero {
+    }
+    
+    .cloud-infrastructures { color: #0088CE !important; }
+    .cloud-infrastructures-links a { color: #0088CE !important; }
+    .cloud-infrastructures-background { background-color:#0088CE; }
+    .cloud-infrastructures-hero {
+    }
+    
+    .infrastructure-management { color: #0088CE !important; }
+    .infrastructure-management-links a { color: #0088CE !important;  }
+    .infrastructure-management-background { background-color:#0088CE; }
+    .infrastructure-management-hero {
+    }
+    
+    
+/*    green*/
+    .traditional-app-development { color:  #3F9C35 !important; }
+    .traditional-app-development-links a { color: #92D400 !important; }
+    .traditional-app-development-background { background-color:#3F9C35; }
+    .traditional-app-development-hero {
+    }
+    
+    .business-process-integration { color:  #3F9C35 !important;  }
+    .business-process-integration-links a {   color: #92D400 !important;  }
+    .business-process-integration-background { background-color:#3F9C35; }
+    .business-process-integration-hero {
+    }
+    
+    .cloud-app-development { color:  #3F9C35 !important;  }
+    .cloud-app-development-links a { color: #92D400 !important; }
+    .cloud-app-development-background { background-color:#3F9C35; }
+    .cloud-app-development-hero {
+    }

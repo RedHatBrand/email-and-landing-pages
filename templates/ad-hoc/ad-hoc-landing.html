@@ -57,7 +57,7 @@ THEMES
   color: #cc0000 !important;
 }
 
-.corporate-background {
+.corporate-baad
   background-color: #A30000;
 }
 
@@ -414,14 +414,7 @@ THEMES
 </head>
 
 <body class="ad-hoc">
-  <header role="banner" class="hero-wrapper"
-    {{^custom-landing-hero-image}}
-    style="background-image: url({{{library-landing-hero-image}}})"
-    {{/custom-landing-hero-image}}
-    {{#custom-landing-hero-image}}
-    style="background-image: url({{{custom-landing-hero-image}}})"
-    {{/custom-landing-hero-image}}>
-
+  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
     <div class="hero {{theme}}-hero">
       <div class="container">
         <div class="logo-rh"></div>
