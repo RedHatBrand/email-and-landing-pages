@@ -16,6 +16,7 @@
 
       .custom-hero-image {
         background-image: url({{#custom-image}}{{{custom-image}}}{{/custom-image}}{{^custom-image}}{{{library-image}}}{{/custom-image}});
+        background-position: center;
         -webkit-filter: grayscale({{saturation}}%);
         filter: grayscale({{saturation}}%);
       }
