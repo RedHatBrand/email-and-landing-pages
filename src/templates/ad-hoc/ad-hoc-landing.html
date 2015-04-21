@@ -16,7 +16,14 @@ height: calc(100vh - 2em);
 </head>
 
 <body class="ad-hoc">
-  <header role="banner" class="hero-wrapper hero-{{ position }} {{theme}}-hero-{{position}} background-darken">
+  <header role="banner" class="hero-wrapper"
+    {{^custom-landing-hero-image}}
+    style="background-image: url({{{library-landing-hero-image}}})"
+    {{/custom-landing-hero-image}}
+    {{#custom-landing-hero-image}}
+    style="background-image: url({{{custom-landing-hero-image}}})"
+    {{/custom-landing-hero-image}}>
+
     <div class="hero {{theme}}-hero">
       <div class="container">
         <div class="logo-rh"></div>

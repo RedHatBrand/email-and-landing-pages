@@ -2,8 +2,8 @@
   "title": "Email Template Example",
   "data": {
     "lang": "en",
-    "hero-small": "/assets/images/headers/buildings-large.jpg",
-    "hero-large": "/assets/images/headers/buildings-large.jpg",
+    "library-email-hero-image": "http://unsplash.imgix.net/photo-1428341944206-459111332729?dpr=2&fit=crop&fm=jpg&h=300&q=75&w=700",
+    "library-landing-hero-image": "/assets/images/headers/buildings-large.jpg",
     "hero-heading":  "Marketing Buzz",
     "date": "20/1/16",
     "position": "middle",
