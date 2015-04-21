@@ -1,6 +1,6 @@
-@import url('https://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
-@import url('http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
-@import url('//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css');
+@import url("https://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css");
+@import url("http://red-hat-overpass-fonts.s3.amazonaws.com/overpass.css");
+@import url("//red-hat-overpass-fonts.s3.amazonaws.com/overpass.css");
 * {
   margin: 0; }
 
@@ -266,7 +266,7 @@ pre {
 .pattern {
   z-index: 50; }
 
-.hero-right, .hero-middle, .hero-left {
+.hero-right, .hero-middle, .hero-left, .hero-full {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat; }
@@ -298,6 +298,12 @@ pre {
 .corporate-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-00-00-50.svg); }
 
+.corporate-hero-full-stripe {
+  background-color: #c00; }
+
+.corporate-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/corporate/red/positioned-08-04-alt-50.svg); }
+
 .services, .services-links a {
   color: #5E6A71 !important; }
 
@@ -324,6 +330,12 @@ pre {
 
 .services-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-00-00-50.svg); }
+
+.services-hero-full-stripe {
+  background-color: #5E6A71; }
+
+.services-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/services/grey/positioned-08-04-alt-50.svg); }
 
 .storage-and-big-data, .storage-and-big-data-links a {
   color: #ed7700 !important; }
@@ -358,6 +370,15 @@ pre {
 .storage-and-big-data-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/storage/yellow/positioned-00-00-50.svg); }
 
+.storage-and-big-data-hero-full-stripe {
+  background-color: #ed7700; }
+
+.storage-and-big-data-hero-full-stripe2 {
+  display: none; }
+
+.storage-and-big-data-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/storage/yellow/positioned-08-04-alt-50.svg); }
+
 .traditional-infrastructures, .traditional-infrastructures-links, a {
   color: #0088CE !important; }
 
@@ -390,6 +411,15 @@ pre {
 
 .traditional-infrastructures-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/infrastructure/blue/positioned-00-00-50.svg); }
+
+.traditional-infrastructures-hero-full-stripe {
+  background-color: #0088CE; }
+
+.traditional-infrastructures-hero-full-stripe2 {
+  display: none; }
+
+.traditional-infrastructures-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/infrastructure/blue/positioned-08-04-alt-50.svg); }
 
 .cloud-infrastructures, .cloud-infrastructures-links a {
   color: #0088CE !important; }
@@ -424,6 +454,15 @@ pre {
 .cloud-infrastructures-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/blue/positioned-00-00-50.svg); }
 
+.cloud-infrastructures-hero-full-stripe {
+  background-color: #0088CE; }
+
+.cloud-infrastructures-hero-full-stripe2 {
+  display: none; }
+
+.cloud-infrastructures-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/blue/positioned-08-04-alt-50.svg); }
+
 .infrastructure-management, .infrastructure-management-links a {
   color: #0088CE !important; }
 
@@ -456,6 +495,15 @@ pre {
 
 .infrastructure-management-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/management/blue/positioned-00-00-50.svg); }
+
+.infrastructure-management-full-stripe {
+  background-color: #0088CE; }
+
+.infrastructure-management-full-stripe2 {
+  display: none; }
+
+.infrastructure-management-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/management/blue/positioned-08-04-alt-50.svg); }
 
 .traditional-app-development, .traditional-app-development-links a {
   color: #3F9C35 !important; }
@@ -490,6 +538,15 @@ pre {
 .traditional-app-development-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/app-dev/green-mid/positioned-00-00-50.svg); }
 
+.traditional-app-development-hero-full-stripe {
+  background-color: #92D400; }
+
+.traditional-app-development-hero-full-stripe2 {
+  display: none; }
+
+.traditional-app-development-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/app-dev/green-mid/positioned-08-04-50.svg); }
+
 .business-process-integration, .business-process-integration-links a {
   color: #3F9C35 !important; }
 
@@ -512,7 +569,7 @@ pre {
   display: none; }
 
 .business-process-integration-hero-right-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/green-mid/positioned-12-12-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/business-process/green-mid/positioned-12-12-50.svg); }
 
 .business-process-integration-hero-left-stripe {
   background-image: url(http://redhatbrand.github.io/RedHatTemplates/global-assets/images/shapes/green-mid/grid-00-00.svg); }
@@ -521,7 +578,16 @@ pre {
   display: none; }
 
 .business-process-integration-hero-left-pattern {
-  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/green-mid/positioned-00-00-50.svg); }
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/business-process/green-mid/positioned-00-00-50.svg); }
+
+.business-process-integration-hero-full-stripe {
+  background-color: #92D400; }
+
+.business-process-integration-hero-full-stripe2 {
+  display: none; }
+
+.business-process-integration-hero-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/business-process/green-mid/positioned-08-04-50.svg); }
 
 .cloud-app-development, .cloud-app-development-links a {
   color: #3F9C35 !important; }
@@ -555,6 +621,15 @@ pre {
 
 .cloud-app-development-hero-left-pattern {
   background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/green-mid/positioned-00-00-50.svg); }
+
+.cloud-app-development-full-stripe {
+  background-color: #92D400; }
+
+.cloud-app-development-full-stripe2 {
+  display: none; }
+
+.cloud-app-development-full-pattern {
+  background-image: url(http://redhatbrand.github.io/RedHatPatterns/positioned-patterns/cloud-infrastructure/green-mid/positioned-08-04-50.svg); }
 
 /*\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
