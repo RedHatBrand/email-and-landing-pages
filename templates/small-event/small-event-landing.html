@@ -61,7 +61,13 @@
     </div>
   </div>
 
-  <header role="banner" class="hero-wrapper hero-{{position}} {{theme}}-hero-{{position}} background-darken">
+  <header role="banner" class="hero-wrapper"
+    {{^custom-landing-hero-image}}
+    style="background-image: url({{{library-landing-hero-image}}})"
+    {{/custom-landing-hero-image}}
+    {{#custom-landing-hero-image}}
+    style="background-image: url({{{custom-landing-hero-image}}})"
+    {{/custom-landing-hero-image}}>
     <div class="hero {{theme}}-hero">
       <div id="main-nav">
         <div class="container">
