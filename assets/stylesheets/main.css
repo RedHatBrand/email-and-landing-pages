@@ -267,7 +267,7 @@ pre {
   z-index: 50; }
 
 .hero-right {
-  background-size: 48em 48em, 48em 48em, cover;
+  background-size: cover;
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat; }
 
