@@ -4,3 +4,4 @@ node_modules
 .tmp
 build
 npm-debug.log
+.publish
