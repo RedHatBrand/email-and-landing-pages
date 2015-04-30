@@ -10,7 +10,7 @@
 
 </head>
 <body class="newsletter">
-  <header role="banner" class="hero-wrapper"
+  <header role="banner" class="hero-wrapper {{theme}}-background"
     {{^custom-landing-hero-image}}
     style="background-image: url({{{library-landing-hero-image}}})"
     {{/custom-landing-hero-image}}
@@ -53,8 +53,8 @@
           <p>
             <a href="{{{ url }}}"  class="call-to-action">
               {{#call-to-action}}
-                {{ call-to-action }}
               {{/call-to-action}}
+                {{ call-to-action }}
 
               {{^call-to-action}}
                 Find out more
