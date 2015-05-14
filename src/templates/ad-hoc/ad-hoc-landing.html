@@ -16,7 +16,7 @@ height: calc(100vh - 2em);
 </head>
 
 <body class="ad-hoc">
-  <header role="banner" class="hero-wrapper"
+  <header role="banner" class="hero-wrapper {{theme}}-background"
     {{^custom-landing-hero-image}}
     style="background-image: url({{{library-landing-hero-image}}})"
     {{/custom-landing-hero-image}}
@@ -28,7 +28,22 @@ height: calc(100vh - 2em);
       <div class="container">
         <div class="logo-rh"></div>
         <h1>{{{hero-heading}}}</h1>
-        <a href="#form" class="button" id="call-to-action">{{call-to-action}}</a>
+
+        {{#call-to-action}}
+        {{#call-to-action-link}}
+        <a href="{{{call-to-action-link}}}" class="button menu-link">{{call-to-action}}</a>
+        {{/call-to-action-link}}
+        {{/call-to-action}}
+
+        {{#call-to-action}}
+        {{#form-config-script}}
+        {{^call-to-action-link}}
+        <a href="#form" class="button menu-link">{{call-to-action}}</a>
+        {{/call-to-action-link}}
+        {{/form-config-script}}
+        {{/call-to-action}}
+
+
       </div>
     </div>
   </header>

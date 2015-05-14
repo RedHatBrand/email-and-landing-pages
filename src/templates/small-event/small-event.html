@@ -91,47 +91,90 @@ height: calc(100vh - 2em);
                       <h2 style="margin-top: 0; margin-bottom: 0">{{{title}}}</h2>
                     </td>
                   </tr>
-                  {{^custom-feature-image}}
-                  {{#library-feature-image}}
-                  <tr>
-                    <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
-                      <img width="660" src="{{ library-feature-image }}" class="bodyImage" />
-                    </td>
-                  </tr>
-                  {{/library-feature-image}}
-                  {{/custom-feature-image}}
-
-                  {{#custom-feature-image}}
-                  <tr>
-                    <td valign="top" class="bodyContent {{theme}}-links" style="padding-top: 20px">
-                      <img width="660" src="{{ custom-feature-image }}" class="bodyImage" />
-                    </td>
-                  </tr>
-                  {{/custom-feature-image}}
 
                   <tr>
-                    <td class="bodyContent {{theme}}-links" style="padding-top:0;">
-                      {{{ body }}}
+                    {{^custom-feature-image}}
+                      {{^library-feature-image}}
+                      <td valign="top" class="bodyContent {{theme}}-links">
+                        {{{ body }}}
 
-                      {{#article-call-to-action }}
-                      <p>
-                      <!--[if mso]>
-                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
-                          <w:anchorlock/>
-                          <center>
-                        <![endif]-->
-                          <a href="{{{url}}}" class="call-to-action" style="color: #fff !important">
-                            {{ article-call-to-action }}
-                          </a>
+                        {{#call-to-action}}
+                        <p>
                         <!--[if mso]>
-                          </center>
-                        </v:roundrect>
-                      <![endif]-->
-                      </p>
-                      {{/article-call-to-action }}
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
+                            <w:anchorlock/>
+                            <center>
+                          <![endif]-->
+                            <a href="{{{call-to-action-url}}}" class="call-to-action" style="color: #fff !important">
+                              {{ call-to-action }}
+                            </a>
+                          <!--[if mso]>
+                            </center>
+                          </v:roundrect>
+                        <![endif]-->
+                        </p>
+                        {{/call-to-action}}
 
-                      <hr />
-                    </td>
+                        <hr />
+                      </td>
+                      {{/library-feature-image}}
+
+                      {{#library-feature-image}}
+                      <td style="min-width:350px;" width="450" valign="top" class="bodyContent {{theme}}-links">
+                        {{{ body }}}
+
+                        {{#call-to-action}}
+                        <p>
+                        <!--[if mso]>
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
+                            <w:anchorlock/>
+                            <center>
+                          <![endif]-->
+                            <a href="{{{call-to-action-url}}}" class="call-to-action" style="color: #fff !important">
+                              {{ call-to-action }}
+                            </a>
+                          <!--[if mso]>
+                            </center>
+                          </v:roundrect>
+                        <![endif]-->
+                        </p>
+                        {{/call-to-action}}
+
+                        <hr />
+                      </td>
+                      <td width="200" id ="featured-image" valign="top" class="bodyContent {{theme}}-links">
+                        <img width="200" src="{{library-feature-image}}" alt="featured-image" />
+                      </td>
+                      {{/library-feature-image}}
+                    {{/custom-feature-image}}
+
+                    {{#custom-feature-image}}
+                      <td style="min-width:350px;" width="450" valign="top" class="bodyContent {{theme}}-links">
+                        {{{ body }}}
+
+                        {{#call-to-action}}
+                        <p>
+                        <!--[if mso]>
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{{call-to-action-link}}}" style="height:40px;v-text-anchor:middle;width:160px;" arcsize="10%" stroke="f" fillcolor="#cc0000">
+                            <w:anchorlock/>
+                            <center>
+                          <![endif]-->
+                            <a href="{{{call-to-action-url}}}" class="call-to-action" style="color: #fff !important">
+                              {{ call-to-action }}
+                            </a>
+                          <!--[if mso]>
+                            </center>
+                          </v:roundrect>
+                        <![endif]-->
+                        </p>
+                        {{/call-to-action}}
+
+                        <hr />
+                      </td>
+                      <td width="200" id ="featured-image" valign="top" class="bodyContent {{theme}}-links">
+                        <img width="200" src="{{custom-feature-image}}" alt="featured-image" />
+                      </td>
+                    {{/custom-feature-image}}
                   </tr>
                 </table>
               </td>

@@ -5,3 +5,5 @@ node_modules
 build
 npm-debug.log
 .publish
+.sublime-project
+.sublime-workspace
